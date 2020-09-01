@@ -40,6 +40,10 @@
 	icon_state = "disposal"
 	dynamic_lighting = FALSE
 
+/area/nadezhda/maintenance/recycling
+	name = "Recycling Plant"
+	icon_state = "disposal"
+
 /area/nadezhda/maintenance/surface_disposal
 	name = "Surface Disposal"
 	icon_state = "disposal"
@@ -290,6 +294,9 @@
 
 /area/nadezhda/maintenance/substation/bridge
 	name = "Bridge Substation"
+
+/area/nadezhda/maintenance/substation/solarplant
+	name = "Solar Substation"
 
 
 
@@ -566,6 +573,30 @@
 
 /area/nadezhda/crew_quarters/podrooms2
 	name = "\improper Lower Pod Dormitories"
+
+/area/nadezhda/crew_quarters/apartment1
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment2
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment3
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment4
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment5
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment6
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment7
+	name = "\improper Industrial Apartment Complex"
+
+/area/nadezhda/crew_quarters/apartment8
+	name = "\improper Industrial Apartment Complex"
 
 /area/nadezhda/crew_quarters/sleep
 	name = "\improper Dormitories"
@@ -1271,6 +1302,10 @@ area/nadezhda/medical/medbaymeeting
 	name = "\improper Cargo Office"
 	icon_state = "quartoffice"
 
+/area/nadezhda/weaponfactory
+	name = "\improper Weapons Factory"
+	icon_state = "quartoffice"
+
 /area/nadezhda/quartermaster/pods
 	name = "\improper Lonestar Pod Dorms"
 	icon_state = "quartoffice"
@@ -1472,6 +1507,9 @@ area/nadezhda/medical/medbaymeeting
 	name = "\improper Shuttle Hangar"
 	icon_state = "erisgreen"
 
+/area/nadezhda/pros/mechanicshop
+	name = "\improper Mechanic's Shop"
+	icon_state = "erisgreen"
 
 //Storage
 
