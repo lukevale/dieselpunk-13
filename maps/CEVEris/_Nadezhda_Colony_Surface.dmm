@@ -4178,7 +4178,7 @@
 "kBo" = (/obj/machinery/door/airlock/glass{name = "Medical E.V.A. Triage"; req_one_access = list(5,78)},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/white,/area/nadezhda/medical/medeva)
 "kCP" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/wood,/area/nadezhda/crew_quarters/apartment7)
 "kDW" = (/obj/item/ammo_magazine/ammobox/lrifle_small/practice,/turf/simulated/floor/tiled/techmaint,/area/nadezhda/maintenance{name = "Surface Maintenance"})
-"kEE" = (/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/structure/cable/heavyduty{icon_state = "1-2-8"},/turf/simulated/floor/tiled/techmaint,/area/nadezhda/maintenance/substation/solarplant)
+"kEE" = (/obj/structure/cable{d2 = 8; icon_state = "0-8"},/obj/structure/cable/heavyduty{icon_state = "1-2-8"},/obj/structure/cable/ender{id = "surface to stairs"},/turf/simulated/floor/tiled/techmaint,/area/nadezhda/maintenance/substation/solarplant)
 "kHe" = (/obj/machinery/light_switch{pixel_y = 30},/turf/simulated/floor/tiled/dark/gray_perforated,/area/nadezhda/security/tactical)
 "kHH" = (/obj/machinery/recycler,/turf/simulated/floor/tiled/dark/danger,/area/nadezhda/maintenance/recycling)
 "kHJ" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/structure/catwalk,/turf/simulated/floor/plating/under,/area/nadezhda/maintenance/recycling)
