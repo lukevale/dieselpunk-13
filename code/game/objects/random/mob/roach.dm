@@ -9,7 +9,7 @@
 				/mob/living/carbon/superior_animal/roach/toxic = 2,
 				/mob/living/carbon/superior_animal/roach/nanite = 2,
 				/mob/living/carbon/superior_animal/roach/hunter = 4,
-				/mob/living/carbon/superior_animal/roach/support = 4,
+//				/mob/living/carbon/superior_animal/roach/support = 4,
 				/mob/living/carbon/superior_animal/roach/fuhrer = 0.5))
 
 /obj/random/mob/roaches/low_chance
