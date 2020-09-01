@@ -40,6 +40,7 @@
 	damage_overlays
 	damage_mask
 	blood_mask*/
+	mask_icon = 'icons/inventory/doggo/mask.dmi'
 
 /datum/species_form/feline
 	playable = TRUE
@@ -147,6 +148,7 @@
 	base = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = null	//TODO: White vulp deformed sprites. There aren't even regular ones here.
 	appearance_flags = HAS_HAIR_COLOR | HAS_EYE_COLOR | HAS_SKIN_COLOR | HAS_UNDERWEAR
+	mask_icon = 'icons/inventory/doggo/mask.dmi'
 
 /datum/species_form/akula
 	playable = FALSE
