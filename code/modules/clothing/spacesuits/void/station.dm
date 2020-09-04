@@ -437,3 +437,31 @@
 	siemens_coefficient = 0.4
 	helmet = /obj/item/clothing/head/space/void/medarmor/sarge
 	matter = list(MATERIAL_STEEL = 40, MATERIAL_BIOMATTER = 10, MATERIAL_PLASTIC = 30, MATERIAL_GLASS = 10)
+
+/obj/item/clothing/head/helmet/space/void/knight
+	name = "Brother-Knight Helm"
+	desc = "A visored helmet with a cloth hood covering it."
+	icon_state = "prime"
+	armor = list(
+		melee = 60,
+		bullet = 60,
+		energy = 60,
+		bomb = 80,
+		bio = 100,
+		rad = 100
+	)
+
+/obj/item/clothing/suit/space/void/knight
+	name = "Brother-Knight Armor"
+	desc = "Armor of the Orden Hospitaller's chamber militant"
+	icon_state = "prime"
+	slowdown = 0.15
+	armor = list(
+		melee = 60,
+		bullet = 60,
+		energy = 60,
+		bomb = 80,
+		bio = 100,
+		rad = 100
+	)
+	helmet = /obj/item/clothing/head/helmet/space/void/knight

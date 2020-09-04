@@ -23,7 +23,7 @@
 	module.set_up()
 
 /obj/item/weapon/coreimplant_upgrade/cruciform/sergeant
-	name = "Ascension Kit"
+	name = "Squire Promotion Kit"
 	desc = "A module required to promote a Squire to the rank of Brother-Sergeant"
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
 

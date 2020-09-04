@@ -547,26 +547,22 @@
 		return FALSE
 
 	if(altar)
-		var/response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","Lemniscate","Tessellate","Next Page")
+		var/response = input(user, "Which cruciform do you require?") in list("Lemniscate","Tessellate","Monomial","Divisor","No Path","Cancel Litany")
 		if (response == "Lemniscate")
 			new /obj/item/weapon/implant/core_implant/cruciform/lemniscate(altar.loc)
 			return TRUE
 		if (response == "Tessellate")
 			new /obj/item/weapon/implant/core_implant/cruciform/tessellate(altar.loc)
 			return TRUE
-		if (response == "Next Page")
-			response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","Monomial","Divisor","Next Page")
 		if (response == "Monomial")
 			new /obj/item/weapon/implant/core_implant/cruciform/monomial(altar.loc)
 			return TRUE
 		if (response == "Divisor")
 			new /obj/item/weapon/implant/core_implant/cruciform/divisor(altar.loc)
 			return TRUE
-		if (response == "Next Page")
-			response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","No Path","Cancel Litany")
 		if (response == "No Path")
 			new /obj/item/weapon/implant/core_implant/cruciform(altar.loc)
 			return TRUE
 		if (response == "Cancel Litany")
-			fail("You decide not to retrive a cruciform at this time.", user, C)
+			fail("You decide not to obtain a cruciform at this time.", user, C)
 			return FALSE

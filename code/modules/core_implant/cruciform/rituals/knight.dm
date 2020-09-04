@@ -42,7 +42,7 @@
 
 	return TRUE
 
-	/datum/ritual/targeted/cruciform/knight/atonement
+/datum/ritual/targeted/cruciform/knight/atonement
 	name = "Atonement"
 	phrase = "Piaculo sit \[Target human]!"
 	desc = "Imparts extreme pain on the target disciple, but does no actual harm. Use this if someone who performs a heretical act."
@@ -80,16 +80,23 @@
 		if(target.wearer && (target.loc && (target.locs[1] in view())))
 			return target
 
-	/datum/ritual/targeted/cruciform/knight/upgrade_kit
+/datum/ritual/targeted/cruciform/knight/upgrade_kit
 	name = "Covenant"
 	phrase = "I vow that I have found a worthy candidate for the trials of Knighthood"
-	desc = "Request an upgrade kit to promote a Chaplain to a Corporal"
+	desc = "Request an upgrade kit to promote a Chaplain to a Corporal, or a Corporal to Sergeant"
 	power = 50
 
 /datum/ritual/targeted/cruciform/knight/upgrade_kit/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/CI,list/targets)
-	new /obj/item/weapon/coreimplant_upgrade/cruciform/priest(usr.loc)
-
-	return TRUE
+	var/response = input(user, "Which upgrade do you require?") in list("Squire","Sergeant","Monomial","Divisor","Cancel Litany")
+	if (response == "Squire")
+		new /obj/item/weapon/coreimplant_upgrade/cruciform/squire(usr.loc)
+		return TRUE
+	if (response == "Sergeant")
+		new /obj/item/weapon/coreimplant_upgrade/cruciform/sergeant(usr.loc)
+		return TRUE
+	if (response == "Cancel Litany")
+		fail("No upgrade selected",user,CI)
+		return FALSE
 
 /datum/ritual/cruciform/knight/initiation
 	name = "Initiation"
@@ -97,7 +104,7 @@
 	desc = "The second stage of granting a promotion to a Novice. The ascension kit is the first step."
 	power = 50
 
-/datum/ritual/cruciform/Knight/initiation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
+/datum/ritual/cruciform/knight/initiation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
 	var/obj/item/weapon/implant/core_implant/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
 
 	if(!CI || !CI.wearer || !ishuman(CI.wearer) || !CI.active)
@@ -109,13 +116,24 @@
 		fail("The target is already inducted.",user,C)
 		return FALSE
 
-	var/datum/core_module/activatable/cruciform/priest_convert/PC = CI.get_module(CRUCIFORM_PRIEST_CONVERT)
+	var/datum/core_module/activatable/cruciform/priest_convert/SC = CI.get_module(CRUCIFORM_SQUIRE_CONVERT)
 
-	if(!PC)
-		fail("Target must have the induction upgrade inside their cruciform.",user,C)
+	if(!SC)
+		fail("Target must have a squire upgrade inside their cruciform.",user,C)
 		return FALSE
 
-	PC.activate()
-	log_and_message_admins("promoted disciple [C] to Brother Chaplain with initiation litany")
+	SC.activate()
+	log_and_message_admins("promoted disciple [C] to Brother-Corporal with initiation litany")
+
+	return TRUE
+
+	var/datum/core_module/activatable/cruciform/priest_convert/SGC = CI.get_module(CRUCIFORM_SERGEANT_CONVERT)
+
+	if(!SGC)
+		fail("Target must have a squire upgrade inside their cruciform.",user,C)
+		return FALSE
+
+	SGC.activate()
+	log_and_message_admins("promoted disciple [C] to Brother-Sergeant with initiation litany")
 
 	return TRUE
