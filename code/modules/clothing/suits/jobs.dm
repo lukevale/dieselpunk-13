@@ -82,8 +82,8 @@
 	siemens_coefficient = 0.7
 
 //Chaplain
-/obj/item/clothing/suit/storage/confessor
-	name = "Confessor jacket"
+/obj/item/clothing/suit/storage/chaplain
+	name = "Chaplaincy jacket"
 	desc = "A long, lightly armoured jacket. Dark, stylish and authoritarian."
 	icon_state = "chaplain_hoodie"
 	item_state = "chaplain_hoodie"

@@ -14,7 +14,7 @@
 	l_ear = /obj/item/device/radio/headset/heads/preacher
 	id_type = /obj/item/weapon/card/id/chaplain
 	uniform = /obj/item/clothing/under/rank/preacher
-	suit = /obj/item/clothing/suit/storage/confessor
+	suit = /obj/item/clothing/suit/storage/chaplain
 	shoes = /obj/item/clothing/shoes/reinforced
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/weapon/book/ritual/cruciform/priest = 1)
