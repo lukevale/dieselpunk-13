@@ -14,7 +14,7 @@
 	l_ear = /obj/item/device/radio/headset/heads/preacher
 	id_type = /obj/item/weapon/card/id/chaplain
 	uniform = /obj/item/clothing/under/rank/preacher
-	suit = /obj/item/clothing/suit/storage/chaplain
+	suit = /obj/item/clothing/suit/storage/confessor
 	shoes = /obj/item/clothing/shoes/reinforced
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/weapon/book/ritual/cruciform/priest = 1)
@@ -23,7 +23,8 @@
 	name = OUTFIT_JOB_NAME("Hospitaller - Brother-Knight")
 	l_ear = /obj/item/device/radio/headset/church
 	id_type = /obj/item/weapon/card/id/chaplain
-	uniform = /obj/item/clothing/under/rank/preacher
+	uniform = /obj/item/clothing/under/rank/acolyte
+	suit = /obj/item/clothing/suit/space/void/prime
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/weapon/book/ritual/cruciform/priest = 1)
@@ -32,7 +33,8 @@
 	name = OUTFIT_JOB_NAME("Hospitaller - Brother-Sergeant")
 	l_ear = /obj/item/device/radio/headset/church
 	id_type = /obj/item/weapon/card/id/chaplain
-	uniform = /obj/item/clothing/under/rank/preacher
+	uniform = /obj/item/clothing/under/rank/acolyte
+	suit = /obj/item/clothing/suit/space/void/medarmor/sarge
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/weapon/book/ritual/cruciform/priest = 1)
@@ -41,13 +43,14 @@
 	name = OUTFIT_JOB_NAME("Hospitaller - Brother-Corporal")
 	l_ear = /obj/item/device/radio/headset/church
 	id_type = /obj/item/weapon/card/id/chaplain
-	uniform = /obj/item/clothing/under/rank/preacher
+	uniform = /obj/item/clothing/under/rank/acolyte
+	suit = /obj/item/clothing/suit/space/void/medarmor
 	shoes = /obj/item/clothing/shoes/jackboots
 	gloves = /obj/item/clothing/gloves/thick
 	backpack_contents = list(/obj/item/weapon/book/ritual/cruciform/priest = 1)
 
 /decl/hierarchy/outfit/job/church/chaplain
 	name = OUTFIT_JOB_NAME("Hospitaller - Chaplain")
-	uniform = /obj/item/clothing/under/rank/acolyte
+	uniform = /obj/item/clothing/under/rank/preacher
 	shoes = /obj/item/clothing/shoes/reinforced
 	gloves = /obj/item/clothing/gloves/thick

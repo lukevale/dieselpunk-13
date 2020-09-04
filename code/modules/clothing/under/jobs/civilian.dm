@@ -58,7 +58,7 @@
 
 /obj/item/clothing/under/rank/acolyte
 	desc = "Ceremonial garb of the Orden Hospitaller Chaplaincy."
-	name = "Chaplain's vestments"
+	name = "Knight's vestments"
 	icon_state = "acolyte"
 	item_state = "acolyte"
 
