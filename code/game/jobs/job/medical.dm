@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Chief Biolab Overseer"
+	title = "Biolab Overseer"
 	flag = CBO
 	head_position = 1
 	department = DEPARTMENT_MEDICAL
@@ -7,7 +7,7 @@
 	faction = MAP_FACTION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Nadezhda Council"
+	supervisors = "the High Council"
 	difficulty = "Hard."
 	selection_color = "#94a87f"
 	req_admin_notify = 1
@@ -38,7 +38,7 @@
 							 /datum/computer_file/program/chem_catalog,
 							 /datum/computer_file/program/reports)
 
-	description = "The Chief Biolab Overseer is the head of the medical branch of the Soteria Institute, preserving and improving lives.<br>\
+	description = "The Biolab Overseer is the head of the State Hospital, preserving and improving lives.<br>\
 	Your main responsibility is to keep everyone alive, as is the objective of your department. Prioritise health over most other concerns. <br>\
 	A variety of medical staff work under your command. Although these roles are clear-cut compared to the research branch, direct them appropriately.<br>\
 	Of course, remember that you are a doctor yourself - feel free to help with less specialised activities to ease the burden.<br>\
@@ -57,14 +57,14 @@
 	join_tag = /datum/job/cmo
 
 /datum/job/doctor
-	title = "Soteria Doctor"
+	title = "Medical Doctor"
 	flag = DOCTOR
 	department = DEPARTMENT_MEDICAL
 	department_flag = MEDICAL
 	faction = MAP_FACTION
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the Chief Biolab Overseer"
+	supervisors = "the Biolab Overseer"
 	difficulty = "Medium."
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL
@@ -88,7 +88,7 @@
 							/datum/computer_file/program/chem_catalog,
 							/datum/computer_file/program/camera_monitor)
 
-	description = "The Doctor is a professional medic and surgeon dedicated to healing the sick and injured, at all costs.<br>\
+	description = "The Medical Doctor is a professional medic and surgeon dedicated to healing the sick and injured, at all costs.<br>\
 	A broad range of medical procedures fall under your purview - diagnostics, general treatment, surgery, and virology.<br>\
 	You are not expected to be an expert in all: specialising in an area is fine. Divide tasks amongst colleagues, with CBO guidance.<br>\
 	Remember that chemistry has a dedicated specialist. Avoid this department unless it is notably short-staffed.<br>\
@@ -99,19 +99,19 @@
 		Fill in at chemistry if a Chemist is unavailable."
 
 /obj/landmark/join/start/doctor
-	name = "Soteria Doctor"
+	name = "Medical Doctor"
 	icon_state = "player-green"
 	join_tag = /datum/job/doctor
 
 /datum/job/orderly
-	title = "Soteria Orderly"
+	title = "Orderly"
 	flag = ORDERLY
 	department = DEPARTMENT_MEDICAL
 	department_flag = MEDICAL
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Biolab Overseer"
+	supervisors = "the Biolab Overseer"
 	difficulty = "Medium."
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL
@@ -147,12 +147,12 @@
 		Ensure that any outbreaks are contained, such as slimes, infected monkies, or kudzu."
 
 /obj/landmark/join/start/chemist //This says chemist so I didn't have to edit the map shit when I changed this. Fix later.
-	name = "Soteria Orderly"
+	name = "Orderly"
 	icon_state = "player-green"
 	join_tag = /datum/job/orderly
 
 /datum/job/psychiatrist
-	title = "Soteria Psychiatrist"
+	title = "Psychiatrist"
 	flag = PSYCHIATRIST
 	department = DEPARTMENT_MEDICAL
 	department_flag = MEDICAL
@@ -160,7 +160,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	wage = WAGE_PROFESSIONAL
-	supervisors = "the Soteria Biolab Overseer"
+	supervisors = "the Biolab Overseer"
 	difficulty = "Easy To Medium."
 	selection_color = "#a8b69a"
 
@@ -192,20 +192,20 @@
 		Determine if individuals are fit for work or not. Help those who are proven unfit."
 
 /obj/landmark/join/start/psychiatrist
-	name = "Soteria Psychiatrist"
+	name = "Psychiatrist"
 	icon_state = "player-green"
 	join_tag = /datum/job/psychiatrist
 
 
 /datum/job/paramedic
-	title = "Soteria Paramedic"
+	title = "Paramedic"
 	flag = PARAMEDIC
 	department = DEPARTMENT_MEDICAL
 	department_flag = MEDICAL
 	faction = MAP_FACTION
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Soteria Biolab Overseer"
+	supervisors = "the Biolab Overseer"
 	difficulty = "Medium."
 	selection_color = "#a8b69a"
 	wage = WAGE_LABOUR_HAZARD
@@ -241,7 +241,7 @@
 	Run errands for the medbay staff, act as their hands outside of the medbay."
 
 /obj/landmark/join/start/paramedic
-	name = "Soteria Paramedic"
+	name = "Paramedic"
 	icon_state = "player-green"
 	join_tag = /datum/job/paramedic
 

@@ -5,13 +5,13 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform
 	name = "vinculum cruciform"
 	icon_state = "cruciform_green"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to accept a new Novice into the Orden Hospitaller."
 	allowed_organs = list(BP_CHEST)
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
 	layer = ABOVE_MOB_LAYER
 	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
-	power = 60
-	max_power = 60
+	power = 75
+	max_power = 75
 	power_regen = 0.5
 	price_tag = 10000
 
@@ -34,7 +34,8 @@ var/list/disciples = list()
 	if(!ishuman(wearer))
 		return
 	var/mob/living/carbon/human/H = wearer
-	if(H.stat == DEAD)
+	name = "[H]'s Cruciform" //This is included here to make it obvious who a cruciform belonged to if it was surgically removed
+	if(H.stat == DEAD || H.stat == UNCONSCIOUS)
 		return
 	if(!active)
 		return
@@ -42,7 +43,6 @@ var/list/disciples = list()
 	H.adjustOxyLoss(100+rand(50))
 	if(part)
 		H.apply_damage(100+rand(75), BURN, part)
-	H.apply_effect(40+rand(20), IRRADIATE, check_protection = 0)
 	var/datum/effect/effect/system/spark_spread/s = new
 	s.set_up(3, 1, src)
 	s.start()
@@ -57,6 +57,14 @@ var/list/disciples = list()
 		return
 	..()
 	add_module(new CRUCIFORM_COMMON)
+	if(path == "tess")
+		add_module(new CRUCIFORM_TESS)
+	if(path == "lemn")
+		add_module(new CRUCIFORM_LEMN)
+	if(path == "mono")
+		add_module(new CRUCIFORM_MONO)
+	if(path == "divi")
+		add_module(new CRUCIFORM_DIVI)
 	update_data()
 	disciples |= wearer
 	return TRUE
@@ -65,6 +73,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform/deactivate()
 	if(!active || !wearer)
 		return
+	make_common()
 	disciples.Remove(wearer)
 	..()
 
@@ -141,6 +150,9 @@ var/list/disciples = list()
 
 /obj/item/weapon/implant/core_implant/cruciform/proc/make_common()
 	remove_modules(CRUCIFORM_PRIEST)
+	remove_modules(CRUCIFORM_SQUIRE)
+	remove_modules(CRUCIFORM_SERGEANT)
+	remove_modules(CRUCIFORM_KNIGHT)
 	remove_modules(CRUCIFORM_INQUISITOR)
 	remove_modules(/datum/core_module/cruciform/red_light)
 
@@ -148,27 +160,58 @@ var/list/disciples = list()
 	add_module(new CRUCIFORM_PRIEST)
 	add_module(new CRUCIFORM_REDLIGHT)
 
-/obj/item/weapon/implant/core_implant/cruciform/proc/make_inquisitor()
+/obj/item/weapon/implant/core_implant/cruciform/proc/make_squire()
+	remove_modules(CRUCIFORM_PRIEST)
 	add_module(new CRUCIFORM_PRIEST)
+	add_module(new CRUCIFORM_SQUIRE)
+	add_module(new CRUCIFORM_REDLIGHT)
+
+/obj/item/weapon/implant/core_implant/cruciform/proc/make_sergeant()
+	remove_modules(CRUCIFORM_PRIEST)
+	remove_modules(CRUCIFORM_SQUIRE)
+	add_module(new CRUCIFORM_PRIEST)
+	add_module(new CRUCIFORM_SQUIRE)
+	add_module(new CRUCIFORM_SERGEANT)
+	add_module(new CRUCIFORM_REDLIGHT)
+
+/obj/item/weapon/implant/core_implant/cruciform/proc/make_knight()
+	remove_modules(CRUCIFORM_PRIEST)
+	remove_modules(CRUCIFORM_SQUIRE)
+	remove_modules(CRUCIFORM_SERGEANT)
+	add_module(new CRUCIFORM_PRIEST)
+	add_module(new CRUCIFORM_SQUIRE)
+	add_module(new CRUCIFORM_SERGEANT)
+	add_module(new CRUCIFORM_KNIGHT)
+	add_module(new CRUCIFORM_REDLIGHT)
+
+/obj/item/weapon/implant/core_implant/cruciform/proc/make_inquisitor()
+	remove_modules(CRUCIFORM_PRIEST)
+	remove_modules(CRUCIFORM_SQUIRE)
+	remove_modules(CRUCIFORM_SERGEANT)
+	remove_modules(CRUCIFORM_KNIGHT)
+	add_module(new CRUCIFORM_PRIEST)
+	add_module(new CRUCIFORM_SQUIRE)
+	add_module(new CRUCIFORM_SERGEANT)
+	add_module(new CRUCIFORM_KNIGHT)
 	add_module(new CRUCIFORM_INQUISITOR)
-	//add_module(new /datum/core_module/cruciform/uplink())
+	add_module(new /datum/core_module/cruciform/uplink())
 	remove_modules(/datum/core_module/cruciform/red_light)
 
 //Path based cruciforms, these grant additional powers based on what path a cultist walks
 /obj/item/weapon/implant/core_implant/cruciform/tessellate
-	name = "tessellate cruciform"
+	name = "cleric cruciform"
 	icon_state = "cruciform_blue"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to accept a new Novice into the Orden Hospitaller."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/tessellate
 	power = 60
 	max_power = 60
-	power_regen = 0.8
+	power_regen = 1
 	path = "tess"
 
 /obj/item/weapon/implant/core_implant/cruciform/lemniscate
-	name = "lemniscate cruciform"
+	name = "cantor cruciform"
 	icon_state = "cruciform_red"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to accept a new Novice into the Orden Hospitaller."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/lemniscate
 	power = 50
 	max_power = 50
@@ -176,21 +219,21 @@ var/list/disciples = list()
 	path = "lemn"
 
 /obj/item/weapon/implant/core_implant/cruciform/monomial
-	name = "monomial cruciform"
+	name = "paladin cruciform"
 	icon_state = "cruciform_yellow"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to accept a new Novice into the Orden Hospitaller."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/monomial
-	power = 90
-	max_power = 90
-	power_regen = 0.1
+	power = 100
+	max_power = 100
+	power_regen = 0.25
 	path = "mono"
 
 /obj/item/weapon/implant/core_implant/cruciform/divisor
-	name = "divisor cruciform"
+	name = "templar cruciform"
 	icon_state = "cruciform_orange"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to accept a new Novice into the Orden Hospitaller."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/divisor
 	power = 50
 	max_power = 50
-	power_regen = 0.4
+	power_regen = 0.75
 	path = "divi"

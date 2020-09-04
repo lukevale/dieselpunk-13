@@ -129,7 +129,7 @@
 
 /datum/ritual/group/cruciform/crusade
 	name = "Crusade"
-	desc = "Reveal crusade litanies to disciples. Depends on participants amount."
+	desc = "Reveal crusade litanies to disciples. A Crusade should only be initiated if there is an immediate threat to the Monastery, or if a miomechanical hivemind threatens the colony."
 	phrase = "Locutus est Dominus ad Mosen dicens."
 	phrases = list(
 		"Locutus est Dominus ad Mosen dicens.",
@@ -145,7 +145,7 @@
 	effect_type = /datum/group_ritual_effect/cruciform/crusade
 
 /datum/group_ritual_effect/cruciform/crusade/success(var/mob/living/M, var/cnt)
-	if(cnt < 6)
+	if(cnt < 3)
 		return
 	var/obj/item/weapon/implant/core_implant/CI = M.get_core_implant(/obj/item/weapon/implant/core_implant/cruciform)
 	if(CI)

@@ -328,12 +328,12 @@
 		)
 
 	armor = list(
-		melee = 40,
-		bullet = 65,
-		energy = 50,
-		bomb = 70,
-		bio = 75,
-		rad = 50
+		melee = 60,
+		bullet = 70,
+		energy = 60,
+		bomb = 80,
+		bio = 100,
+		rad = 100
 	)
 	siemens_coefficient = 0.4
 	light_overlay = "helmet_light_dual"
@@ -341,16 +341,15 @@
 /obj/item/clothing/suit/space/void/assault
 	name = "assault armor"
 	icon_state = "assaultsuit"
-	desc = "A specialty import from the kriosan confederacy, usually imported by the Lonestar thanks to the companies long standing trade agreement. It costs a kings ransom, albiet for a good reason \
-	given its sturdy craftmenship and reinforced armor layers."
+	desc = "Designed by the Kriosan Kaiserreich, this armor features multiple layers of padding beneath durasteel plating. It costs a king's ransom to replace."
 	item_state = "assaultsuit"
 	armor = list(
-		melee = 50,
-		bullet = 75,
+		melee = 60,
+		bullet = 70,
 		energy = 60,
 		bomb = 80,
 		bio = 100,
-		rad = 50
+		rad = 100
 	)
 	siemens_coefficient = 0.4
 	slowdown = 0.6
@@ -358,7 +357,7 @@
 
 //Science
 /obj/item/clothing/head/space/void/medarmor
-	name = "soteria medical helmet"
+	name = "Squire Helm"
 	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
 	icon_state = "armor_medical"
 	item_state = "armor_medical"
@@ -370,30 +369,71 @@
 		)
 
 	armor = list(
-		melee = 25,
-		bullet = 30,
-		energy = 20,
-		bomb = 35,
+		melee = 40,
+		bullet = 40,
+		energy = 40,
+		bomb = 50,
 		bio = 100,
-		rad = 90
+		rad = 100
 	)
 	siemens_coefficient = 0.4
 	light_overlay = "helmet_light_dual"
 	matter = list(MATERIAL_STEEL = 10, MATERIAL_BIOMATTER = 5, MATERIAL_PLASTIC = 5, MATERIAL_GLASS = 5)
 
 /obj/item/clothing/suit/space/void/medarmor
-	name = "soteria medical void armor"
+	name = "Squire Armor"
 	icon_state = "armor_medical"
-	desc = "A suit of all purpose soteria medical void armor. Used for operations where oxygen is a rarity and protection is needed."
+	desc = "Spaceworthy search-and-rescue armor of the Orden Hospitaller. Used for operations where protection is needed."
 	item_state = "armor_medical"
 	armor = list(
-		melee = 30,
-		bullet = 35,
-		energy = 30,
-		bomb = 40,
+		melee = 40,
+		bullet = 40,
+		energy = 40,
+		bomb = 50,
 		bio = 100,
-		rad = 90
+		rad = 100
 	)
 	siemens_coefficient = 0.4
+	slowdown = 0.15
 	helmet = /obj/item/clothing/head/space/void/medarmor
+	matter = list(MATERIAL_STEEL = 40, MATERIAL_BIOMATTER = 10, MATERIAL_PLASTIC = 30, MATERIAL_GLASS = 10)
+
+/obj/item/clothing/head/space/void/medarmor/sarge
+	name = "Brother-Sergeant Helm"
+	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
+	icon_state = "armor_medical_sarge"
+	item_state = "armor_medical_sarge"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|BLOCKHAIR
+	body_parts_covered = HEAD|FACE|EARS
+	item_state_slots = list(
+		slot_l_hand_str = "assaulthelm",
+		slot_r_hand_str = "assaulthelm",
+		)
+
+	armor = list(
+		melee = 50,
+		bullet = 50,
+		energy = 50,
+		bomb = 60,
+		bio = 100,
+		rad = 100
+	)
+	siemens_coefficient = 0.4
+	matter = list(MATERIAL_STEEL = 10, MATERIAL_BIOMATTER = 5, MATERIAL_PLASTIC = 5, MATERIAL_GLASS = 5)
+
+/obj/item/clothing/suit/space/void/medarmor/sarge
+	name = "Brother-Sergeant Armor"
+	icon_state = "armor_medical_sarge"
+	desc = "Spaceworthy search-and-rescue armor of the Orden Hospitaller. This upgraded version is worn by Brother-Sergeants leading a team of Squires."
+	item_state = "armor_medical_sarge"
+	armor = list(
+		melee = 50,
+		bullet = 50,
+		energy = 50,
+		bomb = 60,
+		bio = 100,
+		rad = 100
+	)
+	siemens_coefficient = 0.4
+	helmet = /obj/item/clothing/head/space/void/medarmor/sarge
 	matter = list(MATERIAL_STEEL = 40, MATERIAL_BIOMATTER = 10, MATERIAL_PLASTIC = 30, MATERIAL_GLASS = 10)

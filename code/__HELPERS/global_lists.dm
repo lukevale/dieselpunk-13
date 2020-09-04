@@ -39,7 +39,7 @@ var/global/list/hearing_objects = list()			//list of all objects, that can hear 
 var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
 var/global/list/all_departments = list()			//List of all department datums
 var/global/list/department_IDs = list(DEPARTMENT_COMMAND, DEPARTMENT_MEDICAL, DEPARTMENT_ENGINEERING,
- DEPARTMENT_SCIENCE, DEPARTMENT_SECURITY, DEPARTMENT_LSS, DEPARTMENT_CHURCH, DEPARTMENT_CIVILIAN, DEPARTMENT_PROSPECTOR)
+ DEPARTMENT_SCIENCE, DEPARTMENT_SECURITY, DEPARTMENT_NSS, DEPARTMENT_CHURCH, DEPARTMENT_CIVILIAN, DEPARTMENT_PROSPECTOR)
 var/global/list/global_corporations = list()
 
 

@@ -1,20 +1,23 @@
+#define CRUCIFORM_TYPES list("Tessellate" = "tesselate", "Monomial" = "monomial", "Lemniscate" = "lemniscate", "Divisor" = "divisor", "No Path" = "viniculum" )
+
 /datum/ritual/cruciform/priest
 	name = "priest"
 	phrase = null
 	desc = ""
-	category = "Initiation"
+	category = "Brother Chaplain"
 
 /datum/ritual/targeted/cruciform/priest
 	name = "priest targeted"
 	phrase = null
 	desc = ""
-	category = "Initiation"
+	category = "Brother Chaplain"
 
 
 /*
 	Penance
 	Deals pain damage to a targeted disciple
 */
+/*
 /datum/ritual/targeted/cruciform/priest/penance
 	name = "Penance"
 	phrase = "Mihi vindicta \[Target human]"
@@ -53,7 +56,7 @@
 	if(index == 1 && target.address == text)
 		if(target.wearer && (target.loc && (target.locs[1] in view())))
 			return target
-
+*/
 /*
 	Convalescence
 	Heals yourself a fair amount
@@ -65,7 +68,6 @@
 	cooldown = TRUE
 	cooldown_time = 300
 	power = 35 //Healing yourself is slightly easier than healing someone else
-	category = "Vitae"
 
 /datum/ritual/cruciform/priest/selfheal/perform(mob/living/carbon/human/H, obj/item/weapon/implant/core_implant/C,list/targets)
 	to_chat(H, "<span class='info'>A sensation of relief bathes you, washing away your pain</span>")
@@ -87,7 +89,6 @@
 	cooldown = TRUE
 	cooldown_time = 300
 	power = 45
-	category = "Vitae"
 
 /datum/ritual/cruciform/priest/heal_other/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
 	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
@@ -130,13 +131,13 @@
 
 
 
-
+/*
 /datum/ritual/cruciform/priest/heal_heathen
 	name = "Divine Hymn"
 	phrase = "Ora pro nobis, qui non noverunt viam, hi sunt amissa, sed quia dilexit."
 	desc = "Heal every person who can see and hear for a small amount, even if they do not have a cruciform. Can only be done every quarter hour and requires alot of power. Using this prayer prevents other similar prayers from being used for awhile."
 	cooldown = TRUE
-	cooldown_time = 15 MINUTES
+	cooldown_time = 5 MINUTES
 	cooldown_category = "dhymn"
 	power = 50
 	category = "Vitae"
@@ -162,66 +163,18 @@
 
 /datum/ritual/cruciform/priest/heal_heathen/proc/heal_other(mob/living/carbon/human/participant)
 		to_chat(participant, "<span class='info'>A sensation of relief bathes you, washing away your some of your pain</span>")
-		participant.add_chemical_effect(CE_PAINKILLER, 15)
-		participant.adjustBruteLoss(-15)
-		participant.adjustFireLoss(-15)
-		participant.adjustToxLoss(-15)
-		participant.adjustOxyLoss(-30)
-		participant.adjustBrainLoss(-5)
+		participant.add_chemical_effect(CE_PAINKILLER, 10)
+		participant.adjustBruteLoss(-10)
+		participant.adjustFireLoss(-10)
+		participant.adjustToxLoss(-10)
+		participant.adjustOxyLoss(-20)
+		participant.adjustBrainLoss(-2.5)
 		participant.updatehealth()
-
-
-/*
-	Scrying: Remotely look through someone's eyes. Global range, useful to find fugitives or corpses
-	Uses all of your power and has a limited duration
 */
-/datum/ritual/cruciform/priest/scrying
-	name = "Scrying"
-	phrase = "Ecce ego ad te et ad caelum. Scio omnes absconditis tuis. Vos can abscondere, tu es coram me: nudus."
-	desc = "Look into the world from the eyes of another believer. Strenuous and can only be maintained for half a minute. The target will sense they are being watched, but not by whom. This prayer requires power only primes and crusaders have."
-	power = 100
-	category = "Devotion"
-
-/datum/ritual/cruciform/priest/scrying/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
-
-	if(!user.client)
-		return FALSE
-
-	var/mob/living/M = pick_disciple_global(user, TRUE)
-	if (!M)
-		return
-
-	if(user == M)
-		fail("You feel stupid.",user,C,targets)
-		return FALSE
-
-	to_chat(M, SPAN_NOTICE("You feel an odd presence in the back of your mind. A lingering sense that someone is watching you..."))
-
-	var/mob/observer/eye/god/eye = new/mob/observer/eye/god(M)
-	eye.target = M
-	eye.owner_mob = user
-	eye.owner_loc = user.loc
-	eye.owner = eye
-	user.reset_view(eye)
-
-	//After 30 seconds, your view is forced back to yourself
-	addtimer(CALLBACK(user, .mob/proc/reset_view, user), 300)
-
-	return TRUE
-
-
-/datum/ritual/targeted/cruciform/priest/god_eye/process_target(var/index, var/obj/item/weapon/implant/core_implant/target, var/text)
-	if(index == 1 && target.address == text && target.active)
-		if(target.wearer && target.wearer.stat != DEAD)
-			return target
-
-
-
-
 /datum/ritual/cruciform/priest/epiphany
 	name = "Epiphany"
 	phrase = "In nomine Patris et Filii et Spiritus sancti."
-	desc = "The Absolute's principal sacrament is a ritual of baptism and merging with cruciform. A body, relieved of clothes should be placed on Absolute's special altar."
+	desc = "This sacrament is a ritual of baptism and merging with cruciform. A body, relieved of clothes should be placed on Absolute's special altar."
 
 /datum/ritual/cruciform/priest/epiphany/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
 	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform, FALSE)
@@ -258,58 +211,37 @@
 	phrase = "Et ne inducas nos in tentationem, sed libera nos a malo"
 */
 
-/*
-/datum/ritual/cruciform/priest/reincarnation
-	name = "Reincarnation"
-	phrase = "Vetus moritur et onus hoc levaverit"
-	desc = "A reunion of a spirit with it's new body, ritual of activation of a crucifrom, lying on the body. The process requires NeoTheology's special altar on which a body stripped of clothes is to be placed."
 
-/datum/ritual/cruciform/priest/reincarnation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
+/datum/ritual/cruciform/priest/reactivation
+	name = "Reconsecration"
+	phrase = "Vetus moritur et onus hoc levaverit"
+	desc = "The ritual needed for reactivation of a cruciform that has been unwillingly separated from the body. The process requires an altar and the cruciform in question to be reattached."
+
+/datum/ritual/cruciform/priest/reactivation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
 	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform, FALSE)
 
 	if(!CI)
-		fail("There is no cruciform on this one", user, C)
+		fail("There is no cruciform on this one.", user, C)
 		return FALSE
-
-	var/datum/core_module/cruciform/cloning/data = CI.get_module(CRUCIFORM_CLONING)
 
 	if(!CI.wearer)
 		fail("Cruciform is not installed.", user, C)
 		return FALSE
 
-	if(!CI.activated)
-		fail("This cruciform doesn't have soul inside.", user, C)
-		return FALSE
-
 	if(CI.active)
-		fail("This cruciform already activated.", user, C)
+		fail("This cruciform is already consecrated.", user, C)
 		return FALSE
 
-	if(CI.wearer.stat == DEAD)
-		fail("Soul cannot move to dead body.", user, C)
+	if (CI.wearer.stat == DEAD)
+		fail("The cruciform cannot be bound to a corpse.", user, C)
 		return FALSE
 
-	var/datum/mind/MN = data.mind
-	if(!istype(MN, /datum/mind))
-		fail("Soul is lost.", user, C)
-		return FALSE
-	if(MN.active)
-		if(data.ckey != ckey(MN.key))
-			fail("Soul is lost.", user, C)
-			return FALSE
-	if(MN.current && MN.current.stat != DEAD)
-		fail("Soul is lost.", user, C)
-		return FALSE
+	log_and_message_admins("successfully reconsecrated [CI.wearer]")
+	to_chat(CI.wearer, "<span class='info'>Your cruciform vibrates and warms up.</span>")
 
-	var/succ = CI.transfer_soul()
-
-	if(!succ)
-		fail("Soul transfer failed.", user, C)
-		return FALSE
-
+	CI.activate()
 
 	return TRUE
-*/
 
 /datum/ritual/cruciform/priest/install
 	name = "Commitment"
@@ -392,10 +324,6 @@
 	var/mob/M = CI.wearer
 
 	if(ishuman(M) && M.is_dead())
-		var/mob/living/carbon/human/H = M
-		var/obj/item/organ/external/E = H.organs_by_name[BP_CHEST]
-		E.take_damage(15)
-		H.custom_pain("You feel the cruciform ripping out of your chest!",1)
 		CI.name = "[M]'s Cruciform"
 		CI.uninstall()
 		return TRUE
@@ -409,49 +337,20 @@
 		fail("Deprivation does not work upon the living.", user, C)
 		return FALSE
 
-
-/datum/ritual/cruciform/priest/unupgrade
-	name = "Asacris"
-	phrase = "A caelo usque ad centrum."
-	desc = "This litany will remove any upgrade from the target's cruciform implant. Usuable only by primes and crusaders."
-	power = 100
-	category = "Devotion"
-
-/datum/ritual/cruciform/priest/unupgrade/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
-	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
-
-	if(!CI)
-		fail("There is no cruciform on this one.", user, C)
-		return FALSE
-
-	if(!CI.wearer)
-		fail("Cruciform is not installed.", user, C)
-		return FALSE
-
-	if(!istype(CI.upgrades) || length(CI.upgrades) <= 0)
-		fail("here is no upgrades on this one.", user, C)
-		return FALSE
-
-	for(var/obj/item/weapon/coreimplant_upgrade/CU in CI.upgrades)
-		CU.remove()
-		log_and_message_admins("removed upgrade from [C] cruciform with asacris litany")
-
-	return TRUE
-
 /datum/ritual/targeted/cruciform/priest/upgrade_kit
-	name = "Curaverunt"
+	name = "Covenant"
 	phrase = "Dominus manum meam pro damnato in ovile redire voluerit."
-	desc = "Request an upgrade kit to restore a vector or prime's cruciform to its devout stage."
+	desc = "Request an upgrade kit to formally induct a Novice into the Brotherhood"
 	power = 50
 
-/datum/ritual/targeted/cruciform/priest/upgrade_kit/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
+/datum/ritual/targeted/cruciform/priest/upgrade_kit/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/CI,list/targets)
 	new /obj/item/weapon/coreimplant_upgrade/cruciform/priest(usr.loc)
 	set_personal_cooldown(user)
 
 /datum/ritual/cruciform/priest/initiation
 	name = "Initiation"
-	phrase = "Habe fiduciam in Domino ex toto corde tuo et ne innitaris prudentiae tuae, in omnibus viis tuis cogita illum et ipse diriget gressus tuos."
-	desc = "The second stage of granting a promotion to a disciple, upgrading them to a devout. The devout ascension kit is the first step."
+	phrase = "By the power vested in me as a Brother Chaplain, I hereby welcome you into the fold."
+	desc = "The second stage of granting a promotion to a Novice. The ascension kit is the first step."
 	power = 50
 
 /datum/ritual/cruciform/priest/initiation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
@@ -463,17 +362,17 @@
 
 
 	if(CI.get_module(CRUCIFORM_PRIEST) || CI.get_module(CRUCIFORM_INQUISITOR))
-		fail("The target is already a devout.",user,C)
+		fail("The target is already inducted.",user,C)
 		return FALSE
 
 	var/datum/core_module/activatable/cruciform/priest_convert/PC = CI.get_module(CRUCIFORM_PRIEST_CONVERT)
 
 	if(!PC)
-		fail("Target must have devout upgrade inside his cruciform.",user,C)
+		fail("Target must have the induction upgrade inside their cruciform.",user,C)
 		return FALSE
 
 	PC.activate()
-	log_and_message_admins("promoted disciple [C] to devout with initiation litany")
+	log_and_message_admins("promoted disciple [C] to Brother Chaplain with initiation litany")
 
 	return TRUE
 
@@ -572,6 +471,7 @@
 	phrase = "Cor meum et caro mea, potest deficere, sed non in viribus Deus cordis mei et pars mea Deus in aeternum."
 	stats_to_boost = list(STAT_VIG = 10)
 
+/*
 /datum/ritual/targeted/cruciform/priest/atonement
 	name = "Atonement"
 	phrase = "Piaculo sit \[Target human]!"
@@ -609,7 +509,7 @@
 	if(index == 1 && target.address == text)
 		if(target.wearer && (target.loc && (target.locs[1] in view())))
 			return target
-
+*/
 /datum/ritual/cruciform/priest/records
 	name = "Baptismal Record"
 	phrase = "Memento nomina..."
@@ -633,7 +533,7 @@
 /datum/ritual/cruciform/priest/new_cruciform
 	name = "Prayer of Reunion"
 	phrase = "Ego enim scio cogitationes quas cogito super vos, ait Dominus Deus: Non est nocere consilia, ut bene sit tibi, et tu non adflictionis ut dem vobis finem et patientiam."
-	desc = "Request a new vinculum cruciform in the event someone wishes to join the fold or the one they had was destroyed. Requires the speaker to stand next to an altar. If the person followed a path, they'll need to wait return to the lower colony or wait until after the shift is over to be fully upgraded again."
+	desc = "Request a new cruciform in the event someone wishes to join the fold or the one they had was lost or destroyed."
 	power = 50
 	success_message = "On the verge of audibility you hear pleasant music, the alter slides open and a new cruciform slips out."
 
@@ -647,5 +547,26 @@
 		return FALSE
 
 	if(altar)
-		new /obj/item/weapon/implant/core_implant/cruciform(altar.loc)
-	return TRUE
+		var/response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","Lemniscate","Tessellate","Next Page")
+		if (response == "Lemniscate")
+			new /obj/item/weapon/implant/core_implant/cruciform/lemniscate(altar.loc)
+			return TRUE
+		if (response == "Tessellate")
+			new /obj/item/weapon/implant/core_implant/cruciform/tessellate(altar.loc)
+			return TRUE
+		if (response == "Next Page")
+			response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","Monomial","Divisor","Next Page")
+		if (response == "Monomial")
+			new /obj/item/weapon/implant/core_implant/cruciform/monomial(altar.loc)
+			return TRUE
+		if (response == "Divisor")
+			new /obj/item/weapon/implant/core_implant/cruciform/divisor(altar.loc)
+			return TRUE
+		if (response == "Next Page")
+			response = alert(user, "Which path should this cruciform be dedicated to?","Choose a cruciform path.","No Path","Cancel Litany")
+		if (response == "No Path")
+			new /obj/item/weapon/implant/core_implant/cruciform(altar.loc)
+			return TRUE
+		if (response == "Cancel Litany")
+			fail("You decide not to retrive a cruciform at this time.", user, C)
+			return FALSE

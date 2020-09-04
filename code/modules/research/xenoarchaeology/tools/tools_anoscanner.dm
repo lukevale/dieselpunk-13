@@ -73,7 +73,7 @@
 	cur_turf.visible_message("<span class='info'>[src] clicks.</span>")
 
 
-//Putting these here because they an be found through digging in anomalies later on. Plus I can't be arsed to make new files for single devices.
+//Putting these here because they can be found through digging in anomalies later on. Plus I can't be arsed to make new files for single devices.
 /obj/item/biosyphon
 	name = "Biosiphon Anomaly"
 	desc = "An exceedingly rare bluespace anomaly discovered by a marshal ranger outside the colony. After weeks of study it was discovered its only purpose was duplicating boxes of donuts. \
@@ -431,7 +431,7 @@
 
 /obj/item/weapon/tool/sword/crusader/nt_sword
 	name = "Joyeuse"
-	desc = "A sword made out of an unknown alloy, humming from an unknown power source."
+	desc = "A two-handed sword made out of an unknown alloy, humming from an unknown power source, wielded exclusively by Confessors and Knight-Commanders of the Orden Hospitaller"
 	icon = 'icons/obj/device.dmi'
 	icon_state = "nt_sword"
 	item_state = "nt_sword"
@@ -439,8 +439,13 @@
 	origin_tech = list(TECH_COMBAT = 9, TECH_POWER = 9, TECH_MATERIAL = 9)
 	price_tag = 20000
 	degradation = 0
-	var/flash_cooldown = 1 MINUTES
+	var/flash_cooldown = 30 SECONDS
 	var/last_use = 0
+
+/obj/item/weapon/tool/sword/crusader/nt_sword/knight
+	name = "Hospitaller flamberge"
+	desc = "A two-handed sword made out of durasteel alloy, with a psionic emitter powered by an atomic battery. Typically carried by a Brother-Knight (Lieutenant) of the Orden Hospitaller"
+	flash_cooldown = 1 MINUTES
 
 /obj/item/weapon/tool/sword/crusader/nt_sword/wield(mob/living/user)
 	..()

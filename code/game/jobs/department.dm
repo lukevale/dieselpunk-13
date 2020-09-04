@@ -51,7 +51,7 @@
 	Command
 **************/
 /datum/department/command
-	name = "Nadezhda Council"
+	name = "Nadezhda City Council"
 	id = DEPARTMENT_COMMAND
 	/*
 	The command account is the ship account. It is the master account that retainer departments are paid from,
@@ -70,7 +70,7 @@
 **************/
 //These departments are paid out of ship funding
 /datum/department/ironhammer
-	name = "Marshal and Blackshield Division"
+	name = "Nadezhda Black Guard"
 	id = DEPARTMENT_SECURITY
 	account_initial_balance = 5000
 
@@ -91,23 +91,23 @@
 *******************/
 //Departments subsidised by an external organisation. These pay their own employees
 /datum/department/moebius_medical
-	name = "Soteria Institution: Medical Division"
+	name = "Nadezhda State Research Academy: Medical Division"
 	id = DEPARTMENT_MEDICAL
 	funding_type = FUNDING_EXTERNAL
 	funding_source = "Soteria Institution."
 
 /datum/department/moebius_research
-	name = "Soteria Institution: Research Division"
+	name = "Nadezhda State Research Academy: Science Division"
 	id = DEPARTMENT_SCIENCE
 	account_budget = 5000 //For buying materials and components and things of scientific value
 	funding_type = FUNDING_EXTERNAL
 	funding_source = "Soteria Institution."
 
 /datum/department/church
-	name = "Church of Absolute"
+	name = "Orden Hospitaller"
 	id = DEPARTMENT_CHURCH
 	funding_type = FUNDING_EXTERNAL
-	funding_source = "Church of Absolute"
+	funding_source = "Orden Hospitaller"
 
 
 
@@ -116,8 +116,8 @@
 *******************/
 //Self funds and pays wages out of its earnings
 /datum/department/guild
-	name = "Lonestar Shipping Solutions"
-	id = DEPARTMENT_LSS
+	name = "Nadezhda Shipping & Solutions"
+	id = DEPARTMENT_NSS
 
 	/*
 		The LSS account represents the holdings of the local branch, and CEO.
@@ -125,10 +125,13 @@
 	*/
 	account_initial_balance = 15000
 	funding_type = FUNDING_EXTERNAL
+	account_budget = 2500
+	funding_source = "NSS Subsidiaries"
 
 /datum/department/prospector
 	name = "Prospectors"
 	id = DEPARTMENT_PROSPECTOR
 	account_initial_balance = 7500
-	funding_type = FUNDING_NONE
-
+	funding_type = FUNDING_EXTERNAL
+	account_budget = 2500
+	funding_source = "NSS Subsidiaries"

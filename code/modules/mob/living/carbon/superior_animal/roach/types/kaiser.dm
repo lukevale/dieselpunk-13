@@ -55,10 +55,6 @@ Has ability of every roach.
 	if(can_call_reinforcements())
 		distress_call()
 
-	gas_sac.add_reagent("blattedin", 1)
-	if(prob(7))
-		gas_attack()
-
 
 // TOXIC ABILITIES
 /mob/living/carbon/superior_animal/roach/kaiser/UnarmedAttack(atom/A, proximity)
@@ -73,9 +69,6 @@ Has ability of every roach.
 			L.visible_message(SPAN_DANGER("\the [src] globs up some toxic bile all over \the [L]!"))
 
 // SUPPORT ABILITIES
-/mob/living/carbon/superior_animal/roach/kaiser/proc/gas_attack()
-	if (!gas_sac.has_reagent("blattedin", 20) || stat != CONSCIOUS)
-		return
 
 	var/location = get_turf(src)
 	var/datum/effect/effect/system/smoke_spread/chem/S = new
@@ -130,7 +123,7 @@ Has ability of every roach.
 /mob/living/carbon/superior_animal/roach/kaiser/try_tame(var/mob/living/carbon/user, var/obj/item/weapon/reagent_containers/food/snacks/grown/thefood)
 	if(!istype(thefood))
 		return FALSE
-	if(prob(40))
+	if(prob(20))
 		// TODO: Make Kaiser bite user's arm off here.
 		visible_message("[src] hesitates for a moment... and then charges at [user]!")
 		return FALSE //Sometimes roach just be like that

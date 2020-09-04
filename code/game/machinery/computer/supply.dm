@@ -63,13 +63,13 @@
 
 		if(!requestonly)
 			dat += "<HR>\n"
-			dat += "<b>One-Star Credits: [get_account_credits(department_accounts[DEPARTMENT_LSS])][CREDS]</b><BR><BR>"
+			dat += "<b>Credits: [get_account_credits(department_accounts[DEPARTMENT_NSS])][CREDS]</b><BR><BR>"
 
 		dat += "<A href='?src=\ref[src];order=categories'>[requestonly ? "Request" : "Order"] items</A><BR>"
 
 		if(!requestonly)
 			dat += "<A href='?src=\ref[src];viewmes=1'>View messages</A><BR>"
-			dat += "<A href='?src=\ref[src];viewaccount=\ref[department_accounts[DEPARTMENT_LSS]]'>View banking data</A><BR>"
+			dat += "<A href='?src=\ref[src];viewaccount=\ref[department_accounts[DEPARTMENT_NSS]]'>View banking data</A><BR>"
 
 		dat += {"
 		<A href='?src=\ref[src];viewrequests=1'>View requests</A><BR>
@@ -94,7 +94,7 @@
 	if(..())
 		return TRUE
 
-	var/datum/money_account/supply_account = department_accounts[DEPARTMENT_LSS]
+	var/datum/money_account/supply_account = department_accounts[DEPARTMENT_NSS]
 
 	if(isturf(loc) && ( in_range(src, usr) || issilicon(usr) ) )
 		usr.set_machine(src)
@@ -165,7 +165,7 @@
 		if(requestonly)
 			temp = ""
 		else
-			temp = "<b>Guild Credits: [get_account_credits(supply_account)][CREDS]</b><BR>"
+			temp = "<b>Credits: [get_account_credits(supply_account)][CREDS]</b><BR>"
 
 		if(href_list["order"] == "categories")
 			//all_supply_groups

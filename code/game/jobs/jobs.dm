@@ -6,7 +6,7 @@ var/const/CIVILIAN          =(1<<4)
 var/const/COMMAND           =(1<<5)
 var/const/MISC              =(1<<6)
 var/const/SERVICE           =(1<<7)
-var/const/LSS	            =(1<<8)
+var/const/NSS	            =(1<<8)
 var/const/CHURCH           	=(1<<9)
 var/const/PROSPECTORS		=(1<<10)
 
@@ -25,6 +25,7 @@ var/const/CYBORG			=(1<<9)
 var/const/SWO				=(1<<10)
 var/const/OFFICER			=(1<<11)
 var/const/SERG				=(1<<12)
+var/const/SCOUT				=(1<<13)
 
 
 var/const/MEDSCI			=(1<<1)
@@ -52,12 +53,14 @@ var/const/BOTANIST			=(1<<9)
 var/const/FOREMAN			=(1<<10)
 var/const/SALVAGER			=(1<<11)
 var/const/PROSPECTOR		=(1<<12)
+var/const/MANAGER			=(1<<13)
 
 
-
-var/const/CHAPLAIN			=(1<<0)
-var/const/ACOLYTE			=(1<<1)
-
+var/const/CONFESSOR			=(1<<0)
+var/const/BROKNIGHT			=(1<<1)
+var/const/CHAPLAIN			=(1<<2)
+var/const/BROSARGE			=(1<<3)
+var/const/BROCORP			=(1<<4)
 
 var/list/assistant_occupations = list()
 
@@ -75,9 +78,6 @@ var/list/science_positions = list(JOBS_SCIENCE)
 
 //BS12 EDIT
 var/list/cargo_positions = list(JOBS_CARGO)
-
-
-var/list/prospector_positions = list(JOBS_PROSPECTOR)
 
 
 var/list/church_positions = list(JOBS_CHURCH)

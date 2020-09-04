@@ -25,7 +25,6 @@
 
 
 /*
-/*
 	Penance
 	Deals pain damage to a targeted disciple
 */
@@ -33,7 +32,7 @@
 	name = "Penance"
 	phrase = "Mihi vindicta \[Target human]"
 	desc = "Imparts extreme pain on the target disciple. Does no actual harm."
-	power = 35
+	power = 100
 
 /datum/ritual/targeted/cruciform/inquisitor/penance/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
 	if(!targets.len)
@@ -57,7 +56,7 @@
 	s.set_up(1, 1, M.loc)
 	s.start()
 
-	M.apply_effect(50, AGONY, 0)
+	M.apply_effect(150, AGONY, 0)
 
 	return TRUE
 
@@ -66,7 +65,7 @@
 	if(index == 1 && target.address == text)
 		if(target.wearer && (target.loc && (target.locs[1] in view())))
 			return target
-*/
+
 
 
 /*
@@ -101,89 +100,6 @@
 
 	return TRUE
 */
-
-
-
-
-/*
-	Convalescence
-	Heals yourself a fair amount
-*/
-
-/*
-/datum/ritual/cruciform/inquisitor/selfheal
-	name = "Convalescence"
-	phrase = "Dominus autem dirigat corda vestra in caritate Dei et patientia Christi"
-	desc = "Recover from the ravages of wounds and pain."
-	cooldown = TRUE
-	cooldown_time = 100
-	power = 25 //Healing yourself is slightly easier than healing someone else
-
-/datum/ritual/cruciform/inquisitor/selfheal/perform(mob/living/carbon/human/H, obj/item/weapon/implant/core_implant/C,list/targets)
-	to_chat(H, "<span class='info'>A sensation of relief bathes you, washing away your pain</span>")
-	log_and_message_admins("healed himself with convalescence litany")
-	H.add_chemical_effect(CE_PAINKILLER, 20)
-	H.adjustBruteLoss(-30)
-	H.adjustFireLoss(-30)
-	H.adjustToxLoss(-40)
-	H.adjustOxyLoss(-40)
-	H.updatehealth()
-	set_personal_cooldown(H)
-	return TRUE
-
-
-
-/*
-	Succour
-	Heals another person, quite powerfully. Only works on NT disciples
-*/
-/datum/ritual/cruciform/inquisitor/heal_other
-	name = "Succour"
-	phrase = "Venite ad me, omnes qui laboratis, et onerati estis et ego reficiam vos"
-	desc = "Heal a nearby disciple"
-	cooldown = TRUE
-	cooldown_time = 100
-	power = 35
-
-/datum/ritual/cruciform/inquisitor/heal_other/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
-	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
-
-	if(!CI || !CI.active || !CI.wearer)
-		fail("Cruciform not found.", user, C)
-		return FALSE
-
-
-
-	var/mob/living/carbon/human/H = CI.wearer
-
-	if(!istype(H))
-		fail("Target not found.",user,C,targets)
-		return FALSE
-
-	//Checking turfs allows this to be done in unusual circumstances, like if both are inside the same mecha
-	var/turf/T = get_turf(user)
-	if (!(T.Adjacent(get_turf(H))))
-		to_chat(user, SPAN_DANGER("[H] is beyond your reach.."))
-		return
-
-
-	user.visible_message("[user] places their hands upon [H] and utters a prayer", "You lay your hands upon [H] and begin speaking the words of convalescence")
-	if (do_after(user, 40, H, TRUE))
-		T = get_turf(user)
-		if (!(T.Adjacent(get_turf(H))))
-			to_chat(user, SPAN_DANGER("[H] is beyond your reach.."))
-			return
-		log_and_message_admins(" healed [CI.wearer] with Succour litany")
-		to_chat(H, "<span class='info'>A sensation of relief bathes you, washing away your pain</span>")
-		H.add_chemical_effect(CE_PAINKILLER, 20)
-		H.adjustBruteLoss(-30)
-		H.adjustFireLoss(-30)
-		H.adjustToxLoss(-40)
-		H.adjustOxyLoss(-40)
-		H.updatehealth()
-		set_personal_cooldown(user)
-		return TRUE
-
 
 /*
 	Scrying: Remotely look through someone's eyes. Global range, useful to find fugitives or corpses
@@ -228,40 +144,9 @@
 		if(target.wearer && target.wearer.stat != DEAD)
 			return target
 
-
-
-/*
-	Sends a telepathic message to any disciple
-*/
-/datum/ritual/cruciform/inquisitor/message
-	name = "Sending"
-	phrase = "Audit, me audit vocationem. Ego nuntius vobis."
-	desc = "Send a message anonymously through the void, straight into the mind of another disciple"
-	power = 30
-
-/datum/ritual/cruciform/inquisitor/message/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
-	var/mob/living/carbon/human/H = pick_disciple_global(user, TRUE)
-	if (!H)
-		return
-
-	if(user == H)
-		fail("You feel stupid.",user,C,targets)
-		return FALSE
-
-	var/text = input(user, "What message will you send to the target? The message will be recieved telepathically and they will not know who it is from unless you reveal yourself.", "Sending a message") as (text|null)
-	if (!text)
-		return
-	log_and_message_admins("sent a message to [H] with text \"[text]\"")
-	to_chat(H, "<span class='notice'>A voice speaks in your mind: \"[text]\"</span>")
-
-
-
-
-
-
 /datum/ritual/cruciform/inquisitor/initiation
 	name = "Initiation"
-	phrase = "Habe fiduciam in Domino ex toto corde tuo et ne innitaris prudentiae tuae, in omnibus viis tuis cogita illum et ipse diriget gressus tuos"
+	phrase = "By the powers vested in me as a Confessor, I declare you to have risen in station."
 	desc = "The second stage of granting a field promotion to a disciple, upgrading them to Prime. The Prime ascension kit is the first step."
 	power = 100
 
@@ -273,22 +158,71 @@
 		return FALSE
 
 
-	if(CI.get_module(CRUCIFORM_PRIEST) || CI.get_module(CRUCIFORM_INQUISITOR))
-		fail("The target is already a preacher.",user,C)
+	if(CI.get_module(CRUCIFORM_INQUISITOR))
+		fail("You cannot promote above your station",user,C)
 		return FALSE
 
 	var/datum/core_module/activatable/cruciform/priest_convert/PC = CI.get_module(CRUCIFORM_PRIEST_CONVERT)
+	var/datum/core_module/activatable/cruciform/priest_convert/SC = CI.get_module(CRUCIFORM_SQUIRE_CONVERT)
+	var/datum/core_module/activatable/cruciform/priest_convert/SGC = CI.get_module(CRUCIFORM_SERGEANT_CONVERT)
+	var/datum/core_module/activatable/cruciform/priest_convert/KC = CI.get_module(CRUCIFORM_KNIGHT_CONVERT)
 
-	if(!PC)
-		fail("Target must have preacher upgrade inside his cruciform.",user,C)
-		return FALSE
+	if(PC && !CI.get_module(CRUCIFORM_PRIEST))
+		PC.activate()
+		log_and_message_admins("promoted disciple [C] to Brother Chaplain with initiation litany")
+		user.say("Arise, Brother Chaplain")
+		return TRUE
+	if(SC && !CI.get_module(CRUCIFORM_SQUIRE))
+		SC.activate()
+		log_and_message_admins("promoted disciple [C] to Brother-Corporal with initiation litany")
+		user.say("Arise, Brother-Corporal")
+		return TRUE
+	if(SGC && !CI.get_module(CRUCIFORM_SERGEANT))
+		SGC.activate()
+		log_and_message_admins("promoted disciple [C] to Brother-Sergeant with initiation litany")
+		return TRUE
+	if(KC && !CI.get_module(CRUCIFORM_SQUIRE))
+		KC.activate()
+		log_and_message_admins("promoted disciple [C] to Brother-Knight with initiation litany")
+		return TRUE
 
-	PC.activate()
-	log_and_message_admins("promoted disciple [C] to Preacher with initiation litany")
+	fail("Target must have an upgrade inside their cruciform.",user,C)
+	return FALSE
+
+	log_and_message_admins("promoted disciple [C] with initiation litany")
 
 	return TRUE
 
+/datum/ritual/cruciform/inquisitor/unupgrade
+	name = "Asacris"
+	phrase = "A caelo usque ad centrum."
+	desc = "This litany will remove any upgrade from the target's cruciform implant. Useable only by Knights and Confessors"
+	power = 100
+	category = "Brother-Knight"
 
+/datum/ritual/cruciform/inquisitor/unupgrade/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
+	var/obj/item/weapon/implant/core_implant/cruciform/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
+
+	if(!CI)
+		fail("There is no cruciform on this one.", user, C)
+		return FALSE
+
+	if(!CI.wearer)
+		fail("Cruciform is not installed.", user, C)
+		return FALSE
+
+	if(!istype(CI.upgrades) || length(CI.upgrades) <= 0)
+		fail("There are no upgrades on this one.", user, C)
+		return FALSE
+
+	if(CI.get_module(CRUCIFORM_INQUISITOR))
+		fail("You cannot Asacrate a fellow Confessor", user, C)
+
+	for(var/obj/item/weapon/coreimplant_upgrade/CU in CI.upgrades)
+		CU.remove()
+		log_and_message_admins("removed upgrades from [C] cruciform with asacris litany")
+
+	return TRUE
 
 /datum/ritual/cruciform/inquisitor/check_telecrystals
 	name = "Knowledge"
@@ -306,7 +240,6 @@
 	else
 		to_chat(user, "<span class='info'>You have no uplink.</span>")
 		return FALSE
-*/
 
 
 /datum/ritual/cruciform/inquisitor/brotherhood
@@ -361,42 +294,44 @@
 	cooldown_category = "flash"
 
 /datum/ritual/cruciform/inquisitor/flash/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
-	if(prob(100 - user.stats.getStat(STAT_VIG)))
-		user.Weaken(10)
-		to_chat(user, SPAN_WARNING("The flux of psy-energy knocks over you!"))
-	else
-		to_chat(user, SPAN_NOTICE("The flux of psy-energy washed your mind, but you managed to keep focused!"))
-	playsound(user.loc, 'sound/effects/cascade.ogg', 65, 1)
 	for(var/mob/living/carbon/human/victim in view(user))
 		if(!victim.get_core_implant(/obj/item/weapon/implant/core_implant/cruciform))
 			if(prob(100 - victim.stats.getStat(STAT_VIG)))
 				to_chat(victim, SPAN_WARNING("You feel that your knees bends!"))
-				victim.Weaken(5)
+				victim.Weaken(10)
 			else
 				to_chat(victim, SPAN_NOTICE("Your legs feel numb, but you managed to stay on your feet!"))
 	set_personal_cooldown(user)
 	return TRUE
 
 
+/datum/ritual/targeted/cruciform/inquisitor/useuplink
+	name = "Bounty"
+	phrase = "Supra Domini, bona de te peto. Audi me, et libera vocationem ad me munera tua"
+	desc = "Request supplies and items from headquarters. Find a private place to do this. Establishing the connection takes a lot of power."
+	power = 100
+
+/datum/ritual/targeted/cruciform/inquisitor/useuplink/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
+	var/datum/core_module/cruciform/uplink/I = C.get_module(CRUCIFORM_UPLINK)
+
+	if(I && I.uplink)
+		I.uplink.trigger(user)
+
+		return TRUE
+	return FALSE
+
 
 /*
-	Opens the interface for the embedded Uplink, allowing stuff to be purchased
-	Uses all your power, so you can't use abilities for a couple minutes
+	This is used when an Inquisitor or Knight-Commander promotes someone to the Brother-Knight rank.
 */
 /datum/ritual/targeted/cruciform/inquisitor/spawn_item
 	name = "Litany of Armaments"
 	phrase = "Supra Domini, bona de te peto. Audi me, et libera vocationem ad me munera tua."
-	desc = "Request a greatsword and tower shield from the church armory to become a real crusader. Establishing the connection takes a lot of power and this litany may only be used once every hour."
-	power = 100
-	cooldown = TRUE
-	cooldown_time = 60 MINUTES
-	cooldown_category = "armaments"
+	desc = "Summons a Hospitaller Flamberge, with which to arm newly inducted Knights."
+	power = 50
+	cooldown = FALSE
 
 
 /datum/ritual/targeted/cruciform/inquisitor/spawn_item/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
-	new /obj/item/weapon/tool/sword/crusader(usr.loc)
-	new /obj/item/clothing/accessory/holster/saber/greatsword(usr.loc)
-	new /obj/item/weapon/shield/riot/crusader(usr.loc)
-	new /obj/item/weapon/storage/belt/security/neotheology(usr.loc)
-	set_personal_cooldown(user)
-
+	new /obj/item/weapon/storage/pouch/nt_sheath(usr.loc)
+	new /obj/item/weapon/tool/sword/crusader/nt_sword/knight(usr.loc)

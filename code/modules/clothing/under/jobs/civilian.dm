@@ -51,14 +51,14 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/rank/preacher
-	desc = "A dark ceremonial robe tailored for primes."
-	name = "prime's robe"
+	desc = "A dark uniform tailored for the Orden Hospitaller's Knighthood."
+	name = "Chaplain's vestments"
 	icon_state = "preacher"
 	item_state = "w_suit"
 
 /obj/item/clothing/under/rank/acolyte
-	desc = "Ceremonial garb of the Absolute's vectors."
-	name = "vector's vestments"
+	desc = "Ceremonial garb of the Orden Hospitaller Chaplaincy."
+	name = "Chaplain's vestments"
 	icon_state = "acolyte"
 	item_state = "acolyte"
 

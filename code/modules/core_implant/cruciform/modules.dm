@@ -25,9 +25,9 @@
 /*
 	Traitor uplink hidden inside cruciform. Used for inquisitors and maybe other NT antags
 */
-/*
+
 /datum/core_module/cruciform/uplink
-	var/telecrystals = 15
+	var/telecrystals = 0
 	var/obj/item/device/uplink/hidden/uplink
 
 /datum/core_module/cruciform/uplink/install()
@@ -49,7 +49,7 @@
 	telecrystals = uplink.uses
 	implant.hidden_uplink = null
 	QDEL_NULL(uplink)
-*/
+
 
 
 
@@ -122,9 +122,35 @@
 	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
 	C.make_common()
 
+/datum/core_module/activatable/cruciform/squire_convert/activate()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_priest()
 
+/datum/core_module/activatable/cruciform/squire_convert/uninstall()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_common()
 
+/datum/core_module/activatable/cruciform/sergeant_convert/activate()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_priest()
 
+/datum/core_module/activatable/cruciform/sergeant_convert/uninstall()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_common()
+
+/datum/core_module/activatable/cruciform/knight_convert/activate()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_priest()
+
+/datum/core_module/activatable/cruciform/knight_convert/uninstall()
+	..()
+	var/obj/item/weapon/implant/core_implant/cruciform/C = implant
+	C.make_common()
 
 /datum/core_module/activatable/cruciform/obey_activator/set_up()
 	module = new CRUCIFORM_OBEY
@@ -168,7 +194,50 @@
 	ritual_types = list(/datum/ritual/cruciform/priest,
 	/datum/ritual/targeted/cruciform/priest)
 
+/datum/core_module/rituals/cruciform/squire
+	ritual_types = list(/datum/ritual/cruciform/squire,
+	/datum/ritual/targeted/cruciform/squire)
 
+/datum/core_module/rituals/cruciform/squire/install()
+	..()
+	implant.max_power += 50
+	implant.power_regen += 0.5
+
+
+/datum/core_module/rituals/cruciform/squire/uninstall()
+	..()
+	implant.max_power -= 50
+	implant.power_regen -= 0.5
+
+/datum/core_module/rituals/cruciform/sergeant
+	ritual_types = list(/datum/ritual/cruciform/sergeant,
+	/datum/ritual/targeted/cruciform/sergeant)
+
+/datum/core_module/rituals/cruciform/sergeant/install()
+	..()
+	implant.max_power += 50
+	implant.power_regen += 0.5
+
+
+/datum/core_module/rituals/cruciform/sergeant/uninstall()
+	..()
+	implant.max_power -= 50
+	implant.power_regen -= 0.5
+
+/datum/core_module/rituals/cruciform/knight
+	ritual_types = list(/datum/ritual/cruciform/knight,
+	/datum/ritual/targeted/cruciform/knight)
+
+/datum/core_module/rituals/cruciform/knight/install()
+	..()
+	implant.max_power += 50
+	implant.power_regen += 0.5
+
+
+/datum/core_module/rituals/cruciform/knight/uninstall()
+	..()
+	implant.max_power -= 50
+	implant.power_regen -= 0.5
 
 /datum/core_module/rituals/cruciform/inquisitor
 	access = list(access_nt_inquisitor)

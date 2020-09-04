@@ -1,12 +1,12 @@
 /datum/job/clubmanager
 	title = "Bartender"
 	flag = CLUBMANAGER
-	department = DEPARTMENT_LSS
-	department_flag = LSS
+	department = DEPARTMENT_NSS
+	department_flag = NSS
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
+	supervisors = "the Resource Officer"
 	difficulty = "Easy."
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen)
@@ -19,7 +19,7 @@
 	)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/bartender //Re-using this.
-	description = "The Bartender runs the colony bar, providing colonists with drinks and entertainment.<br>\
+	description = "The Bartender runs the city's bar, providing colonists with drinks and entertainment.<br>\
 	Working with the Chef and Gardener, you make the big decisions. Run your business well - perhaps seek to maximise profits.<br>\
 	Although tips are a good source of income, your wider business acumen will truly decide your prosperity here."
 
@@ -35,12 +35,12 @@
 /datum/job/clubworker
 	title = "Chef"
 	flag = CLUBWORKER
-	department = DEPARTMENT_LSS
-	department_flag = LSS
+	department = DEPARTMENT_NSS
+	department_flag = NSS
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
+	supervisors = "the Resource Officer"
 	difficulty = "Easy."
 	selection_color = "#dddddd"
 	access = list(access_hydroponics, access_bar, access_kitchen)
@@ -70,12 +70,12 @@
 /datum/job/hydro
 	title = "Gardener"
 	flag = BOTANIST
-	department = DEPARTMENT_LSS
-	department_flag = LSS
+	department = DEPARTMENT_NSS
+	department_flag = NSS
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
+	supervisors = "the Resource Officer"
 	difficulty = "Easy."
 	selection_color = "#dddddd"
 	//alt_titles = list("Hydroponicist")
@@ -107,12 +107,12 @@
 /datum/job/actor
 	title = "Actor"
 	flag = ACTOR
-	department = DEPARTMENT_LSS
-	department_flag = LSS
+	department = DEPARTMENT_NSS
+	department_flag = NSS
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
+	supervisors = "the Resource Officer"
 	difficulty = "Easy."
 	selection_color = "#dddddd"
 	access = list(access_theatre)
@@ -135,40 +135,3 @@
 	name = "Actor"
 	icon_state = "player-grey"
 	join_tag = /datum/job/actor
-
-/datum/job/janitor
-	title = "Janitor"
-	flag = JANITOR
-	department = DEPARTMENT_LSS
-	department_flag = LSS
-	faction = MAP_FACTION
-	total_positions = 2
-	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
-	difficulty = "Easy."
-	selection_color = "#dddddd"
-	//alt_titles = list("Custodian","Sanitation Technician")
-	access = list(access_janitor, access_maint_tunnels, access_morgue, access_crematorium, access_mailsorting, access_cargo)
-	wage = WAGE_PROFESSIONAL
-	outfit_type = /decl/hierarchy/outfit/job/service/janitor
-
-	stat_modifiers = list(
-		STAT_ROB = 10,
-		STAT_BIO = 10,
-	)
-
-	software_on_spawn = list(/datum/computer_file/program/camera_monitor)
-	description = "The lowly Janitor, well paid but rarely respected, nevertheless provides a valuable service.<br>\
-	You will trundle around the colony, armed with your trusty janicart full of cleaning supplies, disposing of trash and pests.<br>\
-	Some minor maintenance also falls within your duties. Fix lights, correct broken vendors, replace floor tiles - ease the guild burden.<br>\
-	Although your wage is miserable, your knowledge of maintenance may lead you to some valuable salvage for some extra cash."
-
-	duties = "Clean blood, dirt, rubble and messes. Don't clean up crime scenes!<br>\
-		Conduct minor repairs and maintenance when guild adepts aren't available.<br>\
-		Deploy traps on burrows and do your best to handle the ongoing roach and spider problem."
-
-/obj/landmark/join/start/janitor
-	name = "Janitor"
-	icon_state = "player-black"
-	join_tag = /datum/job/janitor
-

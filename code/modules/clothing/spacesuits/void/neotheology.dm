@@ -12,8 +12,8 @@
 	)
 
 /obj/item/clothing/suit/space/void/acolyte
-	name = "vector armor"
-	desc = "Worn, heavy, steadfast in the name of God."
+	name = "Brother-Chaplain Armor"
+	desc = "The armor worn by "
 	icon_state = "acolyte"
 	slowdown = 0.15
 	armor = list(
@@ -55,7 +55,7 @@
 	helmet = /obj/item/clothing/head/helmet/space/void/agrolyte
 
 /obj/item/clothing/head/helmet/space/void/custodian
-	name = "custodian helmet"
+	name = "Custodian helmet"
 	desc = "Cleaning floors is more dangerous than it looks."
 	icon_state = "custodian"
 	armor = list(
@@ -69,7 +69,7 @@
 	unacidable = TRUE
 
 /obj/item/clothing/suit/space/void/custodian
-	name = "custodian armor"
+	name = "Custodian armor"
 	desc = "Someone's gotta clean this mess."
 	icon_state = "custodian"
 	slowdown = 0.05
@@ -85,28 +85,28 @@
 	helmet = /obj/item/clothing/head/helmet/space/void/custodian
 
 /obj/item/clothing/head/helmet/space/void/prime
-	name = "prime hood"
+	name = "Brother-Knight Helm"
 	desc = "A visored helmet with a cloth hood covering it."
 	icon_state = "prime"
 	armor = list(
-		melee = 40,
-		bullet = 40,
-		energy = 40,
-		bomb = 50,
+		melee = 60,
+		bullet = 60,
+		energy = 60,
+		bomb = 80,
 		bio = 100,
 		rad = 100
 	)
 
 /obj/item/clothing/suit/space/void/prime
-	name = "prime armor"
-	desc = "Trust in god but keep your armor on."
+	name = "Brother-Knight Armor"
+	desc = "Armor of the Orden Hospitaller's chamber militant"
 	icon_state = "prime"
 	slowdown = 0.15
 	armor = list(
-		melee = 40,
-		bullet = 40,
-		energy = 40,
-		bomb = 50,
+		melee = 60,
+		bullet = 60,
+		energy = 60,
+		bomb = 80,
 		bio = 100,
 		rad = 100
 	)

@@ -195,6 +195,9 @@
 //Cruciform
 #define CRUCIFORM_COMMON /datum/core_module/rituals/cruciform/base
 #define CRUCIFORM_PRIEST /datum/core_module/rituals/cruciform/priest
+#define CRUCIFORM_SQUIRE /datum/core_module/rituals/cruciform/squire
+#define CRUCIFORM_SERGEANT /datum/core_module/rituals/cruciform/sergeant
+#define CRUCIFORM_KNIGHT /datum/core_module/rituals/cruciform/knight
 #define CRUCIFORM_INQUISITOR /datum/core_module/rituals/cruciform/inquisitor
 #define CRUCIFORM_CRUSADER /datum/core_module/rituals/cruciform/crusader
 #define CRUCIFORM_UPLINK /datum/core_module/cruciform/uplink
@@ -209,6 +212,9 @@
 
 #define CRUCIFORM_OBEY /datum/core_module/cruciform/obey
 #define CRUCIFORM_PRIEST_CONVERT /datum/core_module/activatable/cruciform/priest_convert
+#define CRUCIFORM_SQUIRE_CONVERT /datum/core_module/activatable/cruciform/squire_convert
+#define CRUCIFORM_SERGEANT_CONVERT /datum/core_module/activatable/cruciform/sergeant_convert
+#define CRUCIFORM_KNIGHT_CONVERT /datum/core_module/activatable/cruciform/knight_convert
 #define CRUCIFORM_OBEY_ACTIVATOR /datum/core_module/activatable/cruciform/obey_activator
 
 //https://secure.byond.com/docs/ref/info.html#/atom/var/mouse_opacity

@@ -11,14 +11,15 @@
 	difficulty = "Hard."
 	selection_color = "#97b0be"
 	req_admin_notify = 1
-	wage = WAGE_NONE
+	wage = WAGE_NONE // Draws salary from Prospector account
 	department_account_access = TRUE
 
 	outfit_type = /decl/hierarchy/outfit/job/foreman
 
 	access = list(
 		access_prospector, access_foreman, access_external_airlocks, access_eva, access_heads, access_sec_doors,
-		access_RC_announce, access_keycard_auth, access_maint_tunnels
+		access_RC_announce, access_keycard_auth, access_maint_tunnels, access_mailsorting, access_cargo,
+		access_cargo_bot, access_mining, access_mining_station
 	)
 
 	stat_modifiers = list(
@@ -34,12 +35,13 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-	description = "The foreman leads the prospectors, a group of independent scavengers seeking fortune from ruins and scrap.<br>\
+	description = "The Foreman oversees the hazardous labor of Nadezhda Shipping & Salvage, directly leading scavenger teams seeking fortune from ruins and scrap.<br>\
 	Your goal is to lead your team into hostile locations and take everything of value that isn't nailed down - and the nails too!<br>\
 	As potentially the youngest head of staff and the one expected to be in the most danger at all times you should be independent and cunning.<br>\
-	Your work is perhaps the most dangerous within the entire colony, so good combat and survival skills are essential."
+	Your work is perhaps the most dangerous within the entire colony, so good combat and survival skills are essential. Consider bringing a GPS device<br>\
+	with you, so that the Orden Hospitaller can tend to any injuries your team isn't equipped to handle."
 
-	duties = "Assemble your team of prospectors and salvagers by equipping them with whatever you can find in your prep area and elsewhere.<br>\
+	duties = "Assemble your team of prospectors, drill techs, and salvagers by equipping them with whatever you can find in your prep area and elsewhere.<br>\
 		Lead your team through dangerous areas and ensure they recover everything of value.<br>\
 		Keep everyone alive and ensure nobody is left behind.<br>\
 		Fill in any missing role on your team be it as muscle, medical, or technical support."
@@ -60,17 +62,18 @@
 	supervisors = "the Foreman"
 	difficulty = "Medium."
 	selection_color = "#a7bbc6"
-	wage = WAGE_NONE
+	wage = WAGE_LABOUR_HAZARD
 
 	outfit_type = /decl/hierarchy/outfit/job/salv
 
 	access = list(
-		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels
+		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels,
+		access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station
 	)
 
 	stat_modifiers = list(
-		STAT_BIO = 20,
-		STAT_MEC = 20,
+		STAT_BIO = 30,
+		STAT_MEC = 30,
 		STAT_COG = 10,
 		STAT_TGH = 10,
 		STAT_VIG = 10,
@@ -104,12 +107,13 @@
 	supervisors = "the Foreman"
 	difficulty = "Medium."
 	selection_color = "#a7bbc6"
-	wage = WAGE_NONE
+	wage = WAGE_LABOUR_HAZARD
 
 	outfit_type = /decl/hierarchy/outfit/job/pro
 
 	access = list(
-		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels
+		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels,
+		access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station
 	)
 
 	stat_modifiers = list(
@@ -131,3 +135,49 @@
 	icon_state = "player-blue"
 	join_tag = /datum/job/pro
 
+/datum/job/mining
+	title = "Drill Technician"
+	flag = MINER
+	department = DEPARTMENT_PROSPECTOR
+	department_flag = PROSPECTORS
+	faction = MAP_FACTION
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "the Foreman"
+	difficulty = "Easy."
+	selection_color = "#c3b9a6"
+	wage = WAGE_LABOUR_HAZARD //The miners union is stubborn
+
+	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
+
+	description = "The Drill Technician is a professional resource procurer, acquiring valuable minerals for Nadezhda Shipping & Salvage.<br>\
+Your primary responsibility is to descend into the deep tunnels and dig up as much ore as you can.<br>\
+Accessed by elevator, the area contains an outpost with all the facilities to process said ore and deliver refined materials ready for use.<br>\
+Whatever you dig up will go to the warehouse, and from then on it is the responsibility of others to sell it.<br>\
+The deep tunnels are far less dangerous than the wilderness, but pack well - disappearances are not unheard of.<br>\
+You may also be ordered by the Foreman to come along on trips to mineral-rich locations in the Periphery or in asteroid fields."
+
+	duties = "Dig up ores and minerals to be processed into useable material.<br>\
+	Locate other valuables within the tunnels that may be turned to profit."
+
+	access = list(
+		access_prospector, access_external_airlocks, access_eva, access_maint_tunnels,
+		access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station
+	)
+
+	stat_modifiers = list(
+		STAT_ROB = 15,
+		STAT_TGH = 15,
+		STAT_VIG = 15,
+		STAT_MEC = 15
+	)
+
+	software_on_spawn = list(///datum/computer_file/program/supply,
+							 ///datum/computer_file/program/deck_management,
+							 /datum/computer_file/program/wordprocessor,
+							 /datum/computer_file/program/reports)
+
+/obj/landmark/join/start/mining
+	name = "Drill Technician"
+	icon_state = "player-beige"
+	join_tag = /datum/job/mining

@@ -113,7 +113,7 @@
 	icon_state = "section2deck2starboard"
 
 /area/nadezhda/maintenance/sunkenclub
-	name = "Sunken Club"
+	name = "Nightclub"
 	icon_state = "section2deck3port"
 
 /area/nadezhda/maintenance/constructionarea
@@ -171,12 +171,12 @@
 	icon_state = "erisgreen"
 
 /area/nadezhda/dungeon/outside/zoo
-	name = "Abandoned Research Lab"
+	name = "Chemical Production Center"
 	icon_state = "erisgreen"
 	dynamic_lighting = TRUE
 
 /area/nadezhda/dungeon/outside/prepper
-	name = "Prepper Base"
+	name = "Prospector Forward Base"
 	icon_state = "erisgreen"
 	ambience = list('sound/ambience/ambimo1.ogg', 'sound/ambience/ambimo2.ogg')
 	dynamic_lighting = TRUE
@@ -189,14 +189,14 @@
 	dynamic_lighting = TRUE
 
 /area/nadezhda/dungeon/outside/smuggler_zone
-	name = "Smuggler Base"
+	name = "Black Guard Compound"
 	icon_state = "erisgreen"
 	ambience = list('sound/ambience/ambimo1.ogg', 'sound/ambience/ambimo2.ogg')
 	dynamic_lighting = TRUE
 	requires_power = 0
 
 /area/nadezhda/dungeon/outside/smuggler_zone_u
-	name = "Smuggler Base Underground"
+	name = "Black Guard Compound"
 	icon_state = "erisgreen"
 	dynamic_lighting = TRUE
 	requires_power = 0
@@ -210,7 +210,7 @@
 	flags = null
 
 /area/nadezhda/outside/one_star
-	name = "Greyson Positronic Base"
+	name = "Orden Hospitaller Monastery"
 	icon_state = "erisgreen"
 	ambience = list('sound/ambience/ambigen13.ogg', 'sound/ambience/ambigen14.ogg', 'sound/ambience/ambimalf.ogg')
 	dynamic_lighting = TRUE

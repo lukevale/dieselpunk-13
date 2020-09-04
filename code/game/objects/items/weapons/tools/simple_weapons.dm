@@ -381,8 +381,8 @@
 		overlays += "[icon_state]_power_off"
 
 /obj/item/weapon/tool/sword/crusader
-	name = "crusader greatsword"
-	desc = "A traditional blade meeting the materials and design of the future. It's made from durasteel and the craftmenship is of the highest quality. It bears the insignia of the Church. Deus Vult."
+	name = "Hospitaller longsword"
+	desc = "A traditional blade meeting the materials and design of the future. It's made from durasteel and the craftmenship is of the highest quality. It is carried by all knights of the Orden Hospitaller."
 	icon = 'icons/obj/weapons-blades.dmi'
 	icon_state = "crusader"
 	item_state = "crusader"

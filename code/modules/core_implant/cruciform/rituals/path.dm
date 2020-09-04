@@ -2,14 +2,14 @@
 	name = "cruciform"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/tessellate
-	category = "Tessellate"
+	category = "Cleric"
 
 
 /datum/ritual/targeted/cruciform/tessellate
 	name = "cruciform targeted"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/tessellate
-	category = "Tessellate"
+	category = "Cleric"
 
 
 /datum/ritual/cruciform/tessellate/heal_heathen_special
@@ -49,11 +49,12 @@
 
 
 /datum/ritual/cruciform/tessellate/heal_heathen_improved
-	name = "Healing Word"
+	name = "Revivify"
 	phrase = "Pastor gregem suum pascet, sive sciens sive ignarus gubernandum."
-	desc = "Heal every person who can see and hear for a fair amount, even if they do not have a cruciform. This prayer uses alot of power."
+	desc = "Heal every person who can see and hear for a large amount, even if they do not have a cruciform. This prayer uses alot of power."
 	cooldown = TRUE
-	cooldown_time = 300
+	cooldown_time = 10 MINUTES
+	cooldown_category = "dhymn"
 	power = 50
 
 /datum/ritual/cruciform/tessellate/heal_heathen_improved/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
@@ -77,12 +78,12 @@
 
 /datum/ritual/cruciform/tessellate/heal_heathen_improved/proc/heal_other(mob/living/carbon/human/participant)
 		to_chat(participant, "<span class='info'>A sensation of relief bathes you, washing away your some of your pain</span>")
-		participant.add_chemical_effect(CE_PAINKILLER, 20)
-		participant.adjustBruteLoss(-20)
-		participant.adjustFireLoss(-20)
-		participant.adjustToxLoss(-20)
-		participant.adjustOxyLoss(-40)
-		participant.adjustBrainLoss(-5)
+		participant.add_chemical_effect(CE_PAINKILLER, 40)
+		participant.adjustBruteLoss(-40)
+		participant.adjustFireLoss(-40)
+		participant.adjustToxLoss(-40)
+		participant.adjustOxyLoss(-80)
+		participant.adjustBrainLoss(-10)
 		participant.updatehealth()
 
 
@@ -90,14 +91,14 @@
 	name = "cruciform"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/lemniscate
-	category = "Lemniscate"
+	category = "Cantor"
 
 
 /datum/ritual/targeted/cruciform/lemniscate
 	name = "cruciform targeted"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/lemniscate
-	category = "Lemniscate"
+	category = "Cantor"
 
 /datum/ritual/cruciform/lemniscate/long_boost
 	name = "Long boost ritual"
@@ -105,9 +106,10 @@
 	desc = "This litany boosts mechanical stats of everyone who's hear you on the short time. "
 	cooldown = TRUE
 	cooldown_time = 2 MINUTES
+	power = 50
 	effect_time = 30 MINUTES
 	cooldown_category = "short_boost"
-	category = "Lemniscate"
+	category = "Cantor"
 	var/list/stats_to_boost = list()
 
 	New()
@@ -166,27 +168,27 @@
 /datum/ritual/cruciform/lemniscate/long_boost/mechanical
 	name = "Hammering Roar"
 	phrase = "Noli timere, quia ego tecum sum; ne declines, quia ego Deus tuus: Tuus confortavi te, et auxiliatus sum tibi, et suscepit te dextera Justi mei sunt."
-	stats_to_boost = list(STAT_MEC = 10)
+	stats_to_boost = list(STAT_MEC = 30)
 
 /datum/ritual/cruciform/lemniscate/long_boost/cognition
 	name = "Discovery of Lore"
 	phrase = "Haec locutus sum vobis ut in me pacem habeatis. In mundo pressuram habebitis. Sed confidite, Ego vici mundum."
-	stats_to_boost = list(STAT_COG = 10)
+	stats_to_boost = list(STAT_COG = 30)
 
 /datum/ritual/cruciform/lemniscate/long_boost/biology
 	name = "Sanctorum of Life"
 	phrase = "Venite ad me omnes qui laboratis, et onerati estis, et ego reficiam vos."
-	stats_to_boost = list(STAT_BIO = 10)
+	stats_to_boost = list(STAT_BIO = 30)
 
 /datum/ritual/cruciform/lemniscate/long_boost/courage
 	name = "Dirge of Honor"
 	phrase = "Confortare et esto robustus. Nolite timere nec paveatis a conspectu eorum quia Dominus Deus tuus ipse est ductor tuus. Et non dimittet nec derelinquet te."
-	stats_to_boost = list(STAT_ROB = 10, STAT_TGH = 10)
+	stats_to_boost = list(STAT_ROB = 30, STAT_TGH = 30)
 
 /datum/ritual/cruciform/lemniscate/long_boost/vigilance
 	name = "Binding Geas"
 	phrase = "Dat lasso virtutem et his qui non sunt fortitudinem et robur multiplicat."
-	stats_to_boost = list(STAT_VIG = 10)
+	stats_to_boost = list(STAT_VIG = 30)
 
 
 /datum/ritual/cruciform/monomial
@@ -194,14 +196,14 @@
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/monomial
 	fail_message = "The Cruciform feels cold against your chest."
-	category = "Monomial"
+	category = "Paladin"
 
 
 /datum/ritual/targeted/cruciform/monomial
 	name = "cruciform targeted"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/monomial
-	category = "Monomial"
+	category = "Paladin"
 
 /datum/ritual/cruciform/monomial/ironskin
 	name = "Resolution"
@@ -250,19 +252,19 @@
 	name = "cruciform"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/divisor
-	category = "Divisor"
+	category = "Templar"
 
 
 /datum/ritual/targeted/cruciform/divisor
 	name = "cruciform targeted"
 	phrase = null
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/divisor
-	category = "Divisor"
+	category = "Templar"
 
 /datum/ritual/targeted/cruciform/divisor/spawn_con
 	name = "Canticle of Defense"
 	phrase = "Sed Dominus autem mihi astitit, et confortavit me, ut per me prædicatio impleatur, et nuntius ut audirent eum omnes gentes."
-	desc = "Request a taser, absolutism tactical belt, and divisor garb from the church armory for defending yourself and your fellow disciples. Establishing the connection takes a lot of power and this litany may only be used once every four hours."
+	desc = "Summons a Hospitaller longsword and a Centurio pistol for defending yourself and your fellow disciples. Establishing the connection takes a lot of power and this litany may only be used once every four hours."
 	power = 50
 	cooldown = TRUE
 	cooldown_time = 4 HOURS
@@ -270,10 +272,9 @@
 
 
 /datum/ritual/targeted/cruciform/divisor/spawn_con/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
-	new /obj/item/weapon/gun/energy/taser(usr.loc)
-	new /obj/item/weapon/storage/belt/security/neotheology(usr.loc)
-	new /obj/item/clothing/head/rank/divisor(usr.loc)
-	new /obj/item/clothing/suit/greatcoat/divisor(usr.loc)
+	new /obj/item/weapon/gun/energy/centurio(usr.loc)
+	new /obj/item/clothing/accessory/holster/saber/greatsword/occupied(usr.loc)
+	new /obj/item/weapon/cell/medium/moebius/omega(usr.loc)
 	set_personal_cooldown(user)
 
 /datum/ritual/cruciform/divisor/div_flash
@@ -292,8 +293,8 @@
 		if(!victim.get_core_implant(/obj/item/weapon/implant/core_implant/cruciform))
 			if(prob(100 - victim.stats.getStat(STAT_VIG)))
 				to_chat(victim, SPAN_WARNING("You feel a blast of energy that knocks you down!"))
-				victim.Stun(3)
-				victim.Weaken(3)
+				victim.Stun(5)
+				victim.Weaken(5)
 			else
 				to_chat(victim, SPAN_NOTICE("Your legs feel numb, but you managed to stay on your feet!"))
 	set_personal_cooldown(user)

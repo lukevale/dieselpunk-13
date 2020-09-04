@@ -93,7 +93,7 @@
 		to_chat(H, SPAN_NOTICE("There is nothing here. You feel safe."))
 	return TRUE
 
-
+/*
 /datum/ritual/cruciform/base/message
 	name = "Sending"
 	phrase = "Audit, me audit vocationem. Ego nuntius vobis."
@@ -115,3 +115,22 @@
 	to_chat(H, "<span class='notice'><b><font size='3px'><font color='#ffaa00'>A voice speaks in your mind: \"[text]\"</font><b></span>")
 	playsound(user.loc, 'sound/machines/signal.ogg', 50, 1)
 	playsound(H, 'sound/machines/signal.ogg', 50, 1)
+*/
+
+/datum/ritual/cruciform/base/selfejection
+	name = "Self Deprivation"
+	phrase = "Deus eleison in animus mea, ut ego separatum coroporis mea ex eius lux sancti."
+	desc = "A prayer that even a Novice may use to deactivate and remove their cruciform without injury."
+	power = 0
+
+/datum/ritual/cruciform/base/selfejection/perform(mob/living/carbon/human/H, obj/item/weapon/implant/core_implant/CI)
+	var/mob/M = CI.wearer
+
+	if(ishuman(M))
+		CI.deactivate()
+		CI.uninstall()
+		return TRUE
+	if(ismob(M))
+		CI.deactivate()
+		CI.uninstall()
+		return TRUE

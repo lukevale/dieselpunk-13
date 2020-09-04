@@ -103,7 +103,6 @@
 			"car" = cargo_positions,
 			"civ" = civilian_positions,
 			"chr" = church_positions,
-			"pro" = prospector_positions,
 			"bot" = nonhuman_positions
 		)
 

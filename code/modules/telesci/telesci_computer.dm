@@ -183,7 +183,6 @@
 				return
 			teleporting = 0
 			teleport_cooldown = world.time + (power * 2)
-			teles_left -= 1
 
 			// use a lot of power
 			use_power(power * 10)

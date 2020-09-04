@@ -5,14 +5,49 @@
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
 
 /obj/item/weapon/coreimplant_upgrade/cruciform/priest
-	name = "Devout Ascension Kit"
-	desc = "The first stage of restoring a disciple to his proper status. Requires a ritual from a prime or vector to complete."
+	name = "Induction Kit"
+	desc = "The first stage of promoting a Novice. Requires a ritual from a member of the Clergy to activate"
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
 
 /obj/item/weapon/coreimplant_upgrade/cruciform/priest/set_up()
 	module = new CRUCIFORM_PRIEST_CONVERT
 	module.set_up()
 
+/obj/item/weapon/coreimplant_upgrade/cruciform/squire
+	name = "Esquire Kit"
+	desc = "A module required to promote a Private to the rank of Squire. "
+	implant_type = /obj/item/weapon/implant/core_implant/cruciform
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/squire/set_up()
+	module = new CRUCIFORM_SQUIRE_CONVERT
+	module.set_up()
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/sergeant
+	name = "Ascension Kit"
+	desc = "A module required to promote a Squire to the rank of Brother-Sergeant"
+	implant_type = /obj/item/weapon/implant/core_implant/cruciform
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/sergeant/set_up()
+	module = new CRUCIFORM_SERGEANT_CONVERT
+	module.set_up()
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/knight
+	name = "Knighthood Kit"
+	desc = "A module required to promote a Squire or Sergeant to the rank of Brother-Knight."
+	implant_type = /obj/item/weapon/implant/core_implant/cruciform
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/knight/set_up()
+	module = new CRUCIFORM_KNIGHT_CONVERT
+	module.set_up()
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/inquisitor
+	name = "Confessor Kit"
+	desc = "A module that can promote a Brother-Knight to the rank of Confessor."
+	implant_type = /obj/item/weapon/implant/core_implant/cruciform
+
+/obj/item/weapon/coreimplant_upgrade/cruciform/inquisitor/set_up()
+	module = new CRUCIFORM_INQUISITOR
+	module.set_up()
 
 /obj/item/weapon/coreimplant_upgrade/cruciform/obey
 	name = "Obey upgrade"

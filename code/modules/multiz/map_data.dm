@@ -84,7 +84,7 @@ ADMIN_VERB_ADD(/client/proc/test_MD, R_DEBUG, null)
 	var/list/contact_levels    = new // Z-levels that can be contacted from the station, for eg announcements
 	var/list/sealed_levels	   = new // Z-levels that don't allow random transit at edge
 	var/list/asteroid_leves    = new
-	var/list/accessable_levels = new
+	var/list/accessable_levels = new // Z-levels that can be entered with telescience and beacons
 	var/list/empty_levels = null     // Empty Z-levels that may be used for various things
 	var/list/names = new
 	var/security_state = /decl/security_state/default // The default security state system to use.
@@ -94,13 +94,13 @@ ADMIN_VERB_ADD(/client/proc/test_MD, R_DEBUG, null)
 	var/default_spawn = "Cryogenic Storage"
 
 	var/allowed_jobs = list(/datum/job/premier, /datum/job/rd, /datum/job/pg, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/smc, /datum/job/swo, /datum/job/foreman,
-						/datum/job/supsec, /datum/job/inspector, /datum/job/medspec, /datum/job/trooper, /datum/job/officer, /datum/job/serg,
+						/datum/job/supsec, /datum/job/medspec, /datum/job/trooper, /datum/job/officer, /datum/job/serg,
 						/datum/job/doctor, /datum/job/orderly, /datum/job/paramedic, /datum/job/psychiatrist,
 						/datum/job/technomancer,
 						/datum/job/cargo_tech, /datum/job/mining, /datum/job/merchant,
 						/datum/job/salvager, /datum/job/pro,
 						/datum/job/clubworker, /datum/job/clubmanager, /datum/job/actor,
-						/datum/job/chaplain, /datum/job/acolyte, /datum/job/janitor, /datum/job/hydro,
+						/datum/job/chaplain, /datum/job/confessor, /datum/job/janitor, /datum/job/hydro,
 						/datum/job/scientist, /datum/job/roboticist,
 						/datum/job/ai, /datum/job/cyborg,
 						/datum/job/assistant

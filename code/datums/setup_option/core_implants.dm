@@ -10,11 +10,13 @@
 		/datum/job/cmo,
 		/datum/job/chief_engineer,
 		/datum/job/supsec,
-		/datum/job/inspector,
 		/datum/job/officer,
 		/datum/job/smc
 		)
 	allowed_depts = CHURCH
+	allowed_jobs = list(
+		/datum/job/janitor
+		)
 	allow_modifications = TRUE
 
 /datum/category_item/setup_option/core_implant/cruciform/tessellate
