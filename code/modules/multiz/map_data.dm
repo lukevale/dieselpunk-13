@@ -103,7 +103,10 @@ ADMIN_VERB_ADD(/client/proc/test_MD, R_DEBUG, null)
 						/datum/job/chaplain, /datum/job/confessor, /datum/job/janitor, /datum/job/hydro,
 						/datum/job/scientist, /datum/job/roboticist,
 						/datum/job/ai, /datum/job/cyborg,
-						/datum/job/assistant
+						/datum/job/assistant,
+						/datum/job/broknight,
+						/datum/job/brosarge,
+						/datum/job/brocorp
 
 						)
 
