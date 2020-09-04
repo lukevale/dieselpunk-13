@@ -36,7 +36,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	EVENT_LEVEL_MUNDANE = 0, //Mundane
 	EVENT_LEVEL_MODERATE = 0, //Moderate
 	EVENT_LEVEL_MAJOR = 0, //Major
-	EVENT_LEVEL_ROLESET = 110 //Roleset
+	EVENT_LEVEL_ROLESET = 0 //Roleset
 	)
 
 	//Lists of events. These are built dynamically at runtime
@@ -47,10 +47,10 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 
 	//Configuration:
 	//Things you can set to make a new storyteller
-	var/gain_mult_mundane = 1.0
-	var/gain_mult_moderate = 1.0
-	var/gain_mult_major = 1.0
-	var/gain_mult_roleset = 1.0
+	var/gain_mult_mundane = 0.0
+	var/gain_mult_moderate = 0.0
+	var/gain_mult_major = 0.0
+	var/gain_mult_roleset = 0.0
 
 	var/list/tag_weight_mults = list()
 	var/list/tag_cost_mults = list()
