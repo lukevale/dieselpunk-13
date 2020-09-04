@@ -119,6 +119,7 @@
 
 	stat_modifiers = list(
 	STAT_VIG = 30,
+	STAT_BIO = 30,
 	STAT_TGH = 60,
 	STAT_ROB = 60,
 	)
@@ -163,6 +164,7 @@
 
 	stat_modifiers = list(
 	STAT_VIG = 20,
+	STAT_BIO = 30,
 	STAT_TGH = 50,
 	STAT_ROB = 50,
 	)
@@ -205,6 +207,7 @@
 
 	stat_modifiers = list(
 	STAT_VIG = 20,
+	STAT_BIO = 20,
 	STAT_TGH = 40,
 	STAT_ROB = 40,
 	)
