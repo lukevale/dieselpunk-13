@@ -71,7 +71,7 @@
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/chaplain
 
@@ -113,7 +113,7 @@
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/chaplain
 
@@ -153,12 +153,12 @@
 	department = DEPARTMENT_CHURCH
 	department_flag = CHURCH
 	faction = MAP_FACTION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/brosarge
 
@@ -196,12 +196,12 @@
 	department = DEPARTMENT_CHURCH
 	department_flag = CHURCH
 	faction = MAP_FACTION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/brocorp
 
