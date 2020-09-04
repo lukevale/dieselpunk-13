@@ -156,7 +156,7 @@ Avoid the deeper tunnels unless otherwise instructed, however - this domain is h
 	//alt_titles = list("Custodian","Sanitation Technician")
 	access = list(access_janitor, access_maint_tunnels, access_morgue, access_crematorium, access_mailsorting, access_cargo)
 	wage = WAGE_PROFESSIONAL
-	outfit_type = /decl/hierarchy/outfit/job/service/janitor
+	outfit_type = /decl/hierarchy/outfit/job/cargo/cargo_tech
 
 	stat_modifiers = list(
 		STAT_ROB = 10,
@@ -179,7 +179,6 @@ Avoid the deeper tunnels unless otherwise instructed, however - this domain is h
 	duties = "Staff the front desk and be ready to process payments and orders.<br>\
 	Deliver goods to departments and individuals in good time.<br>\
 	Always seek other forms of profit, but do so while keeping the company in a good light."
-	setup_restricted = TRUE
 
 /obj/landmark/join/start/manager
 	name = "Shipping Manager"
