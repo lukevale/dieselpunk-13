@@ -115,7 +115,7 @@
 	selection_color = "#ecd37d"
 	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
-	outfit_type = /decl/hierarchy/outfit/job/church/chaplain
+	outfit_type = /decl/hierarchy/outfit/job/church/broknight
 
 	stat_modifiers = list(
 	STAT_VIG = 30,
