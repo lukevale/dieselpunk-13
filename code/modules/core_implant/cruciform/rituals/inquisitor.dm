@@ -13,13 +13,13 @@
 /datum/ritual/cruciform/inquisitor
 	name = "crusader"
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
-	category = "Crusader"
+	category = "Confessor"
 	power = 30
 
 /datum/ritual/targeted/cruciform/inquisitor
 	name = "crusader targeted"
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
-	category = "Crusader"
+	category = "Confessor"
 	power = 30
 
 

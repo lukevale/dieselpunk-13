@@ -222,10 +222,10 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 			points[a] += delta
 
 /datum/storyteller/proc/handle_points()
-	points[EVENT_LEVEL_MUNDANE] += 1 * (gain_mult_mundane) * (RAND_DECIMAL(1-variance, 1+variance))
-	points[EVENT_LEVEL_MODERATE] += 1 * (gain_mult_moderate) * (RAND_DECIMAL(1-variance, 1+variance))
-	points[EVENT_LEVEL_MAJOR] += 1 * (gain_mult_major) * (RAND_DECIMAL(1-variance, 1+variance))
-	points[EVENT_LEVEL_ROLESET] += 1 * (gain_mult_roleset) * (RAND_DECIMAL(1-variance, 1+variance))
+	points[EVENT_LEVEL_MUNDANE] += 0 * (gain_mult_mundane)
+	points[EVENT_LEVEL_MODERATE] += 0 * (gain_mult_moderate)
+	points[EVENT_LEVEL_MAJOR] += 0 * (gain_mult_major)
+	points[EVENT_LEVEL_ROLESET] += 0 * (gain_mult_roleset)
 	check_thresholds()
 
 /datum/storyteller/proc/check_thresholds()

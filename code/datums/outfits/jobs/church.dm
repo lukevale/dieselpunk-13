@@ -51,6 +51,6 @@
 
 /decl/hierarchy/outfit/job/church/chaplain
 	name = OUTFIT_JOB_NAME("Hospitaller - Chaplain")
-	uniform = /obj/item/clothing/under/rank/acolyte
+	uniform = /obj/item/clothing/under/rank/preacher
 	shoes = /obj/item/clothing/shoes/reinforced
 	gloves = /obj/item/clothing/gloves/thick

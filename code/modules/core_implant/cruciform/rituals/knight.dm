@@ -47,7 +47,7 @@
 	phrase = "Piaculo sit \[Target human]!"
 	desc = "Imparts extreme pain on the target disciple, but does no actual harm. Use this if someone who performs a heretical act."
 	power = 50
-	category = "Vitae"
+	category = "Brother-Knight"
 
 /datum/ritual/targeted/cruciform/knight/atonement/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
 	if(!targets.len)
@@ -81,10 +81,11 @@
 			return target
 
 /datum/ritual/targeted/cruciform/knight/upgrade_kit
-	name = "Covenant"
+	name = "Recruitment"
 	phrase = "I vow that I have found a worthy candidate for the trials of Knighthood"
 	desc = "Request an upgrade kit to promote a Chaplain to a Corporal, or a Corporal to Sergeant"
 	power = 50
+	category = "Brother-Knight"
 
 /datum/ritual/targeted/cruciform/knight/upgrade_kit/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/CI,list/targets)
 	var/response = input(user, "Which upgrade do you require?") in list("Squire","Sergeant","Monomial","Divisor","Cancel Litany")
@@ -98,13 +99,14 @@
 		fail("No upgrade selected",user,CI)
 		return FALSE
 
-/datum/ritual/cruciform/knight/initiation
-	name = "Initiation"
+/datum/ritual/cruciform/knight/promotion
+	name = "Promotion"
 	phrase = "By the power vested in me as a Brother-Knight, I declare you to have risen in station."
 	desc = "The second stage of granting a promotion to a Novice. The ascension kit is the first step."
 	power = 50
+	category = "Brother-Knight"
 
-/datum/ritual/cruciform/knight/initiation/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
+/datum/ritual/cruciform/knight/promotion/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C,list/targets)
 	var/obj/item/weapon/implant/core_implant/CI = get_implant_from_victim(user, /obj/item/weapon/implant/core_implant/cruciform)
 
 	if(!CI || !CI.wearer || !ishuman(CI.wearer) || !CI.active)
