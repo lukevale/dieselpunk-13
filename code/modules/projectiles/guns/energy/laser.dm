@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/energy/laser
-	name = "\"Lightfall\" laser rifle"
-	desc = "\"Old Testament\" brand laser carbine. Deadly and radiant, like the ire of God it represents."
+	name = "\"Zweilancer\" laser rifle"
+	desc = "An \"Old Testament\" design upgraded by the Orden Hospitaller. It's twice as deadly and radient as the Lightfall that preceeded it."
 	icon = 'icons/obj/guns/energy/laser.dmi'
 	icon_state = "laser"
 	item_state = "laser"
@@ -12,10 +12,13 @@
 	matter = list(MATERIAL_PLASTEEL = 20, MATERIAL_WOOD = 8, MATERIAL_SILVER = 5)
 	price_tag = 2500
 	projectile_type = /obj/item/projectile/beam/midlaser
+	charge_cost = 50
+	zoom_factor = 1.50
 	gun_tags = list(GUN_LASER, GUN_ENERGY)
 	init_firemodes = list(
 		WEAPON_NORMAL,
 		WEAPON_CHARGE
+		BURST_2_ROUND
 	)
 	twohanded = TRUE
 

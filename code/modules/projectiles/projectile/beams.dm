@@ -141,8 +141,8 @@
 
 /obj/item/projectile/beam/sniper
 	name = "sniper beam"
-	icon_state = "xray"
-	damage_types = list(BURN = 50)
+	icon_state = "u_laser"
+	damage_types = list(BURN = 125)
 	armor_penetration = 40
 	stun = 3
 	weaken = 3

@@ -311,7 +311,7 @@
 
 //Sniper rifles
 /obj/item/projectile/bullet/antim
-	damage_types = list(BRUTE = 90)
+	damage_types = list(BRUTE = 100)
 	armor_penetration = 100
 	stun = 5
 	weaken = 10
