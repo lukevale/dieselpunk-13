@@ -4,7 +4,7 @@
 	welcome = "Welcome to the Nadezhda colony! We hope you enjoy your stay!"
 	description = "Peaceful and relaxed storyteller who will try to help the crew a little."
 
-	gain_mult_mundane = 0s.0
+	gain_mult_mundane = 0.0
 	gain_mult_moderate = 0.0
 	gain_mult_major = 0.0
 	gain_mult_roleset = 0.0
