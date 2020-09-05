@@ -136,68 +136,59 @@
 	area_light_color = COLOR_LIGHTING_MAINT_DARK
 	dynamic_lighting = FALSE
 
-
-/area/nadezhda/dungeon/outside/trashcave
-	name = "Trash Cave"
-	icon_state = "nadezhdagreen"
-	ambience = list('sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambigen11.ogg', 'sound/ambience/ambigen12.ogg')
-	dynamic_lighting = TRUE
-
 /area/nadezhda/dungeon/outside/abandoned_solars
 	name = "Abandoned Solars"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
 
 /area/nadezhda/dungeon/outside/burned_outpost
 	name = "Burned Outpost"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
 
 /area/nadezhda/dungeon/outside/hunter_cabin
 	name = "Hunter Cabin"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
 	ambience = list('sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambigen11.ogg', 'sound/ambience/ambigen12.ogg')
 
 /area/nadezhda/dungeon/outside/campground
 	name = "Campground"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
 	ambience = list('sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambigen11.ogg', 'sound/ambience/ambigen12.ogg')
 
 /area/nadezhda/dungeon/outside/farm
 	name = "Lost Farm"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
 	ambience = list('sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambigen11.ogg', 'sound/ambience/ambigen12.ogg')
 
 /area/nadezhda/dungeon/outside/abandoned_outpost
 	name = "Lost Outpost"
-	icon_state = "erisgreen"
+	icon_state = "landmark"
+
+/area/nadezhda/dungeon/outside/abandoned_shed
+	name = "Derelict Storage Shed"
+	icon_state = "landmark"
 
 /area/nadezhda/dungeon/outside/zoo
 	name = "Chemical Production Center"
-	icon_state = "erisgreen"
+	icon_state = "chemfactory"
 	dynamic_lighting = TRUE
 
 /area/nadezhda/dungeon/outside/prepper
 	name = "Prospector Forward Base"
-	icon_state = "erisgreen"
+	icon_state = "prepper"
 	ambience = list('sound/ambience/ambimo1.ogg', 'sound/ambience/ambimo2.ogg')
 	dynamic_lighting = TRUE
 	requires_power = 0
 
-/area/nadezhda/dungeon/outside/monster_cave
-	name = "Monster Cave"
-	icon_state = "erisgreen"
-	forced_ambience = list('sound/ambience/ambisin1.ogg', 'sound/ambience/ambisin2.ogg', 'sound/ambience/ambisin3.ogg', 'sound/ambience/ambisin4.ogg')
-	dynamic_lighting = TRUE
-
 /area/nadezhda/dungeon/outside/smuggler_zone
 	name = "Black Guard Compound"
-	icon_state = "erisgreen"
+	icon_state = "blackguard"
 	ambience = list('sound/ambience/ambimo1.ogg', 'sound/ambience/ambimo2.ogg')
 	dynamic_lighting = TRUE
 	requires_power = 0
 
 /area/nadezhda/dungeon/outside/smuggler_zone_u
 	name = "Black Guard Compound"
-	icon_state = "erisgreen"
+	icon_state = "blackguard"
 	dynamic_lighting = TRUE
 	requires_power = 0
 
@@ -211,32 +202,50 @@
 
 /area/nadezhda/outside/one_star
 	name = "Orden Hospitaller Monastery"
-	icon_state = "erisgreen"
+	icon_state = "monk"
 	ambience = list('sound/ambience/ambigen13.ogg', 'sound/ambience/ambigen14.ogg', 'sound/ambience/ambimalf.ogg')
 	dynamic_lighting = TRUE
 	requires_power = 0
 	flags = AREA_FLAG_RAD_SHIELDED
 
-/area/nadezhda/outside/dcave
-	name = "Diyaab Cave"
-	icon_state = "erisgreen"
-
-/area/nadezhda/outside/fnest
-	name = "Fennec Nest"
-	icon_state = "erisgreen"
-
 /area/nadezhda/outside/pond
 	name = "Pond"
-	icon_state = "erisgreen"
+	icon_state = "water"
 
-/area/nadezhda/outside/bcave
+/area/nadezhda/outside/cave_bear
 	name = "Bear Cave"
-	icon_state = "erisgreen"
+	icon_state = "spelunk"
 	dynamic_lighting = TRUE
 
-/area/nadezhda/outside/scave
+/area/nadezhda/outside/cave_diyaab
+	name = "Diyaab Cave"
+	icon_state = "spelunk"
+
+/area/nadezhda/outside/cave_fennec
+	name = "Fennec Nest"
+	icon_state = "spelunk"
+
+/area/nadezhda/dungeon/outside/cave_monster
+	name = "Monster Cave"
+	icon_state = "spelunk"
+	forced_ambience = list('sound/ambience/ambisin1.ogg', 'sound/ambience/ambisin2.ogg', 'sound/ambience/ambisin3.ogg', 'sound/ambience/ambisin4.ogg')
+	dynamic_lighting = TRUE
+
+/area/nadezhda/outside/cave_spider
 	name = "Spider Cave"
-	icon_state = "erisgreen"
+	icon_state = "spelunk"
+
+/area/nadezhda/dungeon/outside/cave_trash
+	name = "Trash Cave"
+	icon_state = "spelunk"
+	ambience = list('sound/ambience/ambigen9.ogg', 'sound/ambience/ambigen10.ogg', 'sound/ambience/ambigen11.ogg', 'sound/ambience/ambigen12.ogg')
+	dynamic_lighting = TRUE
+
+/area/nadezhda/outside/meadow
+    name = "Meadow"
+    icon_state = "meadow"
+    sound_env = MOUNTAINS
+    forced_ambience = list('sound/ambience/meadowamb1.ogg', 'sound/ambience/meadowamb2.ogg', 'sound/ambience/meadowamb3.ogg', 'sound/ambience/meadowamb4.ogg')
 
 /area/nadezhda/outside/forest
 	name = "Forest"
@@ -246,15 +255,9 @@
 
 /area/nadezhda/outside/lakeside
     name = "Lakeside"
-    icon_state = "erisblue"
+    icon_state = "lakeside"
     sound_env = MOUNTAINS
     forced_ambience = list('sound/ambience/lakeamb1.ogg', 'sound/ambience/lakeamb2.ogg', 'sound/ambience/lakeamb3.ogg')
-
-/area/nadezhda/outside/meadow
-    name = "Meadow"
-    icon_state = "meadow"
-    sound_env = MOUNTAINS
-    forced_ambience = list('sound/ambience/meadowamb1.ogg', 'sound/ambience/meadowamb2.ogg', 'sound/ambience/meadowamb3.ogg', 'sound/ambience/meadowamb4.ogg')
 
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
 
@@ -1304,7 +1307,7 @@ area/nadezhda/medical/medbaymeeting
 
 /area/nadezhda/weaponfactory
 	name = "\improper Weapons Factory"
-	icon_state = "quartoffice"
+	icon_state = "wepfactory"
 
 /area/nadezhda/quartermaster/pods
 	name = "\improper Lonestar Pod Dorms"
@@ -1509,7 +1512,7 @@ area/nadezhda/medical/medbaymeeting
 
 /area/nadezhda/pros/mechanicshop
 	name = "\improper Mechanic's Shop"
-	icon_state = "erisgreen"
+	icon_state = "workshop"
 
 //Storage
 
