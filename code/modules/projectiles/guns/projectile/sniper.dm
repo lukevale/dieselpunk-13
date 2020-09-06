@@ -9,6 +9,7 @@
 	slot_flags = SLOT_BACK
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 2)
 	caliber = CAL_ANTIM
+	item_charge_meter = TRUE
 	recoil_buildup = 75
 	handle_casings = HOLD_CASINGS
 	load_method = SINGLE_CASING
