@@ -17,7 +17,7 @@
 	gun_tags = list(GUN_LASER, GUN_ENERGY)
 	init_firemodes = list(
 		WEAPON_NORMAL,
-		WEAPON_CHARGE
+		WEAPON_CHARGE,
 		BURST_2_ROUND
 	)
 	twohanded = TRUE
