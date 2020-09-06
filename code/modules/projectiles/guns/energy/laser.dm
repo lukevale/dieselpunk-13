@@ -5,7 +5,7 @@
 	icon_state = "laser"
 	item_state = null
 	fire_sound = 'sound/weapons/Laser.ogg'
-	slot_flags = SLOT_BELT|SLOT_BACK
+	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
 	force = WEAPON_FORCE_NORMAL
 	item_charge_meter = TRUE

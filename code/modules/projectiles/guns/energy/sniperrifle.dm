@@ -9,6 +9,7 @@
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
 	projectile_type = /obj/item/projectile/beam/sniper
 	slot_flags = SLOT_BACK
+	item_charge_meter = TRUE
 	charge_cost = 300
 	fire_delay = 35
 	force = 10
