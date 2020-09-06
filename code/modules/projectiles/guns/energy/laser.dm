@@ -8,6 +8,7 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
 	force = WEAPON_FORCE_NORMAL
+	item_charge_meter = TRUE
 	twohanded = TRUE
 	one_hand_penalty = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
