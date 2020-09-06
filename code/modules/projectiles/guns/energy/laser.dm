@@ -15,12 +15,13 @@
 	price_tag = 2500
 	projectile_type = /obj/item/projectile/beam/midlaser
 	charge_cost = 50
+	burst = 2
+	burst_delay = 2
 	zoom_factor = 1.50
 	gun_tags = list(GUN_LASER, GUN_ENERGY)
 	init_firemodes = list(
 		WEAPON_NORMAL,
-		WEAPON_CHARGE,
-		BURST_2_ROUND
+		WEAPON_CHARGE
 	)
 	twohanded = TRUE
 

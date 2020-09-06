@@ -65,7 +65,7 @@
 
 	var/icon_contained = TRUE
 	var/static/list/item_icons_cache = list()
-	var/wielded_item_state = null
+	var/wielded_item_state = "_doble"
 	var/one_hand_penalty = 0 //The higher this number is, the more severe the accuracy penalty for shooting it one handed. 5 is a good baseline for this, but var edit it live and play with it yourself.
 
 	var/projectile_color //Set by a firemode. Sets the fired projectiles color

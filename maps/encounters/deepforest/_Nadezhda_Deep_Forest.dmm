@@ -1161,7 +1161,7 @@
 "Ar" = (/obj/structure/flora/big/bush2,/turf/simulated/floor/asteroid/grass,/area/nadezhda/outside/forest)
 "As" = (/obj/structure/flora/small/bushc3,/obj/structure/flora/tree/jungle,/turf/simulated/floor/asteroid/grass,/area/nadezhda/outside/forest)
 "At" = (/obj/structure/flora/ausbushes/brflowers,/obj/structure/flora/small/bushc1,/turf/simulated/floor/asteroid/grass,/area/nadezhda/outside/forest)
-"Au" = (/obj/machinery/door/blast/regular,/turf/simulated/floor/wood/wild5,/area/nadezhda/dungeon/outside/smuggler_zone)
+"Au" = (/obj/machinery/door/blast/regular{id = "Compound Door"},/turf/simulated/floor/wood/wild5,/area/nadezhda/dungeon/outside/smuggler_zone)
 "Av" = (/obj/structure/flora/tree/jungle/variant1,/obj/structure/flora/small/bushc2,/turf/simulated/floor/asteroid/grass,/area/nadezhda/outside/forest)
 "Aw" = (/obj/landmark/join/start/smc,/turf/simulated/floor/carpet/turcarpet,/area/nadezhda/dungeon/outside/smuggler_zone)
 "Ax" = (/obj/structure/flora/small/bushc1,/obj/structure/flora/big/bush3,/turf/unsimulated/wall/jungle,/area/nadezhda/outside/forest)

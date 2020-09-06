@@ -19,7 +19,7 @@
 /mob/fall_impact(var/turf/from, var/turf/dest)
 	return
 
-/mob/proc/take_overall_damage(var/brute, var/burn, var/used_weapon = null)
+/mob/proc/take_overall_damage(var/brute, var/burn, var/halloss, var/used_weapon = null)
 	return
 
 /mob/Initialize()
