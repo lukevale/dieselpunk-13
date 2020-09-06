@@ -22,3 +22,4 @@
 		WEAPON_CHARGE
 	)
 	twohanded = TRUE
+	one_hand_penalty = 15
