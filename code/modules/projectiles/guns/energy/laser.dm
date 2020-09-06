@@ -3,11 +3,13 @@
 	desc = "An \"Old Testament\" design upgraded by the Orden Hospitaller. It's twice as deadly and radient as the Lightfall that preceeded it."
 	icon = 'icons/obj/guns/energy/laser.dmi'
 	icon_state = "laser"
-	item_state = "laser"
+	item_state = null
 	fire_sound = 'sound/weapons/Laser.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
 	force = WEAPON_FORCE_NORMAL
+	twohanded = TRUE
+	one_hand_penalty = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	matter = list(MATERIAL_PLASTEEL = 20, MATERIAL_WOOD = 8, MATERIAL_SILVER = 5)
 	price_tag = 2500
@@ -27,7 +29,7 @@
 	desc = "\"Artificer's Guild\" brand rail gun. This gun features a sleek and deadly design but it may burn out a battery when used."
 	icon = 'icons/obj/guns/energy/railgun.dmi'
 	icon_state = "railgun"
-	item_state = "railgun"
+	item_state = null
 	item_charge_meter = TRUE
 	fire_sound = 'sound/weapons/rail.ogg'
 	item_charge_meter = TRUE
@@ -67,7 +69,7 @@
 	desc = "\"Artificer's Guild\" brand rail pistol. This gun features a sleek and deadly design but it may burn out a battery when used."
 	icon = 'icons/obj/guns/energy/railpistol.dmi'
 	icon_state = "railpistol"
-	item_state = "railpistol"
+	item_state = null
 	item_charge_meter = TRUE
 	fire_sound = 'sound/weapons/rail.ogg'
 	suitable_cell = /obj/item/weapon/cell/medium
@@ -95,7 +97,7 @@
 	desc = "A slapped together junk design made as a copy of the far superior Reductor rail gun. It's projectiles fire slower and it has a wider delay between shots with the same issue of burning batteries out."
 	icon = 'icons/obj/guns/energy/energyshotgun.dmi'
 	icon_state = "eshotgun"
-	item_state = "eshotgun"
+	item_state = null
 	item_charge_meter = TRUE
 	w_class = ITEM_SIZE_BULKY
 	force = WEAPON_FORCE_PAINFUL
@@ -135,7 +137,7 @@
 	Sometimes jokingly called the \"Disco Vazer\"."
 	icon = 'icons/obj/guns/energy/lasersmg-1.dmi'
 	icon_state = "lasersmg"
-	item_state = "lasersmg"
+	item_state = null
 	w_class = ITEM_SIZE_NORMAL
 	fire_sound = 'sound/weapons/Laser.ogg'
 	suitable_cell = /obj/item/weapon/cell/medium
@@ -236,7 +238,7 @@
 	name = "\"Destiny\" energy pistol"
 	icon = 'icons/obj/guns/energy/capgun.dmi'
 	icon_state = "caplaser"
-	item_state = "caplaser"
+	item_state = null
 	item_charge_meter = TRUE
 	desc = "This weapon is old, yet still robust and reliable. It's marked with an old Greyson Positronic brand, a distant reminder of what this corporation was, before it fell to ruin."
 	force = WEAPON_FORCE_PAINFUL
@@ -259,7 +261,7 @@
 	desc = "A new design for an energy weapon. The lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
 	icon = 'icons/obj/guns/energy/lascannon.dmi'
 	icon_state = "lasercannon"
-	item_state = "lasercannon"
+	item_state = null
 	item_charge_meter = TRUE
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
