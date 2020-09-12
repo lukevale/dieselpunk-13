@@ -128,7 +128,7 @@
 		STAT_TGH = 20,
 		STAT_ROB = 20,
 		STAT_VIG = 10,
-		STAT_BIO = 15
+		STAT_BIO = 10
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/chem_catalog,
@@ -171,7 +171,7 @@
 	)
 
 	stat_modifiers = list(
-		STAT_BIO = 25,
+		STAT_BIO = 10,
 		STAT_COG = 15,
 		STAT_VIG = 5
 	)
@@ -221,6 +221,8 @@
 		STAT_TGH = 10,
 		STAT_VIG = 10,
 	)
+
+	perks = list(/datum/perk/timeismoney)
 
 	perks = list(/datum/perk/selfmedicated)
 

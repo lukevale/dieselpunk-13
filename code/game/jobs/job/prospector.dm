@@ -23,12 +23,15 @@
 	)
 
 	stat_modifiers = list(
-		STAT_ROB = 30,
-		STAT_TGH = 30,
+		STAT_ROB = 40,
+		STAT_TGH = 40,
 		STAT_VIG = 30,
 		STAT_MEC = 10,
 		STAT_BIO = 10,
 	)
+
+	perks = list(/datum/perk/junkborn)
+	perks = list(/datum/perk/space_asshole)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/digitalwarrant,
@@ -75,7 +78,7 @@
 		STAT_BIO = 30,
 		STAT_MEC = 30,
 		STAT_COG = 10,
-		STAT_TGH = 10,
+		STAT_TGH = 20,
 		STAT_VIG = 10,
 		STAT_ROB = 10,
 	)
@@ -117,10 +120,14 @@
 	)
 
 	stat_modifiers = list(
-		STAT_TGH = 20,
+		STAT_TGH = 40,
 		STAT_VIG = 20,
-		STAT_ROB = 20,
+		STAT_ROB = 40,
+		STAT_BIO = 10,
 	)
+
+	perks = list(/datum/perk/junkborn)
+	perks = list(/datum/perk/space_asshole)
 
 	description = "The Prospector serves as hired muscle to the Foreman, positioned somewhere between meat shield and exterminator.<br>\
 	Your job is to keep the Salvagers and anyone else with you protected, handling the fighting and being the first to enter dangerous areas. <br>\
