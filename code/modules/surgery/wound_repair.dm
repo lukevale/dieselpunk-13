@@ -62,7 +62,7 @@
 			user.visible_message(SPAN_NOTICE("[user] treats the brute damage to [target]'s body with the [tool_name]."), \
 			SPAN_NOTICE("You treat the brute damage to [target]'s body with [tool_name].") )
 			if(tool.use(1))
-				target.adjustBruteLoss(-15)
+				target.adjustBruteLoss(-30)
 
 /datum/old_surgery_step/external/brute_heal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/stack/tool)
 
@@ -122,7 +122,7 @@
 			user.visible_message(SPAN_NOTICE("[user] treats the burn damage to [target]'s body with the [tool_name]."), \
 			SPAN_NOTICE("You treat the burn damage to [target]'s body with [tool_name].") )
 			if(tool.use(1))
-				target.adjustFireLoss(-15)
+				target.adjustFireLoss(-30)
 
 
 /datum/old_surgery_step/external/burn_heal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/stack/tool)
@@ -174,9 +174,8 @@
 		if (target.getToxLoss() >= 0)
 			user.visible_message(SPAN_NOTICE("[user] finishess filtering out any toxins in [target]'s body and repairing any neural degradation with the [tool_name]."), \
 			SPAN_NOTICE("You finish filtering out any toxins to [target]'s body and repairing any neural degradation with the [tool_name].") )
-			if(tool.use(1))
-				target.adjustToxLoss(-200)
-				target.timeofdeath = 99999999
+			target.adjustToxLoss(-200)
+			target.timeofdeath = 99999999
 
 
 /datum/old_surgery_step/external/tox_heal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/stack/tool)

@@ -2,15 +2,15 @@
 	name = "medical pack"
 	singular_name = "medical pack"
 	icon = 'icons/obj/stack/items.dmi'
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 	w_class = ITEM_SIZE_SMALL
 	throw_speed = 4
 	throw_range = 20
 	var/heal_brute = 0
 	var/heal_burn = 0
 	price_tag = 10
-	matter = list(MATERIAL_BIOMATTER = 5)
+	matter = list(MATERIAL_BIOMATTER = 1)
 	var/automatic_charge_overlays = FALSE	//Do we handle over-lays with base update_icon()? | Stolen from TG egun code
 	var/charge_sections = 5		// How many indicator blips are there?
 	var/charge_x_offset = 2		//The spacing between each charge indicator. Should be 2 to leave a 1px gap between each blip.
@@ -273,6 +273,7 @@
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
 	splittable = FALSE	// Is the stack capable of being splitted?
 	preloaded_reagents = list("silicon" = 4, "ethanol" = 10, "lithium" = 4)
+	matter = list(MATERIAL_BIOMATTER = 2.5)
 
 /obj/item/stack/medical/advanced/bruise_pack/attack(mob/living/carbon/M, mob/living/user)
 	if(..())
@@ -369,6 +370,7 @@
 	consumable = FALSE	// Will the stack disappear entirely once the amount is used up?
 	splittable = FALSE	// Is the stack capable of being splitted?
 	preloaded_reagents = list("silicon" = 4, "ethanol" = 10, "mercury" = 4)
+	matter = list(MATERIAL_BIOMATTER = 2.5)
 
 /obj/item/stack/medical/advanced/ointment/attack(mob/living/carbon/M, mob/living/user)
 	if(..())
