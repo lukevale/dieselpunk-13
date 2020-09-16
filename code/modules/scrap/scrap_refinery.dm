@@ -20,7 +20,7 @@
 	var/icon_name = "grinder-o"
 	var/blood = FALSE
 	var/eat_dir = WEST
-	var/chance_to_recycle = 1
+	var/chance_to_recycle = 25
 
 /obj/machinery/recycler/Initialize()
 	// On us
@@ -98,6 +98,8 @@
 			else
 				stop(AM)
 		else if(istype(AM, /obj/item))
+			recycle(AM)
+		else if(istype(AM, /obj/structure))
 			recycle(AM)
 		else // Can't recycle
 			playsound(loc, 'sound/machines/buzz-sigh.ogg', 50, 0)
