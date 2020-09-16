@@ -646,6 +646,19 @@
 		set_opacity(1)
 		alpha = 255
 
+/obj/structure/window/framed
+	name = "framed window"
+	alpha = 255
+	desc = "It looks rather strong. Might take a few good hits to shatter it."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "framewindow"
+	dir = 2
+	shardtype = /obj/structure/grille/frame
+
+/obj/structure/window/framed/update_icon()
+//Framed window tiles do not change.
+	return
+
 /obj/structure/window/reinforced/crescent/attack_hand()
 	return
 

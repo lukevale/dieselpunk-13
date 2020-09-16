@@ -167,6 +167,8 @@
 	..(newloc,MATERIAL_DIAMOND)
 /turf/simulated/wall/gold/New(var/newloc)
 	..(newloc,MATERIAL_GOLD)
+/turf/simulated/wall/plastic/New(var/newloc)
+	..(newloc,MATERIAL_PLASTIC)
 /turf/simulated/wall/silver/New(var/newloc)
 	..(newloc,MATERIAL_SILVER)
 /turf/simulated/wall/plasma/New(var/newloc)
@@ -175,6 +177,8 @@
 	..(newloc,MATERIAL_DURASTEEL)
 /turf/simulated/wall/sandstone/New(var/newloc)
 	..(newloc,MATERIAL_SANDSTONE)
+/turf/simulated/wall/concrete/New(var/newloc)
+	..(newloc,MATERIAL_CONCRETE)
 /turf/simulated/wall/ironplasma/New(var/newloc)
 	..(newloc,MATERIAL_IRON,MATERIAL_PLASMA)
 /turf/simulated/wall/golddiamond/New(var/newloc)
@@ -185,6 +189,38 @@
 	..(newloc,MATERIAL_SANDSTONE,MATERIAL_DIAMOND)
 /turf/simulated/wall/wood/New(var/newloc)
 	..(newloc,MATERIAL_WOOD)
+
+/turf/simulated/wall/iron
+	icon_state = "maskiron"
+	icon_base_override = "metal"
+
+/turf/simulated/wall/iron/darkgrey
+	icon_state = "maskirondarkgrey"
+	base_color_override = "#C0C0C0"
+
+/turf/simulated/wall/iron/lightgrey
+	icon_state = "maskironlightgrey"
+	base_color_override = "#D1E6E3"
+
+/turf/simulated/wall/iron/military
+	icon_state = "maskironmilitary"
+	base_color_override = "#6C7364"
+
+/turf/simulated/wall/iron/blue
+	icon_state = "maskironblue"
+	base_color_override = "#6EA7BE"
+
+/turf/simulated/wall/concrete
+	icon_state = "maskconcrete"
+	icon_base_override = "stone"
+
+/turf/simulated/wall/plastic
+	icon_state = "maskplastic"
+	icon_base_override = "plastic"
+
+/turf/simulated/wall/plastic/dark
+	icon_state = "maskplasticdark"
+	base_color_override = "#312b38"
 
 /turf/simulated/wall/wood
 	icon_state = "wood"

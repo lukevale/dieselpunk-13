@@ -704,6 +704,21 @@
 	icon_state = "stone_old2"
 	initial_flooring = /decl/flooring/rock/manmade/ruin3
 
+/turf/simulated/floor/rock/manmade/pavement1
+	name = "pavement"
+	icon_state = "pave_empty"
+	initial_flooring = /decl/flooring/rock/manmade/pavement1
+
+/turf/simulated/floor/rock/manmade/pavement2
+	name = "pavement"
+	icon_state = "pave_brick"
+	initial_flooring = /decl/flooring/rock/manmade/pavement2
+
+/turf/simulated/floor/rock/manmade/pavement3
+	name = "pavement"
+	icon_state = "pave_tiling"
+	initial_flooring = /decl/flooring/rock/manmade/pavement3
+
 /turf/simulated/floor/rock/seafloor
 	name = "rocks"
 	icon_state = "seafloor"

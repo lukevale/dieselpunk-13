@@ -274,3 +274,9 @@
 		damage *= abs(from.z - dest.z)
 
 	return damage
+
+/obj/structure/grille/frame
+	icon = 'icons/obj/structures.dmi'
+	name = "frame"
+	icon_state = "frame"
+	health = 10
