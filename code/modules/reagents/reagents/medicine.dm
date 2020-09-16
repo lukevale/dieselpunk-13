@@ -248,14 +248,15 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 	color = "#8080FF"
 	metabolism = REM * 0.5
 	scannable = 1
+	affects_dead = 1
 
 /datum/reagent/medicine/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/effect_multiplier)
 	if(M.bodytemperature < 170)
-		M.adjustCloneLoss(-(1 + (M.getCloneLoss() * 0.05)) * effect_multiplier)
-		M.adjustOxyLoss(-(1 + (M.getOxyLoss() * 0.05)) * effect_multiplier)
+		M.adjustCloneLoss(-(5 + (M.getCloneLoss() * 0.05)) * effect_multiplier)
+		M.adjustOxyLoss(-(5 + (M.getOxyLoss() * 0.05)) * effect_multiplier)
 		M.add_chemical_effect(CE_OXYGENATED, 1)
-		M.heal_organ_damage(1 * effect_multiplier, 1 * effect_multiplier, 5 * effect_multiplier, 5 * effect_multiplier)
-		M.adjustToxLoss(-(1 + (M.getToxLoss() * 0.05)) * effect_multiplier)
+		M.heal_organ_damage(5 * effect_multiplier, 1 * effect_multiplier, 5 * effect_multiplier, 5 * effect_multiplier)
+		M.adjustToxLoss(-(5 + (M.getToxLoss() * 0.05)) * effect_multiplier)
 		M.add_chemical_effect(CE_PULSE, -2)
 
 /datum/reagent/medicine/clonexadone
@@ -271,11 +272,11 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 
 /datum/reagent/medicine/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/effect_multiplier)
 	if(M.bodytemperature < 170)
-		M.adjustCloneLoss(-(3 + (M.getCloneLoss() * 0.05)) * effect_multiplier)
-		M.adjustOxyLoss(-(3 + (M.getOxyLoss() * 0.05)) * effect_multiplier)
+		M.adjustCloneLoss(-(10 + (M.getCloneLoss() * 0.05)) * effect_multiplier)
+		M.adjustOxyLoss(-(10 + (M.getOxyLoss() * 0.05)) * effect_multiplier)
 		M.add_chemical_effect(CE_OXYGENATED, 2)
-		M.heal_organ_damage(3 * effect_multiplier, 3 * effect_multiplier, 5 * effect_multiplier, 5 * effect_multiplier)
-		M.adjustToxLoss(-(3 + (M.getToxLoss() * 0.05)) * effect_multiplier)
+		M.heal_organ_damage(10 * effect_multiplier, 3 * effect_multiplier, 5 * effect_multiplier, 5 * effect_multiplier)
+		M.adjustToxLoss(-(10 + (M.getToxLoss() * 0.05)) * effect_multiplier)
 		M.add_chemical_effect(CE_PULSE, -2)
 
 /* Painkillers */
@@ -350,14 +351,14 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 /datum/reagent/medicine/synaptizine
 	name = "Synaptizine"
 	id = "synaptizine"
-	description = "Synaptizine is used to treat various diseases."
+	description = "Synaptizine is a powerful stimulant similar to Adderal that enhances the fortitude of the body's nervous system and helps cure hallucinations. Slightly toxic."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#99CCFF"
 	metabolism = REM * 0.05
 	overdose = 5
 	scannable = 1
-	nerve_system_accumulations = 50
+	nerve_system_accumulations = -50
 
 /datum/reagent/medicine/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/effect_multiplier)
 	M.drowsyness = max(M.drowsyness - 5, 0)
@@ -367,7 +368,7 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 	holder.remove_reagent("mindbreaker", 5)
 	M.adjust_hallucination(-10)
 	M.add_chemical_effect(CE_MIND, 2)
-	M.adjustToxLoss(0.5 * effect_multiplier) // It used to be incredibly deadly due to an oversight. Not anymore!
+	M.adjustToxLoss(0.25 * effect_multiplier) // It used to be incredibly deadly due to an oversight. Not anymore!
 	M.add_chemical_effect(CE_PAINKILLER, 40, TRUE)
 
 /datum/reagent/medicine/alkysine
