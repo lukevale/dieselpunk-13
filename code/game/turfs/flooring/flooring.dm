@@ -918,6 +918,15 @@ var/list/flooring_types
 /decl/flooring/rock/manmade/ruin3
 	icon_base = "stone_old2"
 
+/decl/flooring/rock/manmade/pavement1
+	icon_base = "pave_empty"
+
+/decl/flooring/rock/manmade/pavement2
+	icon_base = "pave_brick"
+
+/decl/flooring/rock/manmade/pavement3
+	icon_base = "pave_tiling"
+
 /decl/flooring/rock/seafloor
 	icon_base = "seafloor"
 

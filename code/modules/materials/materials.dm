@@ -345,6 +345,16 @@ var/list/name_to_material
 	sheet_singular_name = "brick"
 	sheet_plural_name = "bricks"
 
+/material/stone/concrete
+	name = MATERIAL_CONCRETE
+	icon_colour = "#808080"
+	var/image/texture
+
+/material/stone/concrete/New()
+	..()
+	texture = image('icons/turf/wall_texture.dmi', "concrete")
+	texture.blend_mode = BLEND_MULTIPLY
+
 /material/stone/marble
 	name = MATERIAL_MARBLE
 	icon_colour = "#AAAAAA"
@@ -604,7 +614,7 @@ var/list/name_to_material
 /material/iron
 	name = MATERIAL_IRON
 	stack_type = /obj/item/stack/material/iron
-	icon_colour = "#5C5454"
+	icon_colour = "#666666"
 	weight = 22
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
