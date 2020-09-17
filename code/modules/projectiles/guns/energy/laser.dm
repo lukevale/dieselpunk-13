@@ -3,7 +3,7 @@
 	desc = "An \"Old Testament\" design upgraded by the Orden Hospitaller. It's twice as deadly and radient as the Lightfall that preceeded it."
 	icon = 'icons/obj/guns/energy/laser.dmi'
 	icon_state = "laser"
-	item_state = null
+	item_state = "laser"
 	fire_sound = 'sound/weapons/Laser.ogg'
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
