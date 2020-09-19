@@ -191,6 +191,7 @@
 	name = "Neck Fluff"
 	icon_state = "neckfluff"
 	gender = NEUTER
+	blend = ICON_MULTIPLY
 
 /*
 ///////////////////////////////////
