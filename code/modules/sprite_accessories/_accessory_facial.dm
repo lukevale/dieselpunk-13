@@ -186,6 +186,12 @@
 	icon_state = "facial_dorsalfrill_s"
 	gender = NEUTER
 
+//should be moved later when we have a better setup for these
+/datum/sprite_accessory/facial_hair/neckfluff
+	name = "Neck Fluff"
+	icon_state = "neckfluff"
+	gender = NEUTER
+
 /*
 ///////////////////////////////////
 /  =---------------------------=  /
