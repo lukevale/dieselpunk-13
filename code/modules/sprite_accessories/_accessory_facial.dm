@@ -55,6 +55,10 @@
 	name = "Chinstrap"
 	icon_state = "chin"
 
+/datum/sprite_accessory/facial_hair/shaggy
+	name = "Shaggy"
+	icon_state = "shaggy"
+
 /datum/sprite_accessory/facial_hair/dwarf
 	name = "Dwarf Beard"
 	icon_state = "dwarf"
@@ -191,6 +195,7 @@
 	name = "Neck Fluff"
 	icon_state = "neckfluff"
 	gender = NEUTER
+	blend = ICON_MULTIPLY
 
 /*
 ///////////////////////////////////
