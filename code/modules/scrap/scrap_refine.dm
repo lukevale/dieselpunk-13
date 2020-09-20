@@ -45,8 +45,9 @@
 
 /obj/item/stack/sheet/refined_scrap
 	name = "refined scrap"
-	desc = "This is ghetto gold! It could be used as fuel or building material. Even lonestar would give cargo points for this."
+	desc = "This is ghetto gold! It could be used as fuel or building material. Even lonestar would earn a pretty penny for this."
 	icon = 'icons/obj/structures/scrap/refine.dmi'
 	icon_state = "refined"
 	max_amount = 20
 	amount = 1
+	price_tag = 2500
