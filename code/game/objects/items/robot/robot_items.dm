@@ -101,3 +101,19 @@
 		..()
 		hud = new /obj/item/clothing/glasses/hud/security(src)
 		return
+
+/obj/item/weapon/shockpaddles/robot/hound
+	name = "paws of life"
+	//icon = 'icons/mob/dogborg_vr.dmi'
+	//icon_state = "defibpaddles0"
+	icon = 'icons/obj/defibrillator.dmi'
+	icon_state = "defibpaddles0"
+	desc = "Zappy paws. For fixing cardiac arrest."
+	combat = 1
+	attack_verb = list("batted", "pawed", "bopped", "whapped")
+	chargecost = 500
+
+/obj/item/weapon/shockpaddles/robot/hound/jumper
+	name = "jumper paws"
+	desc = "Zappy paws. For rebooting a full body prostetic."
+	use_on_synthetic = 1
