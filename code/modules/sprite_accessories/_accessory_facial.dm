@@ -57,7 +57,8 @@
 
 /datum/sprite_accessory/facial_hair/shaggy
 	name = "Shaggy"
-	icon_state = "shaggy"
+	icon_state = "shag"
+	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/dwarf
 	name = "Dwarf Beard"

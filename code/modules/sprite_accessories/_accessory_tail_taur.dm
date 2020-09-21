@@ -1,8 +1,8 @@
-/*
+
 ////////////////////////////
-/  =--------------------=  /
-/  == Taur Definitions ==  /
-/  =--------------------=  /
+//  =--------------------=  /
+//  == Taur Definitions ==  /
+//  =--------------------=  /
 ////////////////////////////
 
 
@@ -20,6 +20,9 @@
 
 	//Could do nested lists but it started becoming a nightmare. It'd be more fun for lookups of a_intent and m_intent, but then subtypes need to
 	//duplicate all the messages, and it starts getting awkward. These are singletons, anyway!
+	hide_body_parts	= list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
+	clip_mask_icon = 'icons/mob/sprite_accessory/taurs.dmi'
+	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
 
 /datum/sprite_accessory/tail/taur/alraune
 	name = "Alraune (Taur)"
@@ -163,4 +166,17 @@
 	icon_state = "wolf_s"
 	colored_layers = 2
 
-/*
+/datum/sprite_accessory/tail/taur/long_lizard
+	name = "Large Dragon Tail"
+	icon_state = "lizbigliz_s"
+	hide_body_parts = null
+	clip_mask_icon = null
+	clip_mask_state = null
+
+/datum/sprite_accessory/tail/taur/long_liz_scale
+	name = "Large Dragon Tail/W scales"
+	icon_state = "lizbigliz_s"
+	hide_body_parts = null
+	clip_mask_icon = null
+	clip_mask_state = null
+	colored_layers = 2
