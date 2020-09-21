@@ -1,4 +1,5 @@
 "aa" = (/turf/simulated/wall/iron/lightgrey,/area/nadezhda/crew_quarters/apartmentu1)
+"ab" = (/obj/item/weapon/stool/padded,/turf/simulated/floor/carpet/gaycarpet,/area/nadezhda/crew_quarters/theatre)
 "ac" = (/turf/simulated/wall/iron/lightgrey,/area/nadezhda/crew_quarters/apartmentu2)
 "ad" = (/turf/simulated/wall/iron/lightgrey,/area/nadezhda/crew_quarters/apartmentu3)
 "ae" = (/obj/effect/floor_decal/industrial/warningwhite{dir = 8},/turf/simulated/floor/rock/manmade/pavement3,/area/nadezhda/crew_quarters/barbackroom)
@@ -73,7 +74,6 @@
 "bv" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/asteroid/grass,/area/nadezhda/crew_quarters/apartmentu3)
 "bw" = (/turf/simulated/floor/carpet/sblucarpet,/area/nadezhda/crew_quarters/apartmentu4)
 "bx" = (/obj/structure/table/woodentable,/obj/structure/mirror{dir = 8; pixel_x = -28; pixel_y = 0},/obj/item/toy/figure/character/civilian/entertainer{pixel_x = -1; pixel_y = 2},/turf/simulated/floor/carpet/gaycarpet,/area/nadezhda/crew_quarters/theatre)
-"by" = (/obj/item/weapon/stool/padded,/obj/landmark/join/start/actor,/turf/simulated/floor/carpet/gaycarpet,/area/nadezhda/crew_quarters/theatre)
 "bz" = (/obj/random/junkfood/low_chance{pixel_x = -1; pixel_y = 3},/turf/simulated/floor/wood,/area/nadezhda/crew_quarters/theatre)
 "bA" = (/obj/structure/closet/secure_closet/freezer,/turf/simulated/floor/wood,/area/nadezhda/crew_quarters/apartmentu1)
 "bB" = (/obj/machinery/light,/turf/simulated/floor/carpet/sblucarpet,/area/nadezhda/crew_quarters/apartmentu1)
@@ -239,7 +239,6 @@
 "eG" = (/obj/structure/toilet{dir = 4},/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/apartmentu8)
 "eH" = (/obj/structure/curtain/open,/obj/machinery/shower{dir = 4; icon_state = "shower"},/obj/effect/floor_decal/spline/fancy,/obj/effect/floor_decal/corner_techfloor_grid,/obj/structure/window/reinforced{dir = 4; pixel_x = 0},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/apartmentu8)
 "eI" = (/obj/structure/table/woodentable,/turf/simulated/floor/carpet/bcarpet,/area/nadezhda/crew_quarters/bar)
-"eJ" = (/obj/structure/bed/chair/custom/bar_special{dir = 4; icon_state = "bar_chair"},/obj/landmark/join/start/salvager,/turf/simulated/floor/wood,/area/nadezhda/crew_quarters/bar)
 "eK" = (/obj/structure/table/marble,/obj/machinery/cash_register{dir = 4},/turf/simulated/floor/tiled/steel/gray_perforated,/area/nadezhda/crew_quarters/kitchen)
 "eL" = (/obj/item/weapon/reagent_containers/glass/beaker,/obj/machinery/camera/network/cev_eris{dir = 8},/obj/structure/table/marble,/obj/machinery/reagentgrinder/portable,/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/kitchen)
 "eM" = (/obj/structure/closet/chefcloset,/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/kitchen)
@@ -248,7 +247,6 @@
 "eP" = (/obj/structure/flora/tree/jungle_small/variant3,/turf/simulated/floor/asteroid/grass,/area/nadezhda/crew_quarters/apartmentu7)
 "eQ" = (/obj/structure/flora/ausbushes/stalkybush,/turf/simulated/floor/asteroid/grass,/area/nadezhda/crew_quarters/apartmentu8)
 "eR" = (/obj/structure/bed/chair/comfy/brown{dir = 1},/obj/structure/window/reinforced,/turf/simulated/floor/carpet/bcarpet,/area/nadezhda/crew_quarters/bar)
-"eS" = (/obj/structure/bed/chair/custom/bar_special{dir = 4; icon_state = "bar_chair"},/obj/landmark/join/start/assistant,/turf/simulated/floor/wood,/area/nadezhda/crew_quarters/bar)
 "eT" = (/obj/structure/table/marble,/turf/simulated/floor/tiled/steel/gray_perforated,/area/nadezhda/crew_quarters/kitchen)
 "eU" = (/obj/item/weapon/reagent_containers/food/condiment/flour,/obj/structure/table/marble,/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/kitchen)
 "eV" = (/obj/structure/closet{name = "pantry"},/obj/item/weapon/reagent_containers/food/snacks/spagetti,/obj/item/weapon/reagent_containers/food/snacks/spagetti,/obj/item/weapon/reagent_containers/food/snacks/spagetti,/obj/item/weapon/reagent_containers/food/snacks/spagetti,/obj/item/weapon/reagent_containers/food/drinks/soymilk,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,/turf/simulated/floor/tiled/cafe,/area/nadezhda/crew_quarters/kitchen)
@@ -543,9 +541,9 @@ ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaaaaaaagboajacacacacahahahadadadadakbvalafafafafahahahahahahahahahahahahcdaiaicdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaamanaaapaqaracasatacahahahadauavadawaxayafazaAafahahahahahahahahahahahahcdaiaicdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaBaCaaagagaDacaEaFacahahahadaGaHadakaIaJafaKaLafahahblblblblblblahahahahcdaiaRcdahahahahah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaMaaaaaNaaaOacacaPacahahahadaQadadaSadaTafafaUafahahblbxbybzbPblcdcdcdcdcdaiaicdahahahahah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaMaaaaaNaaaOacacaPacahahahadaQadadaSadaTafafaUafahahblbxabbzbPblcdcdcdcdcdaiaicdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaVaWaXaYaaaZbabbbcacahahahadbdbebfbgadbhbibjbkafahahblbQclcococpcscscscrcdaiaicdahahahahah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaVaVbmbnaabpbqbcbcacbrbrbradbdbdbsbtadbubwbkbkafahahblcvbycoddbldecscsdfcdaiaicdahahahahah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaVaVbmbnaabpbqbcbcacbrbrbradbdbdbsbtadbubwbkbkafahahblcvabcoddbldecscsdfcdaiaicdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaabAaVbBbCaabDbEbcbFbGbHbIbJbKbLbdbMbNadbObRbkbSafahahbldgcldhdibldjcscscrcdaiaicdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaaaabTaaaabUacacbVacacbWbIbXjpadbYadadbZafafcaafafbrbrcbcbcbcccbcbcbcddAcdcdaiaRcdahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahgpcecececfcecececececfcecgcecfcecececececfcececececececbchcicjckcmcncdcscscdaiaicdahahahahah
@@ -556,11 +554,11 @@ ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctcGdBdCdDctdEdFdGcLcxcecececzcQdHdIdJczdKdLdMcVcCdNdNdNdNdNdNdNdNdNhYcscscscsjrcscdahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctdPctctdQctdRcxcxdScxdTcececzdUczczdVczdWcCcCdXcCdYdNdNdNdNdNdNdNdZeaeaeaebeceaeaeaahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctedeectefefegcxeheicxejcececzekelczemeneocCepeqcCererdNdNererdNdNeseaeteteteueveweaahahahah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctexeyctezefeAcxeBeCcxeDcececzeEeFczememeocCeGeHcCeIeIdNdNeIeIdNdNeJeKeteteLeteteMeaahahahah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctctctctefeNjscxcxcxcxeOcecOczczczczjtePeQcCcCcCcCeReRdNdNeReRdNdNeSeTeteteUeteteVeaeaeaeaah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWeXeYeWeZfafbfcfdfefcffcecefgfhfifgfjfkflfmfnfofmfpfqdNdNfqfqdNdNeSeTetetfretetfseaftfueaah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfvfweWfafxfbfcfyfzfcfAcecefgfBfCfgfkfDflfmfEfFfmeIeIdNdNeIeIdNdNeJeTetetfGetetetfHfIfJeaah
-ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfKeWeWfLeWfMfcfcfNfcfOcecefgfPfgfgfQfgfRfmfmfSfmeReRdNdNeReRdNdNeSeTetetfTetetfUeafIfVeaah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctexeyctezefeAcxeBeCcxeDcececzeEeFczememeocCeGeHcCeIeIdNdNeIeIdNdNgmeKeteteLeteteMeaahahahah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahctctctctefeNjscxcxcxcxeOcecOczczczczjtePeQcCcCcCcCeReRdNdNeReRdNdNgmeTeteteUeteteVeaeaeaeaah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWeXeYeWeZfafbfcfdfefcffcecefgfhfifgfjfkflfmfnfofmfpfqdNdNfqfqdNdNgmeTetetfretetfseaftfueaah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfvfweWfafxfbfcfyfzfcfAcecefgfBfCfgfkfDflfmfEfFfmeIeIdNdNeIeIdNdNgmeTetetfGetetetfHfIfJeaah
+ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfKeWeWfLeWfMfcfcfNfcfOcecefgfPfgfgfQfgfRfmfmfSfmeReRdNdNeReRdNdNgmeTetetfTetetfUeafIfVeaah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfWfXfYfZeWgagbgcgdfccececefggegfggghfggigjgkglfmdNdNdNdNdNdNdNdNgmeTetetgnetetgoeaeaeaeaah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWfWfWgqgreWgsgtgdgdgucececegvgegegwgxfggygzglglfmgAgAgAdNdNgAgAgAgBeagCetetgDetgEeaahahahah
 ahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaheWgFfWgGgHeWgIgJgdgKfccNcecOfggLgegMgNfggOgPglgQfmgRgSgTdNdNgUgSgTgVeaeaeaebeaeaeaeaahahahah
