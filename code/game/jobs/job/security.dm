@@ -279,7 +279,8 @@
 
 	access = list(
 		access_security, access_sec_doors, access_medspec, access_morgue, access_maint_tunnels,
-		access_medical_equip, access_eva, access_brig, access_external_airlocks, access_surgery
+		access_medical_equip, access_eva, access_brig, access_external_airlocks, access_surgery,
+		access_moebius, access_chemistry, access_surgery
 	)
 
 	stat_modifiers = list(
