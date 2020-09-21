@@ -104,9 +104,7 @@
 
 /obj/item/weapon/shockpaddles/robot/hound
 	name = "paws of life"
-	//icon = 'icons/mob/dogborg_vr.dmi'
-	//icon_state = "defibpaddles0"
-	icon = 'icons/obj/defibrillator.dmi'
+	icon = 'icons/mob/dogborg.dmi'
 	icon_state = "defibpaddles0"
 	desc = "Zappy paws. For fixing cardiac arrest."
 	combat = 1
