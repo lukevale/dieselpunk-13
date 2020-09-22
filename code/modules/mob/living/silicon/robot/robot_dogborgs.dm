@@ -96,6 +96,7 @@
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/device/scanner/reagent/adv(src)
 	src.modules += new /obj/item/weapon/autopsy_scanner(src) // an autopsy scanner
+	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
