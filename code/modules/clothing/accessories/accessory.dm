@@ -444,7 +444,7 @@ obj/item/clothing/accessory/scarf/green
 	desc = "A lightweight polymer frame designed to hold a neck upright comfortably."
 	icon_state = "neckbrace"
 	item_state = "neckbrace"
-	
+
 /*Ranks*/
 
 /obj/item/clothing/accessory/ranks/blank
@@ -458,7 +458,7 @@ obj/item/clothing/accessory/scarf/green
 	desc = "Red and silver shoulderboards denoting a Blackshield soldier with the rank of Trooper."
 	icon_state = "trooper_tabs"
 	item_state = "trooper_tabs"
-	
+
 /obj/item/clothing/accessory/ranks/corpsman
 	name = "Shoulderboards (Corpsman)"
 	desc = "Red and silver shoulderboards denoting a Blackshield soldier with the rank of Corpsman."
@@ -470,7 +470,7 @@ obj/item/clothing/accessory/scarf/green
 	desc = "Red and silver shoulderboards denoting a Blackshield soldier with the rank of Sergeant."
 	icon_state = "sergeant_tabs"
 	item_state = "sergeant_tabs"
-	
+
 /obj/item/clothing/accessory/ranks/sergeantmajor
 	name = "Shoulderboards (Sergeant Major)"
 	desc = "Red and silver shoulderboards denoting a Blackshield soldier with the rank of Sergeant Major."
@@ -482,13 +482,13 @@ obj/item/clothing/accessory/scarf/green
 	desc = "Red and gold shoulderboards denoting a Blackshield soldier with the rank of Commander."
 	icon_state = "commander_tabs"
 	item_state = "commander_tabs"
-	
+
 /obj/item/clothing/accessory/ranks/major
 	name = "Shoulderboards (Major)"
 	desc = "Red and gold shoulderboards denoting a Blackshield soldier with the rank of Major."
 	icon_state = "major_tabs"
 	item_state = "major_tabs"
-	
+
 /obj/item/clothing/accessory/ranks/brigadier
 	name = "Shoulderboards (Brigadier)"
 	desc = "Red, gold, and silver shoulderboards denoting the Brigadier."
@@ -500,3 +500,170 @@ obj/item/clothing/accessory/scarf/green
 	desc = "A black, blue, and silver patch made to represent the Blackshield regiment. For use on uniforms when active, or other clothing in other positions."
 	icon_state = "blackshieldpatch"
 	item_state = "blackshieldpatch"
+
+// Hank's shit starts here //
+
+//
+// Collars and such like that
+//
+
+/obj/item/clothing/accessory/choker //A colorable, tagless choker
+	name = "plain choker"
+	desc = "A simple, plain choker. Or maybe it's a collar? Use in-hand to customize it."
+	icon = 'icons/inventory/accessory/mob.dmi'
+	icon_override = 'icons/inventory/accessory/mob.dmi'
+	icon_state = "choker_cst"
+	item_state = "choker_cst"
+	overlay_state = "choker_cst"
+	var/customized = 0
+
+/obj/item/clothing/accessory/choker/attack_self(mob/user as mob)
+	if(!customized)
+		var/design = input(user,"Descriptor?","Pick descriptor","") in list("plain","simple","ornate","elegant","opulent")
+		var/material = input(user,"Material?","Pick material","") in list("leather","velvet","lace","fabric","latex","plastic","metal","chain","silver","gold","platinum","steel","bead","ruby","sapphire","emerald","diamond")
+		var/type = input(user,"Type?","Pick type","") in list("choker","collar","necklace")
+		name = "[design] [material] [type]"
+		desc = "A [type], made of [material]. It's rather [design]."
+		customized = 1
+		to_chat(usr,"<span class='notice'>[src] has now been customized.</span>")
+	else
+		to_chat(usr,"<span class='notice'>[src] has already been customized!</span>")
+
+/obj/item/clothing/accessory/collar
+	icon = 'icons/inventory/accessory/mob.dmi'
+	icon_override = 'icons/inventory/accessory/mob.dmi'
+	icon_state = "collar_blk"
+	var/writtenon = 0
+
+/obj/item/clothing/accessory/collar/silver
+	name = "Silver tag collar"
+	desc = "A collar for your little pets... or the big ones."
+	icon_state = "collar_blk"
+	item_state = "collar_blk"
+	overlay_state = "collar_blk"
+
+/obj/item/clothing/accessory/collar/gold
+	name = "Golden tag collar"
+	desc = "A collar for your little pets... or the big ones."
+	icon_state = "collar_gld"
+	item_state = "collar_gld"
+	overlay_state = "collar_gld"
+
+/obj/item/clothing/accessory/collar/bell
+	name = "Bell collar"
+	desc = "A collar with a tiny bell hanging from it, purrfect furr kitties."
+	icon_state = "collar_bell"
+	item_state = "collar_bell"
+	overlay_state = "collar_bell"
+	var/jingled = 0
+
+/obj/item/clothing/accessory/collar/bell/verb/jinglebell()
+	set name = "Jingle Bell"
+	set category = "Object"
+	set src in usr
+	if(!istype(usr, /mob/living)) return
+	if(usr.stat) return
+
+	if(!jingled)
+		usr.audible_message("[usr] jingles the [src]'s bell.")
+		playsound(src, 'sound/items/ring.ogg', 50, 1)
+		jingled = 1
+		addtimer(CALLBACK(src, .proc/jingledreset), 50)
+	return
+
+/obj/item/clothing/accessory/collar/bell/proc/jingledreset()
+		jingled = 0
+
+/obj/item/clothing/accessory/collar/spike
+	name = "Spiked collar"
+	desc = "A collar with spikes that look as sharp as your teeth."
+	icon_state = "collar_spik"
+	item_state = "collar_spik"
+	overlay_state = "collar_spik"
+
+/obj/item/clothing/accessory/collar/pink
+	name = "Pink collar"
+	desc = "This collar will make your pets look FA-BU-LOUS."
+	icon_state = "collar_pnk"
+	item_state = "collar_pnk"
+	overlay_state = "collar_pnk"
+
+/obj/item/clothing/accessory/collar/holo
+	name = "Holo-collar"
+	desc = "An expensive holo-collar for the modern day pet."
+	icon_state = "collar_holo"
+	item_state = "collar_holo"
+	overlay_state = "collar_holo"
+	matter = list(DEFAULT_WALL_MATERIAL = 50)
+
+// /obj/item/clothing/accessory/collar/holo/indigestible
+	//desc = "A special variety of the holo-collar that seems to be made of a very durable fabric that fits around the neck."//
+//Make indigestible
+// /obj/item/clothing/accessory/collar/holo/indigestible/digest_act(var/atom/movable/item_storage = null)
+	//return FALSE //
+
+/obj/item/clothing/accessory/collar/attack_self(mob/user as mob)
+	if(istype(src,/obj/item/clothing/accessory/collar/holo))
+		to_chat(user,"<span class='notice'>[name]'s interface is projected onto your hand.</span>")
+	else
+		if(writtenon)
+			to_chat(user,"<span class='notice'>You need a pen or a screwdriver to edit the tag on this collar.</span>")
+			return
+		to_chat(user,"<span class='notice'>You adjust the [name]'s tag.</span>")
+
+	var/str = copytext(reject_bad_text(input(user,"Tag text?","Set tag","")),1,MAX_NAME_LEN)
+
+	if(!str || !length(str))
+		to_chat(user,"<span class='notice'>[name]'s tag set to be blank.</span>")
+		name = initial(name)
+		desc = initial(desc)
+	else
+		to_chat(user,"<span class='notice'>You set the [name]'s tag to '[str]'.</span>")
+		initialize_tag(str)
+
+/obj/item/clothing/accessory/collar/proc/initialize_tag(var/tag)
+		name = initial(name) + " ([tag])"
+		desc = initial(desc) + " \"[tag]\" has been engraved on the tag."
+		writtenon = 1
+
+/obj/item/clothing/accessory/collar/holo/initialize_tag(var/tag)
+		..()
+		desc = initial(desc) + " The tag says \"[tag]\"."
+
+/obj/item/clothing/accessory/collar/attackby(obj/item/I, mob/user)
+	if(istype(src,/obj/item/clothing/accessory/collar/holo))
+		return
+
+	if(istype(I,/obj/item/weapon/tool/screwdriver))
+		update_collartag(user, I, "scratched out", "scratch out", "engraved")
+		return
+
+	if(istype(I,/obj/item/weapon/pen))
+		update_collartag(user, I, "crossed out", "cross out", "written")
+		return
+
+	to_chat(user,"<span class='notice'>You need a pen or a screwdriver to edit the tag on this collar.</span>")
+
+/obj/item/clothing/accessory/collar/proc/update_collartag(mob/user, obj/item/I, var/erasemethod, var/erasing, var/writemethod)
+	if(!(istype(user.get_active_hand(),I)) || !(istype(user.get_inactive_hand(),src)) || (user.stat))
+		return
+
+	var/str = copytext(reject_bad_text(input(user,"Tag text?","Set tag","")),1,MAX_NAME_LEN)
+
+	if(!str || !length(str))
+		if(!writtenon)
+			to_chat(user,"<span class='notice'>You don't write anything.</span>")
+		else
+			to_chat(user,"<span class='notice'>You [erasing] the words with the [I].</span>")
+			name = initial(name)
+			desc = initial(desc) + " The tag has had the words [erasemethod]."
+	else
+		if(!writtenon)
+			to_chat(user,"<span class='notice'>You write '[str]' on the tag with the [I].</span>")
+			name = initial(name) + " ([str])"
+			desc = initial(desc) + " \"[str]\" has been [writemethod] on the tag."
+			writtenon = 1
+		else
+			to_chat(user,"<span class='notice'>You [erasing] the words on the tag with the [I], and write '[str]'.</span>")
+			name = initial(name) + " ([str])"
+			desc = initial(desc) + " Something has been [erasemethod] on the tag, and it now has \"[str]\" [writemethod] on it."

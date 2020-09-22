@@ -5,7 +5,8 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	id_type = /obj/item/weapon/card/id/sec
 	pda_type = /obj/item/modular_computer/pda/security
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
+	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/clothing/accessory/dogtags)
+
 
 /decl/hierarchy/outfit/job/security/New()
 	..()
