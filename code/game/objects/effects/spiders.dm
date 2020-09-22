@@ -98,7 +98,7 @@
 /obj/effect/spider/eggcluster/Process()
 	amount_grown += rand(0,2)
 	if(amount_grown >= 100)
-		var/num = rand(1,3)
+		var/num = rand(0,2)
 		var/obj/item/organ/external/O = null
 		if(istype(loc, /obj/item/organ/external))
 			O = loc
@@ -107,6 +107,10 @@
 			var/spiderling = new /obj/effect/spider/spiderling(loc, src)
 			if(O)
 				O.implants += spiderling
+		if(num < 1)
+			O.visible_message(
+			SPAN_DANGER("The egg cluster decomposes. All spiderlings inside were dead!")
+			)
 		qdel(src)
 
 /obj/effect/spider/spiderling
