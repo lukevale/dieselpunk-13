@@ -148,7 +148,7 @@
 	icon_state = "medimplant_sci"
 	matter = null //Nope
 	degradation = 1
-	workspeed = 0.2 //SLOW
+	workspeed = 1 //why would this need to be so slow?
 
 	suitable_cell = /obj/item/weapon/cell/small
 
@@ -163,6 +163,17 @@
 	degradation = 0
 	max_upgrades = 0
 	//matter = list(MATERIAL_BIOMATTER = 10) No
+
+/obj/item/weapon/tool/rutool
+	name = "primed ru appendages"
+	desc = "The appendages that Cht'mant Ru's use for surgery. These make up for any surgical tool you might need, with the advantage of not using any metals. while extremely convenient, specially for other Cht'mants, it is still inferior to advanced science made multitools."
+	icon_state = "ru_surgery_hand"
+	use_power_cost = 0
+	suitable_cell = null
+	tool_qualities = list(QUALITY_CLAMPING = 30, QUALITY_RETRACTING = 30, QUALITY_BONE_SETTING = 30, QUALITY_CAUTERIZING = 30, QUALITY_SAWING = 15, QUALITY_LASER_CUTTING = 30, QUALITY_WIRE_CUTTING = 25)
+
+	max_upgrades = 0
+	workspeed = 0.8
 
 /obj/item/weapon/tool/engimplant
 	name = "engineering omnitool"
