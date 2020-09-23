@@ -34,7 +34,7 @@
 
 	var/time_multiplier = 1	//Try to avoid use of non integer values
 
-	var/biomass_consumption = 2
+	var/biomass_consumption = 6
 
 	var/image/anim0 = null
 	var/image/anim1 = null
