@@ -319,6 +319,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/snake_alt
+	name = "Snake Tail Alt"
+	desc = ""
+	icon_state = "snakealt"
+	colored_layers = 2
+	blend = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/spade_color
 	name = "Spade Tail"
 	desc = ""
@@ -394,6 +401,7 @@
 	icon_state = "wolf"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
+
 
 /*//For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special

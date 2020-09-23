@@ -898,14 +898,3 @@
 /datum/sprite_accessory/hair/cobra_hood
 	name = "Cobra Hood"
 	icon_state = "cobra_hood"
-
-/datum/sprite_accessory/tail/taur/long_lizard
-	name = "Large Dragon Tail"
-	icon_state = "big_liz"
-	hide_body_parts = null
-	clip_mask_icon = null
-	clip_mask_state = null
-
-/datum/sprite_accessory/tail/taur/long_lizard/scaled
-	name = "Large Dragon Tail/W scales"
-	extra_overlay = "big_liz_mark"
