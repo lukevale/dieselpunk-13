@@ -320,7 +320,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/snake_alt
-	name "Snake Tail Alt"
+	name = "Snake Tail Alt"
 	desc = ""
 	icon_state = "snakealt"
 	colored_layers = 2
