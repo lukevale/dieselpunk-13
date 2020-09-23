@@ -20,10 +20,7 @@
 		to_chat(user, "You start restoring the [target.name]")
 		if(do_after(user, 150, target))
 			to_chat(user, "<span class='notice'>You restore \the [target.name]")
-			target.name = initial(target.name)
-			target.color = initial(target.color)
-			target.desc = initial(target.desc)
-			target.oldified = FALSE //Clean AND REPAIR
+			target.make_young()
 			return
 		else
 			to_chat(user, "<span class='notice'>You need to stand still to restore \the [target.name]!</span>")
