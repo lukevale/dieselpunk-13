@@ -12,6 +12,7 @@
 	name = "Resurrection"
 	phrase = "Qui fuit, et crediderunt in me non morietur in aeternum"
 	desc = "A ritual of formation of a new body in a speclially designed machine.  Deceased person's cruciform has to be placed on the scanner then a prayer is to be uttered over the apparatus."
+	category = "Machinery"
 
 /datum/ritual/cruciform/machines/resurrection/perform(mob/living/carbon/human/user, obj/item/weapon/implant/core_implant/C)
 	var/list/OBJS = get_front(user)
