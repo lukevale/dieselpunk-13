@@ -5,7 +5,7 @@
 	icon_state = "case_trinket"
 	item_state = "case_trinket"
 	price_tag = 10000
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_ENGINEERING = 3)
 	matter = list(MATERIAL_PLASTIC = 10, MATERIAL_GLASS = 10)
 
@@ -20,10 +20,7 @@
 		to_chat(user, "You start restoring the [target.name]")
 		if(do_after(user, 150, target))
 			to_chat(user, "<span class='notice'>You restore \the [target.name]")
-			target.name = initial(target.name)
-			target.color = initial(target.color)
-			target.desc = initial(target.desc)
-			target.oldified = FALSE //Clean AND REPAIR
+			target.make_young()
 			return
 		else
 			to_chat(user, "<span class='notice'>You need to stand still to restore \the [target.name]!</span>")
