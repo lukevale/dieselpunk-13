@@ -5,7 +5,7 @@
 	icon_state = "case_trinket"
 	item_state = "case_trinket"
 	price_tag = 10000
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_ENGINEERING = 3)
 	matter = list(MATERIAL_PLASTIC = 10, MATERIAL_GLASS = 10)
 
