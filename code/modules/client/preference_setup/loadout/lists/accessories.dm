@@ -42,3 +42,12 @@
 /datum/gear/accessory/blackshieldpatch
 	display_name = "Blackshield arm patch"
 	path = /obj/item/clothing/accessory/patches/blackshield
+
+/datum/gear/accessory/collars
+	display_name = "collar selection"
+	path = /obj/item/clothing/accessory/collar
+	flags = GEAR_HAS_TYPE_SELECTION
+
+/datum/gear/accessory/choker
+	display_name = "Choker"
+	path = /obj/item/clothing/accessory/choker
