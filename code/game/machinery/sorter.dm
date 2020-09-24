@@ -179,7 +179,7 @@
 	for(var/obj/item/weapon/stock_parts/scanning_module/S in component_parts)
 		num_settings += S.rating
 	number_of_settings = num_settings * initial(number_of_settings)
-	speed = manipulator_rating*10
+	speed = manipulator_rating*100
 
 
 /obj/machinery/sorter/attackby(var/obj/item/I, var/mob/user)
