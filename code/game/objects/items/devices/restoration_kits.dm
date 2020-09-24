@@ -4,7 +4,8 @@
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "case_trinket"
 	item_state = "case_trinket"
-	w_class = ITEM_SIZE_NORMAL
+	price_tag = 10000
+	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_ENGINEERING = 3)
 	matter = list(MATERIAL_PLASTIC = 10, MATERIAL_GLASS = 10)
 
@@ -18,10 +19,8 @@
 	else if(istype(target) && target.oldified == TRUE)
 		to_chat(user, "You start restoring the [target.name]")
 		if(do_after(user, 150, target))
-			to_chat(user, "<span class='notice'>You start to restore \the [target.name].If only you could fix it...</span>")
-			target.name = initial(name)
-			target.color = initial(color)
-			target.oldified = FALSE //Clean AND REPAIR
+			to_chat(user, "<span class='notice'>You restore \the [target.name]")
+			target.make_young()
 			return
 		else
 			to_chat(user, "<span class='notice'>You need to stand still to restore \the [target.name]!</span>")

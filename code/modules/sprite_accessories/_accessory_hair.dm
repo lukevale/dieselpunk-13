@@ -894,3 +894,7 @@
 /datum/sprite_accessory/hair/marqua_long
 	name = "Mar'Qua Long Headtails"
 	icon_state = "marqua_hair_verylong_s"
+
+/datum/sprite_accessory/hair/cobra_hood
+	name = "Cobra Hood"
+	icon_state = "cobra_hood"

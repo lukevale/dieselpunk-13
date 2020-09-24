@@ -601,6 +601,59 @@
 /area/nadezhda/crew_quarters/apartment8
 	name = "\improper Industrial Apartment Complex"
 
+//
+
+/area/nadezhda/crew_quarters/apartmentucorridor
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu1
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu2
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu3
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu4
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu5
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu6
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu7
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu8
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu9
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu10
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu11
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu12
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu13
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu14
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu15
+	name = "\improper Industrial Apartment Complex Underground"
+
+/area/nadezhda/crew_quarters/apartmentu16
+	name = "\improper Industrial Apartment Complex Underground"
+
 /area/nadezhda/crew_quarters/sleep
 	name = "\improper Dormitories"
 

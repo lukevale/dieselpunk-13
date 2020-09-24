@@ -16,6 +16,10 @@
 	var/ani_state // State when wagging/animated
 	var/extra_overlay_w // Wagging state for extra overlay
 	var/layers = 0
+	var/list/hide_body_parts = list() //Uses organ tag defines. Bodyparts in this list do not have their icons rendered, allowing for more spriter freedom when doing taur/digitigrade stuff.
+	var/icon/clip_mask_icon = null //Icon file used for clip mask.
+	var/clip_mask_state = null //Icon state to generate clip mask. Clip mask is used to 'clip' off the lower part of clothing such as jumpsuits & full suits.
+	var/icon/clip_mask = null //Instantiated clip mask of given icon and state
 
 /datum/sprite_accessory/tail/akulahc
 	name = "Akula Tail"
@@ -315,6 +319,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/snake_alt
+	name = "Snake Tail Alt"
+	desc = ""
+	icon_state = "snakealt"
+	colored_layers = 2
+	blend = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/spade_color
 	name = "Spade Tail"
 	desc = ""
@@ -390,6 +401,7 @@
 	icon_state = "wolf"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
+
 
 /*//For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special

@@ -40,6 +40,15 @@
 	is_sealed = TRUE
 	height = 3
 
+/obj/map_data/nadezda_resident
+	name = "Nadezhda Residential"
+	is_station_level = TRUE
+	is_player_level = TRUE
+	is_contact_level = TRUE
+	is_accessable_level = FALSE
+	is_sealed = TRUE
+	height = 4
+
 /obj/map_data/admin
 	name = "Admin Level"
 	is_admin_level = TRUE

@@ -10,7 +10,7 @@
 	taste_description = "slimey metal"
 	reagent_state = LIQUID
 	color = "#696969" // ( ͡° ͜ʖ ͡°)
-	metabolism = REM/2
+	metabolism = REM * 0
 	heating_point = 523
 	heating_products = list("nanites")
 	scannable = 1

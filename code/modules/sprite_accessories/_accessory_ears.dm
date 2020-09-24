@@ -396,3 +396,10 @@
 	icon_state = "wolf"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/bigliz
+	name = "Large Lizard Horns"
+	desc = ""
+	icon_state = "big_liz"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
