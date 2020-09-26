@@ -102,6 +102,8 @@
 		hud = new /obj/item/clothing/glasses/hud/security(src)
 		return
 
+//*******************Extra items for hounds
+
 /obj/item/weapon/shockpaddles/robot/hound
 	name = "paws of life"
 	icon = 'icons/mob/dogborg.dmi'

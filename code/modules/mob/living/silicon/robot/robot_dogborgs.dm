@@ -64,13 +64,13 @@
 	networks = list(NETWORK_MEDICAL)
 	can_be_pushed = 0
 
-	health = 85 //Fragile
-	speed_factor = 1.0 //Kinda slow
-	power_efficiency = 0.6 //Very poor, shackled to a charger
+	health = 100 //Fragile
+	speed_factor = 1.1 //Kinda slow
+	power_efficiency = 1.15 //Decent
 
 	stat_modifiers = list(
 		STAT_BIO = 40,
-		STAT_COG = 10
+		STAT_COG = 50
 	)
 
 	desc = "A versatile medical hound, equipped with all the tools necessary for surgery, chemistry, and \
@@ -97,6 +97,7 @@
 	src.modules += new /obj/item/device/scanner/reagent/adv(src)
 	src.modules += new /obj/item/weapon/autopsy_scanner(src) // an autopsy scanner
 	src.modules += new /obj/item/weapon/shockpaddles/robot/hound(src)
+	src.modules += new /obj/item/weapon/storage/bag/robotic/chem(src)
 	src.emag = new /obj/item/weapon/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent("pacid", 250)
 	src.emag.name = "Polyacid spray"
@@ -155,9 +156,9 @@
 	channels = list("Service" = 1)
 	can_be_pushed = 0
 
-	health = 175 //Bulky
-	speed_factor = 1.1 //Slow
-	power_efficiency = 0.8 //Poor
+	health = 150 //Bulky
+	speed_factor = 1.3 //Average
+	power_efficiency = 1 //Decent
 
 	stat_modifiers = list(
 		STAT_ROB = 20
@@ -214,7 +215,7 @@
 
 	health = 115 //Weak
 	speed_factor = 1.3 //Average
-	power_efficiency = 0.75 //Poor efficiency
+	power_efficiency = 1 //Decent
 
 	desc = "Built for working in a well-equipped lab, and designed to handle a wide variety of research \
 	duties, this module prioritises flexibility over efficiency. Capable of working in R&D, Toxins, \
@@ -222,8 +223,8 @@
 
 	stat_modifiers = list(
 		STAT_BIO = 30,
-		STAT_COG = 40,
-		STAT_MEC = 30
+		STAT_COG = 50,
+		STAT_MEC = 40
 	)
 
 /obj/item/weapon/robot_module/robot/science/New(var/mob/living/silicon/robot/R)
@@ -275,14 +276,14 @@
 
 	health = 170 //Slightly above average
 	speed_factor = 1.4 //Slightly above average
-	power_efficiency = 0.9 //Slightly below average
+	power_efficiency = 1 //Slightly below average
 
 	desc = "The engineering module is designed for setting up and maintaining core ship systems, \
 	as well as occasional repair work here and there. It's a good all rounder that can serve most \
 	engineering tasks."
 
 	stat_modifiers = list(
-		STAT_COG = 20,
+		STAT_COG = 50,
 		STAT_MEC = 40
 	)
 

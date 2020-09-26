@@ -676,3 +676,15 @@
 	can_hold = list (
 		/obj/item/stack/material
 	)
+	
+/obj/item/weapon/storage/bag/robotic/chem
+	name = "internal chemistry bag"
+	desc = "An internalized container for gathering pharmaceuticals."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "chembag"
+	w_class = ITEM_SIZE_SMALL
+	max_storage_space = 200
+	allow_quick_empty = TRUE 
+	//max_w_class = ITEM_SIZE_SMALL
+	can_hold =list(/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle/,/obj/item/weapon/reagent_containers/glass/beaker,/obj/item/weapon/reagent_containers/glass/bottle)
+

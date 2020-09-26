@@ -47,6 +47,8 @@
 	if(oldified)
 		name = initial(name)
 		color = initial(color)
+		desc = initial(desc)
+		price_tag = initial (desc)
 	..()
 
 /obj/item/make_old()
