@@ -1,6 +1,7 @@
 #include "overmap-eris.dm"
 #include "shuttles-eris.dm"
 #include "../encounters/deeptunnels/deeptunnels.dm"
+#include "Nadezhda_Colony_Rec.dmm"
 #include "_Nadezhda_Colony_Underground.dmm"
 #include "_Nadezhda_Colony_Transition.dmm"
 #include "_Nadezhda_Colony_Surface.dmm"
