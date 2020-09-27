@@ -48,8 +48,18 @@
 		name = initial(name)
 		color = initial(color)
 		desc = initial(desc)
-		price_tag = initial(price_tag)
 		contaminated = FALSE
+		if(price_tag)
+			price_tag = initial(price_tag)
+	..()
+/obj/item/weapon/cell/make_young()
+	if(oldified)
+		name = initial(name)
+		color = initial(color)
+		desc = initial(desc)
+		contaminated = FALSE
+		if(price_tag)
+			price_tag = initial(price_tag)
 	..()
 
 /obj/item/make_old()
