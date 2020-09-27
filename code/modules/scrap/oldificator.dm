@@ -48,7 +48,8 @@
 		name = initial(name)
 		color = initial(color)
 		desc = initial(desc)
-		price_tag = initial (desc)
+		price_tag = initial(price_tag)
+		contaminated = FALSE
 	..()
 
 /obj/item/make_old()
