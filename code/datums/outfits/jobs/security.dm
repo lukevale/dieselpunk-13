@@ -5,7 +5,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots
 	id_type = /obj/item/weapon/card/id/sec
 	pda_type = /obj/item/modular_computer/pda/security
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/clothing/accessory/dogtags)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/clothing/accessory/dogtags)
 
 
 /decl/hierarchy/outfit/job/security/New()
@@ -24,7 +24,7 @@
 	id_type = /obj/item/weapon/card/id/hos
 	head = /obj/item/clothing/head/rank/commander
 	pda_type = /obj/item/modular_computer/pda/heads/hos
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1,/obj/item/ammo_magazine/kurtz/rubber = 2,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1,/obj/item/ammo_magazine/kurtz/rubber = 2,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 /decl/hierarchy/outfit/job/security/smc
 	name = OUTFIT_JOB_NAME("Infantry - Blackshield Commander")
@@ -38,7 +38,7 @@
 	id_type = /obj/item/weapon/card/id/hos
 	head = /obj/item/clothing/head/rank/milcom/beret
 	pda_type = /obj/item/modular_computer/pda/heads/hos
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1,/obj/item/ammo_magazine/kurtz = 2,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1,/obj/item/ammo_magazine/kurtz = 2,/obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 
 /decl/hierarchy/outfit/job/security/gunserg
@@ -49,7 +49,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security
 	l_pocket = /obj/item/device/flash
 	gloves = /obj/item/clothing/gloves/stungloves
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 /decl/hierarchy/outfit/job/security/serg
 	name = OUTFIT_JOB_NAME("Infantry - Sergeant Major")
@@ -58,7 +58,7 @@
 	glasses = /obj/item/clothing/glasses/ballistic
 	l_pocket = /obj/item/device/flash
 	gloves = /obj/item/clothing/gloves/thick
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 /decl/hierarchy/outfit/job/security/inspector
 	name = OUTFIT_JOB_NAME("Provosts - Master-At-Arms")
@@ -73,7 +73,7 @@
 	r_hand = /obj/item/weapon/storage/briefcase/crimekit
 	id_type = /obj/item/weapon/card/id/det
 	pda_type = /obj/item/modular_computer/pda/forensics
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/ammo_magazine/slkurtz/rubber = 2, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/ammo_magazine/slkurtz/rubber = 2, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2)
 
 /decl/hierarchy/outfit/job/security/detective/New()
 	..()
@@ -88,7 +88,7 @@
 	pda_type = /obj/item/modular_computer/pda/forensics
 	belt = /obj/item/weapon/storage/belt/medical/emt
 	gloves = /obj/item/clothing/gloves/thick
-	backpack_contents = list(/obj/item/weapon/gun/energy/gun/martin = 1, /obj/item/weapon/cell/small/high = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/gun/energy/gun/martin = 1, /obj/item/weapon/cell/small/high = 1)
 
 /decl/hierarchy/outfit/job/security/ihoper
 	name = OUTFIT_JOB_NAME("Provost - Master-At-Arms")
@@ -98,7 +98,7 @@
 	glasses = /obj/item/clothing/glasses/sechud/tactical
 	head = /obj/item/clothing/head/helmet
 	gloves = /obj/item/clothing/gloves/stungloves
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 /decl/hierarchy/outfit/job/security/troop
 	name = OUTFIT_JOB_NAME("Infantry - Trooper")
@@ -108,4 +108,4 @@
 	glasses = /obj/item/clothing/glasses/ballistic
 	head = /obj/item/clothing/head/rank/trooper/cap
 	gloves = /obj/item/clothing/gloves/thick/swat
-	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1, /obj/item/weapon/tool/knife/tacknife = 1)
+	backpack_contents = list(/obj/item/clothing/accessory/dogtags = 1,/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1, /obj/item/weapon/tool/knife/tacknife = 1)
