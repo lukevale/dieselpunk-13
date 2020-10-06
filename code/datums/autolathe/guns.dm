@@ -32,7 +32,7 @@
 
 /datum/design/autolathe/gun/NM_colt
 	name = "HG .35 \"Bronco\""
-	build_path = /obj/item/weapon/gun/projectile/colt/NM_colt
+	build_path = /obj/item/weapon/gun/projectile/colt/IH_colt
 
 /datum/design/autolathe/gun/detective
 	name = "H&S REV ..35 \"Havelock\""

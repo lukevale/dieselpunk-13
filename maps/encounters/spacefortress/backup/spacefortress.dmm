@@ -47,7 +47,7 @@
 "aU" = (/obj/structure/closet/crate,/obj/random/ammo_fancy/low_chance,/obj/random/ammo_fancy/low_chance,/obj/random/ammo_fancy/low_chance,/obj/random/ammo_fancy/low_chance,/obj/random/ammo_lowcost/low_chance,/obj/random/ammo_lowcost/low_chance,/obj/random/gun_cheap/low_chance,/obj/random/gun_cheap/low_chance,/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/white/brown_platform,/area/outpost/abandoned_fortress)
 "aV" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/tiled,/area/outpost/abandoned_fortress)
 "aW" = (/obj/structure/table/rack,/obj/item/weapon/storage/deferred/crate/demolition,/turf/unsimulated/floor{icon_state = "dark"},/area/outpost/abandoned_fortress)
-"aX" = (/obj/structure/table/rack,/turf/unsimulated/floor{icon_state = "dark"},/area/outpost/abandoned_fortress)
+"aX" = (/obj/structure/table/rack,/obj/item/weapon/storage/deferred/crate/saw,/turf/unsimulated/floor{icon_state = "dark"},/area/outpost/abandoned_fortress)
 "aY" = (/obj/machinery/computer/scan_consolenew,/turf/simulated/floor/tiled/white/brown_platform,/area/outpost/abandoned_fortress)
 "aZ" = (/obj/structure/table/reinforced,/obj/random/junkfood/rotten,/obj/random/junkfood/rotten,/obj/random/junkfood,/obj/random/junkfood/low_chance,/turf/simulated/floor/tiled/white/brown_platform,/area/outpost/abandoned_fortress)
 "ba" = (/obj/structure/table/rack,/obj/item/weapon/storage/deferred/surgery,/turf/unsimulated/floor{icon_state = "dark"},/area/outpost/abandoned_fortress)

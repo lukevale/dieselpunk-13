@@ -94,7 +94,7 @@
 	else
 		new /obj/item/weapon/storage/backpack/sport/ironhammer(src)
 	if(prob(50))
-		new /obj/item/weapon/gun/projectile/colt/NM_colt(src)
+		new /obj/item/weapon/gun/projectile/colt/IH_colt(src)
 		new /obj/item/ammo_magazine/hpistol(src)
 		new /obj/item/ammo_magazine/hpistol(src)
 		new /obj/item/ammo_magazine/hpistol/rubber(src)
@@ -148,7 +148,7 @@
 			new /obj/item/ammo_magazine/hpistol(src)
 			new /obj/item/ammo_magazine/hpistol/rubber(src)
 		if ("bronco")
-			new /obj/item/weapon/gun/projectile/colt/NM_colt(src)
+			new /obj/item/weapon/gun/projectile/colt/IH_colt(src)
 			new /obj/item/ammo_magazine/hpistol(src)
 			new /obj/item/ammo_magazine/hpistol(src)
 			new /obj/item/ammo_magazine/hpistol/rubber(src)

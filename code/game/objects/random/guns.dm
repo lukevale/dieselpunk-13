@@ -125,7 +125,7 @@
 				/obj/item/weapon/gun/projectile/silenced = 2,\
 				/obj/item/weapon/gun/projectile/revolver/mistral = 2,\
 				/obj/item/weapon/gun/projectile/lamia/socom = 0.5,\
-				/obj/item/weapon/gun/projectile/colt/NM_colt = 2,\
+				/obj/item/weapon/gun/projectile/colt/IH_colt = 2,\
 				/obj/item/weapon/gun/projectile/colt/ten = 2,\
 				/obj/item/weapon/gun/projectile/colt/ten/dark = 1,\
 				//obj/item/weapon/gun/projectile/automatic/lmg/saw = 1,
