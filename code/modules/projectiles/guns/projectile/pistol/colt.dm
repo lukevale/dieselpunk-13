@@ -17,13 +17,11 @@
 	gun_tags = list(GUN_PROJECTILE, GUN_CALIBRE_35)
 	one_hand_penalty = 20
 
-/obj/item/weapon/gun/projectile/colt/NM_colt
-	name = "\"Bronco\" pistol"
-	desc = "A rugged derivative of the venerable M1911, built on double-stack frames and modified by the Nadezhda Marshals gunsmiths from new or refitted weapons to meet match-grade standards. Uses .35 rounds."
-	icon_state = "NM_colt"
-	item_state = "colt"
-	caliber = CAL_PISTOL
-	mag_well = MAG_WELL_H_PISTOL
+/obj/item/weapon/gun/projectile/colt/IH_colt
+	name = "FS HG .45 \"Bronco\""
+	desc = "A rugged derivative of the venerable M1911, modernized to the M1911A3 standard. Uses .45 rounds."
+	icon_state = "IH_colt"
+	item_state = "IH_colt"
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	matter = list(MATERIAL_PLASTEEL = 12, MATERIAL_PLASTIC = 5)

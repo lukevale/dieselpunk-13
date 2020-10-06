@@ -795,8 +795,19 @@
 
 	switched_on_force = initial(switched_on_force)
 	extra_bulk = initial(extra_bulk)
+	item_flags = initial(item_flags)
+	name = initial(name)
+	max_upgrades = initial(max_upgrades)
+	color = initial(color)
+	sharp = initial(sharp)
+	prefixes = list()
 
-	..()
+	//Now lets have each upgrade reapply its modifications - Undefined proc and var. Thanks Kaz.
+//	for (var/obj/item/weapon/tool_upgrade/T in upgrades)
+//		T.apply_values()
+
+	for (var/prefix in prefixes)
+		name = "[prefix] [name]"
 
 	health_threshold = max(0, health_threshold)
 

@@ -11,6 +11,11 @@
 	colored_layers = 0 // If set to 1, will apply color to the base sprite using the blend variable's mode.
 	var/desc = "You should not see this..."
 
+/datum/sprite_accessory/ears/alurane
+	name = "Alurane Ears/Hair"
+	desc = ""
+	icon_state = "alurane-ears"
+
 /datum/sprite_accessory/ears/antlers
 	name = "Antlers"
 	desc = ""
@@ -39,8 +44,20 @@
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/bearhc
+/datum/sprite_accessory/ears/aronai
+	name = "Aronai Ears/Head"
+	desc = ""
+	icon_state = "aronai"
+
+/datum/sprite_accessory/ears/bear_brown
 	name = "Bear Ears"
+	desc = ""
+	icon_state = "cow-nohorns"
+	colored_layers = 2
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/bearhc
+	name = "Bear Ears, Colorable"
 	desc = ""
 	icon_state = "bear"
 	colored_layers = 1
@@ -53,8 +70,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/antennae_hc
+/datum/sprite_accessory/ears/antennae
 	name = "Bee Antennae"
+	desc = ""
+	icon_state = "bee"
+
+/datum/sprite_accessory/ears/antennae_hc
+	name = "Bee Antennae, Colorable"
 	desc = ""
 	icon_state = "antennae"
 	colored_layers = 1
@@ -70,14 +92,14 @@
 /datum/sprite_accessory/ears/bunny_floppy
 	name = "Bunny Ears, Floppy"
 	desc = ""
-	icon_state = "bunny_floppy"
+	icon_state = "floppy_bun"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/bunny_swooped
 	name = "Bunny Ears, Swooped"
 	desc = ""
-	icon_state = "bunny_swooped"
+	icon_state = "swooped_bunny"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
@@ -92,20 +114,23 @@
 	name = "Citheronia Antennae"
 	desc = ""
 	icon_state = "lilimoth_antennae"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/cowc
+/datum/sprite_accessory/ears/cow
 	name = "Cow Horns"
 	desc = ""
-	icon_state = "cowearshc"
-	colored_layers = 2
+	icon_state = "cow"
+
+/datum/sprite_accessory/ears/cowc
+	name = "Cow Horns, Colorable"
+	desc = ""
+	icon_state = "cow-c"
+	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/cow_nohorns
 	name = "Cow Horns, Cut"
 	desc = ""
-	icon_state = "ncowearshc"
+	icon_state = "cow-nohorns"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
@@ -116,6 +141,11 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/deathclaw
+	name = "Deathclaw Horns"
+	desc = ""
+	icon_state = "molenar-deathclaw"
+
 /datum/sprite_accessory/ears/deer
 	name = "Deer Ears"
 	desc = ""
@@ -123,8 +153,15 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/demon_horns1_c
+/datum/sprite_accessory/ears/demon_horns1
 	name = "Demon Horns"
+	desc = ""
+	icon_state = "deer"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/demon_horns1_c
+	name = "Demon Horns, Colorable"
 	desc = ""
 	icon_state = "demon-horns1_c"
 	colored_layers = 1
@@ -151,6 +188,13 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/drake
+	name = "Drake Frills"
+	desc = ""
+	icon_state = "drake"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
 /datum/sprite_accessory/ears/elfs
 	name = "Elven Ears"
 	desc = ""
@@ -158,31 +202,32 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/fennecsune
+	name = "Fennecsune Ears"
+	desc = ""
+	icon_state = "runac"
+
+/datum/sprite_accessory/ears/fenears
+	name = "Flatland Zorren Ears"
+	desc = ""
+	icon_state = "fenears"
+
 /datum/sprite_accessory/ears/fenearshc
-	name = "Fennec Ears"
-	desc = ""
-	icon_state = "fenearshc"
-	colored_layers = 2
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/higherlanderhc
-	name = "Fox Ears"
-	desc = ""
-	icon_state = "foxearshc"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/frills_aquatic
-	name = "Frills, Aquatic"
+	name = "Flatland Zorren Ears, Colorable"
 	desc = ""
 	icon_state = "frills_aqua"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/drake
-	name = "Frills, Drake"
+/datum/sprite_accessory/ears/fluffdragon
+	name = "Fluffdragon Ears"
 	desc = ""
-	icon_state = "drake"
+	icon_state = "miria-fluffdragonears"
+
+/datum/sprite_accessory/ears/frills_aquatic
+	name = "Frills, Aquatic"
+	desc = ""
+	icon_state = "frills_aqua"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
@@ -200,12 +245,22 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/pharoah
-	name = "Hound Ears"
+/datum/sprite_accessory/ears/highlander
+	name = "Highlander Zorren Ears"
 	desc = ""
-	icon_state = "shock"
-	colored_layers = 2
+	icon_state = "foxears"
+
+/datum/sprite_accessory/ears/higherlanderhc
+	name = "Highlander Zorren Ears, Colorable"
+	desc = ""
+	icon_state = "foxearshc"
+	colored_layers = 1
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/inkling
+	name = "Inkling Hair"
+	desc = ""
+	icon_state = "molenar-tentacle"
 
 /datum/sprite_accessory/ears/jagged
 	name = "Jagged Ears"
@@ -214,64 +269,78 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/kitsunetritail
-	name = "Kitsune Ears"
+/datum/sprite_accessory/ears/kitsunemiria
+	name = "Kitsune Ears, Iria"
 	desc = ""
-	icon_state = "rosey"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
+	icon_state = "miria-kitsuneears"
 
 /datum/sprite_accessory/ears/kitsune
-	name = "Kitsune Ears, Speckled"
+	name = "Kitsune Ears, Quintail"
 	desc = ""
 	icon_state = "molenar-kitsune"
-	colored_layers = 2
-	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/kitsunetritail
+	name = "Kitsune Ears, Tritail"
+	desc = ""
+	icon_state = "rosey"
 
 /datum/sprite_accessory/ears/kittyhc
-	name = "Feline Ears"
+	name = "Kitty Ears"
 	desc = ""
 	icon_state = "kitty"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/lizard
-	name = "Lizard Horns"
+/datum/sprite_accessory/ears/mouse_grey
+	name = "Mouse Ears"
 	desc = ""
-	icon_state = "molenar-deathclaw"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
+	icon_state = "mouse-grey"
 
 /datum/sprite_accessory/ears/mousehc
-	name = "Mouse Ears"
+	name = "Mouse Ears, Colorable"
 	desc = ""
 	icon_state = "mouse"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/oni_h1_c
+/datum/sprite_accessory/ears/mousehcno
+	name = "Mouse Ears, No Inner Colorable"
+	desc = ""
+	icon_state = "mouse"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/oni_h1
 	name = "Oni Horns"
+	desc = ""
+	icon_state = "oni-h1"
+
+/datum/sprite_accessory/ears/oni_h1_c
+	name = "Oni Horns, Colorable"
 	desc = ""
 	icon_state = "oni-h1_c"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/otie
-	name = "Doberman Ears"
+	name = "Otie Ears"
 	desc = ""
-	icon_state = "otie"
-	colored_layers = 2
+	icon_state = "robot_right"
+	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/panda
 	name = "Panda Ears"
 	desc = ""
 	icon_state = "panda"
-	colored_layers = 2
-	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/naramad
-	name = "Naramad Ears"
+/datum/sprite_accessory/ears/pharoah
+	name = "Pharoah Hound Ears"
+	desc = ""
+	icon_state = "shock"
+
+/datum/sprite_accessory/ears/sergal
+	name = "Sergal Ears"
 	icon_state = "serg_plain_s"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
@@ -279,81 +348,48 @@
 /datum/sprite_accessory/ears/sleek
 	name = "Sleek Ears"
 	desc = ""
-	icon_state = "sleek"
+	icon_state = "sh_curledS"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/squirrelhc
-	name = "Squirrel Ears"
+	name = "Squirrel Ears, Colorable"
 	desc = ""
 	icon_state = "squirrel"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/squirrel_orange
+	name = "Squirrel Ears, Orange"
+	desc = ""
+	icon_state = "squirrel-orange"
+
+/datum/sprite_accessory/ears/squirrel_red
+	name = "Squirrel Ears, Red"
+	desc = ""
+	icon_state = "squirrel-red"
+
 /datum/sprite_accessory/ears/robot
 	name = "Synth Antennae"
 	desc = ""
-	icon_state = "robot_dual"
+	icon_state = "dual_robot_antennae"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/left_robot
 	name = "Synth Antennae, Left"
 	desc = ""
-	icon_state = "robot_left"
+	icon_state = "left_robot_antennae"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/right_robot
 	name = "Synth Antennae, Right"
 	desc = ""
-	icon_state = "robot_right"
+	icon_state = "right_robot_antennae"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/ears/shforward
-	name = "Sablekyne Large Horns"
-	desc = ""
-	icon_state = "sh_forward"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/shcurled
-	name = "Sablekyne Curled Horns"
-	desc = ""
-	icon_state = "sh_curled"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/shcurledS
-	name = "Sablekyne Curled Horns (small)"
-	desc = ""
-	icon_state = "sh_curledS"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/shsmall
-	name = "Sablekyne Small Horns 1"
-	desc = ""
-	icon_state = "sh_small"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/shsmall2
-	name = "Sablekyne Small Horns 2"
-	desc = ""
-	icon_state = "sh_small2"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/shsmall3
-	name = "Sablekyne Small Horns 3"
-	desc = ""
-	icon_state = "sh_small3"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
-
-/*
 /datum/sprite_accessory/ears/teshari
 	name = "Teshari Fluff"
 	desc = ""
@@ -374,26 +410,17 @@
 	icon_state = "tesharihigh"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
-*/
+
 
 /datum/sprite_accessory/ears/tigress
 	name = "Tigress Ears"
 	desc = ""
 	icon_state = "tigressears"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/vulp
 	name = "Vulpkanin Ears"
 	desc = ""
 	icon_state = "vulp"
-	colored_layers = 2
-	blend = ICON_MULTIPLY
-
-/datum/sprite_accessory/ears/wolfhc
-	name = "Wolf Ears"
-	desc = ""
-	icon_state = "wolf"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
 
@@ -403,3 +430,24 @@
 	icon_state = "big_liz"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
+/datum/sprite_accessory/ears/wingwolf
+	name = "Wingwolf Ears"
+	desc = ""
+	icon_state = "kerena"
+
+/datum/sprite_accessory/ears/wolfhc
+	name = "Wolf Ears"
+	desc = ""
+	icon_state = "wolf"
+	colored_layers = 2
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/wolf_green
+	name = "Wolf Ears, Green"
+	desc = ""
+	icon_state = "wolf-green"
+
+/datum/sprite_accessory/ears/wisewolf
+	name = "Wolf Ears, Wise"
+	desc = ""
+	icon_state = "wolf-wise"

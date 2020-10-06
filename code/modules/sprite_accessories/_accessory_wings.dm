@@ -17,18 +17,16 @@
 	var/extra_overlay_w // Flapping state for extra overlay
 	var/layers = 0
 
-/datum/sprite_accessory/wings/bat_color
-	name = "Bat Wings"
+/datum/sprite_accessory/wings/bat_black
+	name = "Bat Wings, Black"
 	desc = ""
-	icon_state = "bat"
-	colored_layers = 1
+	icon_state = "bat-black"
 
-/datum/sprite_accessory/wings/bee
-	name = "Bee Wings"
+/datum/sprite_accessory/wings/bat_color
+	name = "Bat Wings, Colorable"
 	desc = ""
-	icon_state = "bee"
+	icon_state = "bat-color"
 	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/wings/butterfly
 	name = "Butterfly Wings"
@@ -37,31 +35,47 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
-/datum/sprite_accessory/wings/cyberdragon
-	name = "Cybernetic Wings"
+/datum/sprite_accessory/wings/bat_red
+	name = "Bat Wings, Red"
 	desc = ""
-	icon_state = "cyber"
-	colored_layers = 2
+	icon_state = "bat-red"
+
+/datum/sprite_accessory/wings/bee
+	name = "Bee Wings"
+	desc = ""
+	icon_state = "beewings"
+
+/datum/sprite_accessory/wings/citheroniamoth
+	name = "Citheronia Wings"
+	desc = ""
+	icon_state = "citheronia_wings"
+
+/datum/sprite_accessory/wings/cyberdragon_red
+	name = "Cyberdragon Wings"
+	desc = ""
+	icon_state = "cyberdragon_red_s"
+
+/datum/sprite_accessory/wings/cyberdragon
+	name = "Cyberdragon Wings, Colorable"
+	desc = ""
+	icon_state = "cyberdragon_s"
+	colored_layers = 1
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/wings/cyberdoe
+	name = "Cyberdoe Wings"
+	desc = ""
+	icon_state = "cyberdoe_s"
 
 /datum/sprite_accessory/wings/demon
 	name = "Demon Wings"
 	desc = ""
-	icon_state = "demon"
-	colored_layers = 1
-
-/datum/sprite_accessory/wings/dragon
-	name = "Dragon Wings"
-	desc = ""
-	icon_state = "dragon"
-	colored_layers = 1
-	blend = ICON_MULTIPLY
+	icon_state = "sepulchre_wings"
 
 /datum/sprite_accessory/wings/dragonfly
 	name = "Dragonfly Wings"
 	desc = ""
 	icon_state = "dragonfly"
-	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/wings/fantail
@@ -69,7 +83,6 @@
 	desc = ""
 	icon_state = "fantail"
 	colored_layers = 1
-	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/wings/feathered
 	name = "Feathered Wings, Small"
@@ -110,6 +123,16 @@
 	icon_state = "moth_burned"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/wings/greentaj
+	name = "Green Taj Wings"
+	desc = ""
+	icon_state = "scree-wings"
+
+/datum/sprite_accessory/wings/fluffdragon
+	name = "Fluffdragon Wings"
+	desc = ""
+	icon_state = "miria-fluffdragontail"
 
 /datum/sprite_accessory/wings/moth_citheronia
 	name = "Moth Wings, Citheronia"
@@ -214,6 +237,11 @@
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
+/datum/sprite_accessory/wings/pharoah
+	name = "Pharoah Hound Tail"
+	desc = ""
+	icon_state = "shock"
+
 /datum/sprite_accessory/wings/spider_legs
 	name = "Spider Legs"
 	desc = ""
@@ -261,3 +289,14 @@
 	desc = ""
 	icon_state = "succubus"
 	colored_layers = 3
+
+/datum/sprite_accessory/wings/wingwolf
+	name = "Wingwolf Wings"
+	desc = ""
+	icon_state = "kerena-wings"
+	ckeys_allowed = list("somekindofpony")
+
+/datum/sprite_accessory/wings/xenomorph
+	name = "Xenomorph Backplate"
+	desc = ""
+	icon_state = "snag-backplate"

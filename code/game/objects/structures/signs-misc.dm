@@ -104,6 +104,11 @@
 	desc = "A preserved blueprint of some sort of space station."
 	icon_state = "map-right"
 
+/obj/structure/sign/misc/arcade
+	name = "arcade sign"
+	desc = "A sign for the arcade area."
+	icon_state = "arcade"
+
 /obj/structure/sign/misc/garden
 	name = "garden sign"
 	desc = "A sign for the garden area."

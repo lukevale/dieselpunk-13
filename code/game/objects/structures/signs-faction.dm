@@ -62,7 +62,7 @@
 	desc = "A sign depicting the insignia of the Artificer Guild, the clan of mechanists, engineers, and technicians."
 	icon_state = "technomancers"
 
-/obj/structure/sign/faction/excelsior
+/obj/structure/sign/faction/excelsior //Flammen's choice to keep them as commie or cults will determine the update to this.
 	name = "Excelsior"
 	desc = "A sign depicting the insignia of Excelsior, the communist cult."
 	icon_state = "excelsior"
@@ -89,5 +89,5 @@
 
 /obj/structure/sign/faction/derelict2
 	name = "decrepit sign"
-	desc = "A rusted sign displaying some kind of old insignia. It looks eerily imposing."
+	desc = "A rusted sign displaying some kind of old insignia. It looks imposing."
 	icon_state = "something-old2"

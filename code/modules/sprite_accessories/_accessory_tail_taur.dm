@@ -116,11 +116,16 @@
 /datum/sprite_accessory/tail/taur/naga/naga_2c
 	name = "Naga Dual Color (Taur)"
 	icon_state = "naga_s"
-	colored_layers = 2
 
 /datum/sprite_accessory/tail/taur/otie
 	name = "Otie (Taur)"
 	icon_state = "otie_s"
+	colored_layers = 2
+	colored_layers = 2
+
+/datum/sprite_accessory/tail/taur/synthhorse
+	name = "SynthHorse (Taur)"
+	icon_state = "synthhorse_s"
 	colored_layers = 2
 
 /datum/sprite_accessory/tail/taur/slug

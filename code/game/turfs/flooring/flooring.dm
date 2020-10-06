@@ -643,7 +643,7 @@ var/list/flooring_types
 /decl/flooring/wood/wild5
 	icon_base = "wooden_floor_s5"
 
-/decl/flooring/wood/dungeons
+/decl/flooring/wood/dungeons //NEEDS a icon update.
 	icon_base = "dungeons"
 
 /decl/flooring/reinforced
@@ -721,10 +721,9 @@ var/list/flooring_types
 	name = "sand"
 	icon = 'icons/turf/flooring/beach.dmi'
 	icon_base = "sand"
-	flags = TURF_REMOVE_SHOVEL | TURF_CAN_BURN
+	flags = TURF_REMOVE_SHOVEL | TURF_CAN_BURN | TURF_CAN_BREAK
 	build_type = null
 	footstep_sound = "asteroid"
-	plating_type = /decl/flooring/dirt
 
 /decl/flooring/beach/desert
 	icon = 'icons/turf/flooring/beach.dmi'

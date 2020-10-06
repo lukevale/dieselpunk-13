@@ -3,6 +3,7 @@
 /obj/structure/sign/neon
 	desc = "A glowing sign."
 	icon = 'icons/obj/decals-neon.dmi'
+	plane = -25 //Check this later for bugs?
 	light_range = 4
 	light_power = 2
 
