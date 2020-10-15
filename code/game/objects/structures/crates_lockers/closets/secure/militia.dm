@@ -65,6 +65,14 @@
 		new /obj/item/weapon/gun/projectile/lamia/dark(src)
 		new /obj/item/ammo_magazine/kurtz_50(src)
 		new /obj/item/ammo_magazine/kurtz_50/lethal(src)
+	if(prob(50))
+		new /obj/item/weapon/gun/projectile/automatic/omnirifle/standard(src)
+	else
+		new /obj/item/weapon/gun/projectile/automatic/omnirifle/scoped(src)
+	if(prob(50))
+		new /obj/item/ammo_magazine/heavy_rifle_408/lethal(src)
+	else
+		new /obj/item/ammo_magazine/heavy_rifle_408/hv(src)
 	new /obj/item/clothing/accessory/ranks/sergeant(src)
 	new /obj/item/weapon/storage/box/sergeantuniform(src)
 	new /obj/item/clothing/under/rank/armorer(src)
@@ -85,9 +93,6 @@
 	new /obj/item/weapon/storage/belt/webbing/black(src)
 	new /obj/item/clothing/suit/armor/flackvest/militia(src)
 	new /obj/item/weapon/storage/firstaid/ifak(src)
-	new /obj/item/weapon/gun/projectile/boltgun(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
 
 /obj/structure/closet/secure_closet/personal/trooper
 	name = "blackshield trooper's locker"
@@ -128,6 +133,15 @@
 		new /obj/item/weapon/gun/projectile/ladon(src)
 		new /obj/item/ammo_magazine/magnum_40(src)
 		new /obj/item/ammo_magazine/magnum_40/lethal(src)
+	switch(pick("omni", "hustler", "sts"))
+		if ("omni")
+			new /obj/item/weapon/gun/projectile/automatic/omnirifle/standard(src)
+		if ("hustler")
+			new /obj/item/weapon/gun/projectile/automatic/omnirifle(src)
+		if ("sts")
+			new /obj/item/weapon/gun/projectile/automatic/sts/hrifle(src)
+			new /obj/item/clothing/under/shorts/khaki(src)
+			new /obj/item/clothing/glasses/aviator(src)
 	new /obj/item/clothing/accessory/ranks/trooper(src)
 	new /obj/item/weapon/storage/box/trooperuniform(src)
 	new /obj/item/clothing/accessory/dogtags(src)
@@ -148,9 +162,6 @@
 	new /obj/item/clothing/suit/armor/commander/militia_overcoat(src)
 	new /obj/item/weapon/grenade/smokebomb(src)
 	new /obj/item/weapon/grenade/smokebomb(src)
-	new /obj/item/weapon/gun/projectile/boltgun(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
 
 /obj/structure/closet/secure_closet/personal/corpsman
 	name = "blackshield medical corpsman locker"
@@ -171,6 +182,14 @@
 		new /obj/item/weapon/gun/projectile/ladon(src)
 		new /obj/item/ammo_magazine/magnum_40(src)
 		new /obj/item/ammo_magazine/magnum_40/lethal(src)
+	if(prob(60))
+		new /obj/item/weapon/gun/projectile/automatic/omnirifle/omnicarbine(src)
+	else
+		new /obj/item/weapon/gun/projectile/automatic/omnirifle/omnicarbine/rds(src)
+	if(prob(50))
+		new /obj/item/ammo_magazine/heavy_rifle_408/lethal(src)
+	else
+		new /obj/item/ammo_magazine/heavy_rifle_408/hv(src)
 	new /obj/item/clothing/accessory/ranks/corpsman(src)
 	new /obj/item/weapon/storage/box/trooperuniform(src)
 	new /obj/item/clothing/suit/armor/platecarrier/corpsman(src)
