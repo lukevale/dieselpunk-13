@@ -100,7 +100,7 @@
 		new /obj/item/ammo_magazine/highcap_pistol_35/rubber(src)
 	else
 		new /obj/item/weapon/gun/projectile/lamia(src)
-		new /obj/item/ammo_magazine/kurtz_50(src)
+		new /obj/item/ammo_magazine/kurtz_50(src)	
 		new /obj/item/ammo_magazine/kurtz_50(src)
 		new /obj/item/ammo_magazine/kurtz_50/rubber(src)
 	new /obj/item/weapon/storage/backpack/satchel/ironhammer(src)
@@ -150,6 +150,13 @@
 			new /obj/item/ammo_magazine/magnum_40(src)
 			new /obj/item/ammo_magazine/magnum_40(src)
 			new /obj/item/ammo_magazine/magnum_40/rubber(src)
+	switch(pick("bulldog", "rds", "ost"))
+		if ("bulldog")
+			new /obj/item/weapon/gun/projectile/automatic/bulldog(src)
+		if ("rds")
+			new /obj/item/weapon/gun/projectile/automatic/bulldog/rds(src)
+		if ("ost")
+			new /obj/item/weapon/gun/projectile/automatic/ostwind(src)
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/weapon/storage/belt/security(src)
 	new /obj/item/clothing/mask/gas/ihs(src)
@@ -160,6 +167,10 @@
 	new /obj/item/taperoll/police(src)
 	new /obj/item/clothing/head/seccap(src)
 	new /obj/item/clothing/suit/armor/commander/marshal_coat(src)
+	new /obj/item/ammo_casing/light_rifle_257/rubber
+	new /obj/item/ammo_casing/light_rifle_257/rubber
+	new /obj/item/ammo_magazine/light_rifle_257_short
+	new /obj/item/ammo_magazine/light_rifle_257
 
 /obj/structure/closet/secure_closet/medspec
 	name = "corpsman's locker"
