@@ -84,7 +84,7 @@
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/weapon/storage/pouch/large_generic(src)
-	new /obj/item/borg/sight/hud/med(src)
+	new /obj/item/clothing/glasses/hud/health(src)
 	new /obj/item/weapon/gun/energy/centurio(src)
 	new /obj/item/clothing/suit/space/void/medarmor/sarge(src)
 
@@ -111,7 +111,7 @@
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/weapon/storage/pouch/large_generic(src)
-	new /obj/item/borg/sight/hud/med(src)
+	new /obj/item/clothing/glasses/hud/health(src)
 	new /obj/item/weapon/gun/energy/centurio(src)
 	new /obj/item/clothing/suit/space/void/medarmor(src)
 	new /obj/item/weapon/shield/riot(src)
