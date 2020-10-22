@@ -147,3 +147,7 @@
 /datum/gear/utility/ducttape
 	display_name = "duct tape"
 	path = /obj/item/weapon/tool/tape_roll
+
+/datum/gear/utility/kriosan_survival_gear
+	display_name = "kriosan survival gear kit"
+	path = /obj/item/weapon/storage/box/ksg_kit
