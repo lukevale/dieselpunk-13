@@ -438,8 +438,25 @@
 	desc = "Absolutism Crusader"
 	region = ACCESS_REGION_CHURCH
 
-// /var/const/free_access_id = 76
-// /var/const/free_access_id = 77
+/var/const/access_oh_confessor = 76
+/datum/access/oh_confessor
+	id = access_oh_confessor
+	desc = "Orden Hospitaller Confessor"
+
+/var/const/access_oh_knight = 77
+/datum/access/
+	id = access_oh_knight
+	desc = "Orden Hospitaller Knight"
+
+/var/const/access_oh_sargent = 112
+/datum/access/
+	id = access_oh_sargent
+	desc = "Orden Hospitaller Sargent"
+
+/var/const/access_oh_corperal = 113
+/datum/access/
+	id = access_oh_corperal
+	desc = "Orden Hospitaller Corperal"
 
 
 /**************
