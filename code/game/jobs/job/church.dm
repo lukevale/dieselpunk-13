@@ -14,7 +14,7 @@
 	minimum_character_age = 30
 
 	access = list(
-		access_nt_preacher, access_nt_disciple, access_morgue, access_chapel_office, access_crematorium, access_hydroponics, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_sec_doors
+		access_oh_corperal, access_oh_sargent, access_oh_knight, access_oh_confessor, access_nt_preacher, access_nt_disciple, access_morgue, access_chapel_office, access_crematorium, access_hydroponics, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_sec_doors
 	)
 
 	wage = WAGE_COMMAND //The church has deep pockets

@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/reinforced/preacher
-	name = "prime's locker"
-	req_access = list(access_chapel_office)
+	name = "confessor's locker"
+	req_access = list(76)
 	icon_state = "head_preacher"
 
 /obj/structure/closet/secure_closet/reinforced/preacher/populate_contents()
@@ -33,3 +33,85 @@
 	new /obj/item/clothing/head/helmet/prime(src)
 	new /obj/item/clothing/under/rank/church/sport(src)
 	new /obj/item/clothing/suit/storage/neotheosports(src)
+
+/obj/structure/closet/secure_closet/reinforced/ordenknight
+	name = "knight's locker"
+	req_access = list(77)
+	icon_state = "acolyte"
+
+/obj/structure/closet/secure_closet/reinforced/ordenknight/populate_contents()
+	if(prob(25))
+		new /obj/item/weapon/storage/backpack/neotheology(src)
+	else if(prob(25))
+		new /obj/item/weapon/storage/backpack/sport/neotheology(src)
+	else
+		new /obj/item/weapon/storage/backpack/satchel/neotheology(src)
+	new /obj/item/device/radio/headset/church(src)
+	new /obj/item/clothing/gloves/thick(src)
+	new /obj/item/weapon/storage/pouch/pistol_holster(src)
+	new /obj/item/clothing/accessory/holster/leg(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/clothing/mask/gas/germanmask(src)
+	new /obj/item/weapon/tank/onestar_regenerator(src)
+	new /obj/item/weapon/gun/energy/gun(src)
+	new /obj/item/weapon/gun/energy/sniperrifle(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/clothing/suit/space/void/prime(src)
+	new /obj/item/weapon/tool/hammer/mace(src)
+
+/obj/structure/closet/secure_closet/reinforced/ordensargent
+	name = "orden sargent's locker"
+	req_access = list(112)
+	icon_state = "acolyte"
+
+/obj/structure/closet/secure_closet/reinforced/ordensargent/populate_contents()
+	if(prob(25))
+		new /obj/item/weapon/storage/backpack/neotheology(src)
+	else if(prob(25))
+		new /obj/item/weapon/storage/backpack/sport/neotheology(src)
+	else
+		new /obj/item/weapon/storage/backpack/satchel/neotheology(src)
+	new /obj/item/device/radio/headset/church(src)
+	new /obj/item/clothing/gloves/thick(src)
+	new /obj/item/weapon/storage/pouch/pistol_holster(src)
+	new /obj/item/clothing/accessory/holster/leg(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/clothing/mask/gas/germanmask(src)
+	new /obj/item/weapon/tank/onestar_regenerator(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/weapon/storage/pouch/large_generic(src)
+	new /obj/item/borg/sight/hud/med(src)
+	new /obj/item/weapon/gun/energy/centurio(src)
+	new /obj/item/clothing/suit/space/void/medarmor/sarge(src)
+
+/obj/structure/closet/secure_closet/reinforced/ordencorperal
+	name = "corperal's locker"
+	req_access = list(113)
+	icon_state = "acolyte"
+
+/obj/structure/closet/secure_closet/reinforced/ordencorperal/populate_contents()
+	if(prob(25))
+		new /obj/item/weapon/storage/backpack/neotheology(src)
+	else if(prob(25))
+		new /obj/item/weapon/storage/backpack/sport/neotheology(src)
+	else
+		new /obj/item/weapon/storage/backpack/satchel/neotheology(src)
+	new /obj/item/device/radio/headset/church(src)
+	new /obj/item/clothing/gloves/thick(src)
+	new /obj/item/weapon/storage/pouch/pistol_holster(src)
+	new /obj/item/clothing/accessory/holster/leg(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/weapon/cell/medium/moebius/omega(src)
+	new /obj/item/clothing/mask/gas/germanmask(src)
+	new /obj/item/weapon/tank/onestar_regenerator(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/clothing/accessory/bs_silk(src)
+	new /obj/item/weapon/storage/pouch/large_generic(src)
+	new /obj/item/borg/sight/hud/med(src)
+	new /obj/item/weapon/gun/energy/centurio(src)
+	new /obj/item/clothing/suit/space/void/medarmor(src)
+	new /obj/item/weapon/shield/riot(src)
