@@ -113,7 +113,7 @@
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_oh_knight, access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/broknight
 
@@ -158,7 +158,7 @@
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_oh_sargent, access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/brosarge
 
@@ -201,7 +201,7 @@
 	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
-	access = list(access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
+	access = list(access_oh_corperal, access_nt_preacher, access_morgue, access_crematorium, access_maint_tunnels, access_hydroponics, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/church/brocorp
 
