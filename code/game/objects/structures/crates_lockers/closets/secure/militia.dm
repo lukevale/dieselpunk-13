@@ -213,9 +213,6 @@
 	new /obj/item/weapon/storage/firstaid/adv(src)
 	new /obj/item/weapon/storage/firstaid/ifak(src)
 	new /obj/item/weapon/storage/pill_bottle/tramadol(src)
-	new /obj/item/weapon/gun/projectile/boltgun(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
-	new /obj/item/ammo_magazine/speed_loader_rifle_75(src)
 	new /obj/item/clothing/accessory/patches/blackshield_corpsman(src)
 
 /obj/structure/closet/secure_closet/militia/armor

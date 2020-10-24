@@ -367,6 +367,11 @@
 	var/flash_cooldown = 1 MINUTES
 	var/last_use = 0
 
+/obj/item/weapon/tool/sword/crusader/nt_sword/knight
+	name = "Hospitaller flamberge"
+	desc = "A two-handed sword made out of durasteel alloy, with a psionic emitter powered by an atomic battery. Typically carried by a Brother-Knight (Lieutenant) of the Orden Hospitaller"
+	flash_cooldown = 1 MINUTES
+
 /obj/item/weapon/tool/sword/crusader/nt_sword/wield(mob/living/user)
 	..()
 	set_light(l_range = 4, l_power = 3)
