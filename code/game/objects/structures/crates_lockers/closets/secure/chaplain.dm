@@ -54,13 +54,13 @@
 	new /obj/item/weapon/cell/medium/moebius/omega(src)
 	new /obj/item/clothing/mask/gas/germanmask(src)
 	new /obj/item/weapon/tank/onestar_regenerator(src)
-	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/weapon/gun/energy/sniperrifle(src)
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/clothing/suit/space/void/prime(src)
 	new /obj/item/clothing/accessory/holster/saber/greatsword(src)
 	new /obj/item/weapon/tool/sword/crusader/nt_sword/knight(src)
+	new /obj/item/weapon/gun/energy/captain 
 
 /obj/structure/closet/secure_closet/reinforced/ordensargent
 	name = "orden sargent's locker"
@@ -115,7 +115,7 @@
 	new /obj/item/clothing/accessory/bs_silk(src)
 	new /obj/item/weapon/storage/pouch/large_generic(src)
 	new /obj/item/clothing/glasses/hud/health(src)
-	new /obj/item/weapon/gun/energy/centurio(src)
+	new /obj/item/weapon/gun/energy/gun(src)
 	new /obj/item/clothing/suit/space/void/medarmor(src)
 	new /obj/item/weapon/shield/riot(src)
 	new /obj/item/clothing/accessory/holster/saber/greatsword(src)
