@@ -4,7 +4,7 @@
 /  == Taur Definitions ==  /
 /  =--------------------=  /
 ////////////////////////////
-
+*/
 
 // Taur sprites are now a subtype of tail since they are mutually exclusive anyway.
 
@@ -163,4 +163,3 @@
 	icon_state = "wolf_s"
 	colored_layers = 2
 
-/*
