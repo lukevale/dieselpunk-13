@@ -125,7 +125,7 @@
 	icon_state = "wolf"
 
 /datum/sprite_accessory/tail/wolf
-	name = "wolf, colorable"
+	name = "Wolf Tail"
 	desc = ""
 	icon_state = "wolf"
 	colored_layers = 2
@@ -158,14 +158,14 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/fantail
-	name = "avian fantail, colorable"
+	name = "Avian Fantail"
 	desc = ""
 	icon_state = "fantail"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wagtail
-	name = "avian wagtail, colorable"
+	name = "Avian Wagtail"
 	desc = ""
 	icon_state = "wagtail"
 	colored_layers = 1
@@ -193,7 +193,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/crossfox
-	name = "cross fox"
+	name = "Cross Fox Tail"
 	desc = ""
 	icon_state = "crossfox"
 
@@ -248,12 +248,12 @@
 	icon_state = "miria-kitsunetail"
 
 /datum/sprite_accessory/tail/molenar_deathclaw
-	name = "deathclaw bits (Molenar)"
+	name = "Render Tail"
 	desc = ""
 	icon_state = "molenar-deathclaw"
 
 /datum/sprite_accessory/tail/runac
-	name = "fennecsune tails (Runac)"
+	name = "Fennecsune Tails"
 	desc = ""
 	icon_state = "runac"
 
@@ -295,7 +295,7 @@
     icon_state = "featherfluff_tail"
 
 /datum/sprite_accessory/tail/ketrai_wag
-	name = "fennix tail (vwag)"
+	name = "Fennix Tail"
 	desc = ""
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
@@ -331,7 +331,7 @@
 	colored_layers = 1
 
 /datum/sprite_accessory/tail/curltail
-	name = "curltail (vwag)"
+	name = "Curly Tail"
 	desc = ""
 	icon_state = "curltail"
 	ani_state = "curltail_w"
@@ -364,7 +364,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/vulp_new
-	name = "new vulp tail (vwag)"
+	name = "Vulpkanin Tail"
 	desc = ""
 	icon_state = "vulptail"
 	ani_state = "vulptail_w"
@@ -372,7 +372,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/otietail
-	name = "otie tail (vwag)"
+	name = "Otie Tail"
 	desc = ""
 	icon_state = "otie"
 	ani_state = "otie_w"
@@ -395,24 +395,31 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/snaketail
-	name = "snake tail, colorable"
+	name = "Snake Tail"
 	desc = ""
 	icon_state = "snaketail"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/vulpan_alt
-	name = "vulpkanin alt style, colorable"
+	name = "Vulpkanin Tail 2"
 	desc = ""
 	icon_state = "vulptail_alt"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/sergaltaildc
-	name = "sergal, dual-color"
+	name = "Naramad Tail"
 	desc = ""
 	icon_state = "sergal"
 	colored_layers = 2
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/naramadtailhc
+	name = "Naramad Tail 2"
+	desc = ""
+	icon_state = "sergtail_hc_s"
+	colored_layers = 1
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/skunktail
@@ -423,7 +430,7 @@
 	blend = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/deertail
-	name = "deer, dual-color"
+	name = "dockedtail"
 	desc = ""
 	icon_state = "deertail"
 	colored_layers = 2
@@ -1077,5 +1084,69 @@
 	desc = ""
 	icon_state = "tentacle"
 	ani_state = "tentacle_w"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/tajaranhc
+	name = "Sablekyne Tail"
+	desc = ""
+	icon_state = "tajtail_hc_s"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fennecdown
+	name = "Fennec Tail, Downwards"
+	desc = ""
+	icon_state = "fentail_1"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/fennecup
+	name = "Fennec Tail, Upwards"
+	desc = ""
+	icon_state = "fentail_2"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/tail/foxdown
+	name = "Fox Tail, Downwards"
+	desc = ""
+	icon_state = "foxtail_1"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/foxup
+	name = "Fox Tail, Upwards"
+	desc = ""
+	icon_state = "foxtail_2"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/vulpan
+	name = "Vulpkanin Tail 3"
+	desc = ""
+	icon_state = "vulptail_s"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/akulahc
+	name = "Akula Tail"
+	desc = ""
+	icon_state = "sharktail_hc_s"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard
+	name = "Lizard Tail"
+	desc = ""
+	icon_state = "liztail"
+	colored_layers = 1
+	blend = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/lizard2
+	name = "Lizard Tail, Short"
+	desc = ""
+	icon_state = "liztail_short"
 	colored_layers = 1
 	blend = ICON_MULTIPLY
