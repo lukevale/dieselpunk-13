@@ -207,7 +207,6 @@
 /datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_2c
 	name = "Shadekin Tail (dual color)"
 	colored_layers = 2
-	extra_overlay = "shadekin_markings"
 
 /datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_long
 	name = "Shadekin Long Tail"
