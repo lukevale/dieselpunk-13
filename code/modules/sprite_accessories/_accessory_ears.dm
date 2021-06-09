@@ -207,7 +207,6 @@
 	icon_state = "wolf"
 	colored_layers = 2
 	blend = ICON_MULTIPLY
-	extra_overlay = "wolfinner"
 
 /datum/sprite_accessory/ears/bearhc
 	name = "bear, colorable"
