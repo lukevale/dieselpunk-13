@@ -5,7 +5,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform
 	name = "vinculum cruciform"
 	icon_state = "cruciform_green"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Order of Saint Abraham."
 	allowed_organs = list(BP_CHEST)
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform
 	layer = ABOVE_MOB_LAYER
@@ -190,7 +190,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform/tessellate
 	name = "tessellate cruciform"
 	icon_state = "cruciform_blue"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Order of Saint Abraham."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/tessellate
 	power = 60
 	max_power = 60
@@ -200,7 +200,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform/lemniscate
 	name = "lemniscate cruciform"
 	icon_state = "cruciform_red"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Order of Saint Abraham."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/lemniscate
 	//access = list(access_nt_disciple) //So they can try and recuit people - Correction people just cant stop abusing everything ever.
 	power = 50
@@ -211,7 +211,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform/monomial
 	name = "monomial cruciform"
 	icon_state = "cruciform_yellow"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Order of Saint Abraham."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/monomial
 	power = 90
 	max_power = 90
@@ -221,7 +221,7 @@ var/list/disciples = list()
 /obj/item/weapon/implant/core_implant/cruciform/divisor
 	name = "divisor cruciform"
 	icon_state = "cruciform_orange"
-	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Church of Absolute."
+	desc = "A symbol and power core of every disciple. With the proper rituals, this can be implanted to induct a new believer into the Order of Saint Abraham."
 	implant_type = /obj/item/weapon/implant/core_implant/cruciform/divisor
 	power = 50
 	max_power = 50

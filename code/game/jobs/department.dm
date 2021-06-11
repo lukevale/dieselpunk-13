@@ -107,10 +107,10 @@
 	funding_source = "Soteria Institution."
 
 /datum/department/church
-	name = "Church of Absolute"
+	name = "The Order of Saint Abraham"
 	id = DEPARTMENT_CHURCH
 	funding_type = FUNDING_EXTERNAL
-	funding_source = "Church of Absolute"
+	funding_source = "Church of Abraham"
 
 
 

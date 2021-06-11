@@ -149,7 +149,7 @@
 /datum/ai_laws/absolute
 	name = "Absolute"
 	law_header = "Commandments of the Absolute"
-	selectable = 1
+	selectable = FALSE
 
 /datum/ai_laws/absolute/New()
 	add_inherent_law("All the other laws are of equal priority.")

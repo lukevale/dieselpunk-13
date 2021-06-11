@@ -19,7 +19,7 @@
 		list("names" = list(), "header" = "Marshal and Blackshield", "flag" = SECURITY),
 		list("names" = list(), "header" = "Soteria Medical", "flag" = MEDICAL),
 		list("names" = list(), "header" = "Soteria Research", "flag" = SCIENCE),
-		list("names" = list(), "header" = "Church of the Absolute", "flag" = CHURCH),
+		list("names" = list(), "header" = "The Order Of Saint Abraham", "flag" = CHURCH),
 		list("names" = list(), "header" = "Lonestar Shipping Solutions", "flag" = LSS),
 		list("names" = list(), "header" = "Artificers Guild", "flag" = ENGINEERING),
 		list("names" = list(), "header" = "Prospector", "flag" = PROSPECTORS),

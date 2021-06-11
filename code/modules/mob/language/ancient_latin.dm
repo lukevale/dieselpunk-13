@@ -1,6 +1,6 @@
 /datum/language/ancientlatin
 	name = LANGUAGE_LATIN
-	desc = "An ancient language once used by most of europe but now mainly used by followers of the Church of Absolute."
+	desc = "An ancient language once used by most of europe but now mainly used by followers of the Order of Saint Abraham."
 	colour = "latin"
 	key = "l"
 	space_chance = 80

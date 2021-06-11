@@ -91,7 +91,7 @@
 	stampshape = "paper_stamp-dots"
 
 /datum/faction/nadezhda/church
-	name = "Church of Absolute - Augstine Browne"
+	name = "Order of Saint Abraham - Inarius Felwinter"
 
 	fax_alert = "CHURCH FAX"
 	fax_response = "Church Decree"
@@ -100,7 +100,7 @@
 	darkcolor = "#051d66"
 	lightcolor = "#5b83ff"
 
-	stamptext = "This paper has been stamped with the sanctified symbol of Cartographer Augustine Browne."
+	stamptext = "This paper has been stamped with the sanctified symbol of The High Chaplain Inarius Felwinter."
 	stampshape = "paper_stamp-dots"
 
 /datum/faction/nadezhda/voidwolves

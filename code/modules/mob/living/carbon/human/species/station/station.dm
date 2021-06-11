@@ -679,7 +679,7 @@
 	return "Synthetic"
 
 /datum/species/church_synthetic
-	name = "Absolute Synthetic"
+	name = "Aurum Animate"
 	name_plural = "synthetics"
 	default_form = FORM_CHURCHSYNTH
 	obligate_name = TRUE

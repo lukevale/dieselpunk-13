@@ -1,5 +1,5 @@
 /datum/job/chaplain
-	title = "Prime"
+	title = "Confessor"
 	flag = CHAPLAIN
 	department = DEPARTMENT_CHURCH
 	department_flag = CHURCH | COMMAND
@@ -40,7 +40,7 @@
 		CRUCIFORM_REDLIGHT
 	)
 
-	description = "The Prime serves as the head of the local branch of the Church of the Absolute. <br>\
+	description = "The Confessor serves as the head of the local branch of The Order of Saint Abraham. <br>\
 	You represent the interest of the church and its disciples within the colony - identified by the cruciform implant upon their breast.<br>\
 	Your most pressing duty is as a spiritual leader. Preach to the flock, inspire faith and strength, and convert those seeking salvation.<br>\
 	While you are no trained psychologist, you can provide support and guidance to all - in both bright and dark times.<br>\
@@ -54,19 +54,19 @@
 	setup_restricted = TRUE
 
 /obj/landmark/join/start/chaplain
-	name = "Prime"
+	name = "Confessor"
 	icon_state = "player-black"
 	join_tag = /datum/job/chaplain
 
 /datum/job/acolyte
-	title = "Vector"
+	title = "Chaplain"
 	flag = ACOLYTE
 	department = DEPARTMENT_CHURCH
 	department_flag = CHURCH
 	faction = MAP_FACTION
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Prime"
+	supervisors = "the Confessor"
 	difficulty = "Easy to Medium."
 	selection_color = "#ecd37d"
 	access = list(access_morgue, access_crematorium, access_maint_tunnels, access_nt_disciple)
@@ -87,7 +87,7 @@
 
 	perks = list(/datum/perk/neat, /datum/perk/greenthumb, /datum/perk/channeling)
 
-	description = "The Vector serves the Prime, and more generally the church, as a disciple of the Faith.<br>\
+	description = "The Chaplain serves the Confessor, and more generally the church, as a disciple of the Faith.<br>\
 	The sacred duties of operating the bioreactor and managing biomass for the church machines are your main priority.<br>\
 	You should also work to present the Faith in a positive light to all colonists. The Vector may issue you with further duties."
 
@@ -98,6 +98,6 @@
 	setup_restricted = TRUE
 
 /obj/landmark/join/start/acolyte
-	name = "Vector"
+	name = "Chaplain"
 	icon_state = "player-black"
 	join_tag = /datum/job/acolyte

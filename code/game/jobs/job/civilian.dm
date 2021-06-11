@@ -151,19 +151,21 @@
 	icon_state = "player-grey"
 	join_tag = /datum/job/artist
 
+
+//Modifed to be a church role.
 /datum/job/janitor
 	title = "Janitor"
 	flag = JANITOR
-	department = DEPARTMENT_LSS
-	department_flag = LSS
+	department = DEPARTMENT_CHURCH
+	department_flag = CHURCH
 	faction = MAP_FACTION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Chief Executive Officer"
+	supervisors = "the Confessor"
 	difficulty = "Easy."
-	selection_color = "#dddddd"
+	selection_color = "#ecd37d"
 	//alt_titles = list("Custodian","Sanitation Technician")
-	access = list(access_janitor, access_maint_tunnels, access_morgue, access_hydroponics, access_bar, access_kitchen)
+	access = list(access_janitor, access_maint_tunnels, access_morgue, access_hydroponics, access_bar, access_kitchen, access_nt_disciple)
 	wage = WAGE_PROFESSIONAL
 	outfit_type = /decl/hierarchy/outfit/job/service/janitor
 
