@@ -13,6 +13,9 @@
 	var/page = 1    // current page
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
 
+/obj/item/weapon/paper_bundle/papyrus
+	name = "papyrus bundle"
+	icon_state = "papyrus"
 
 /obj/item/weapon/paper_bundle/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()

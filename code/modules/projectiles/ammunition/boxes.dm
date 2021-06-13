@@ -582,3 +582,14 @@
 	caliber = CAL_SHOTGUN
 	ammo_type = /obj/item/ammo_casing/shotgun/incendiary
 	max_ammo = 35
+
+// Black powder cartridges
+/obj/item/ammo_magazine/ammobox/baroque
+	name = "satchel of .580 paper cartridges"
+	icon_state = "box_bp-rifle"
+	w_class = ITEM_SIZE_BULKY
+	matter = list(MATERIAL_STEEL = 10, MATERIAL_CARDBOARD = 10, MATERIAL_LEATHER = 5)
+	caliber = CAL_BPRIFLE
+	ammo_type = /obj/item/ammo_casing/baroque
+	mag_well = MAG_WELL_BOX
+	max_ammo = 100

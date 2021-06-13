@@ -369,6 +369,15 @@
 	damage_types = list(BRUTE = 63)
 	armor_penetration = 50
 
+//Black powder
+/obj/item/projectile/bullet/baroque
+	damage_types = list(BRUTE = 90) //Does just under 50 damage to someone in a standard plate carrier, no toughness, and no damage-reducing perks.
+	armor_penetration = 0
+	name = "large-bore rifle bullet"
+	penetrating = 0
+	step_delay = 0.3
+	agony = 60 // Even if you have badass damage reduction, you really don't want to be hit by more than one of these. This also gives them a total of ~210 damage againsts mobs.
+
 //Shotguns
 //*********************************//
 

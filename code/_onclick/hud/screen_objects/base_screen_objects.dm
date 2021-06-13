@@ -304,6 +304,9 @@
 			usr.attack_ui(slot_id)
 	return TRUE
 
+/obj/screen/inventory/lanyard
+	slot_id = slot_lanyard
+
 /obj/screen/inventory/hand
 	name = "nonamehand"
 

@@ -116,6 +116,15 @@
 	var/stored_ore = list()
 	var/last_update = 0
 
+/obj/item/weapon/storage/bag/ore/hunter
+	name = "foundry satchel"
+	desc = "This hand-stitched, treated leather bag can hold lots of stone and ore for the smelter."
+	icon = 'icons/obj/hunter_crafts.dmi'
+	icon_state = "foundry"
+	slot_flags = SLOT_BELT
+	max_storage_space = 200
+	w_class = ITEM_SIZE_BULKY
+
 /obj/item/weapon/storage/bag/ore/holding
 	name = "satchel of holding"
 	desc = "A revolution in convenience, this satchel allows for immense ore or produce storage."

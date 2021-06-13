@@ -591,6 +591,16 @@
 	caliber = CAL_SCI
 	projectile_type = /obj/item/projectile/beam/weak/lethal
 
+/obj/item/ammo_casing/baroque
+	name = ".580 paper cartridge"
+	desc = "A papyrus cartridge weatherproofed with beeswax. It contains a bullet more than half an inch in diameter, enough black powder to propel that bullet at awesome speed, and a primer allowing it to be discharged with a modern firing pin."
+	caliber = CAL_BPRIFLE
+	projectile_type = /obj/item/projectile/bullet/baroque
+	icon_state = "bp-rifle"
+	spent_icon = "bp-rifle-spent"
+	is_caseless = TRUE
+	maxamount = 5
+
 //// Grenade Shells ////
 
 /obj/item/ammo_casing/grenade
