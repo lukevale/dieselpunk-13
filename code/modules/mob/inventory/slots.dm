@@ -200,10 +200,11 @@
 	update_proc = /mob/proc/update_inv_pockets
 
 /datum/inventory_slot/store/can_equip(obj/item/I, mob/living/carbon/human/owner, disable_warning)
-	if(I.slot_flags & SLOT_DENYPOCKET)
-		if(!disable_warning)
-			to_chat(owner, SPAN_WARNING("[I] can't be holded by your [name]."))
-		return FALSE
+	if(I.slot_flags & SLOT_POCKET)
+		if(I.wont_fit_pocket)
+			if(!disable_warning)
+				to_chat(owner, SPAN_WARNING("[I] can't be holded by your [name]."))
+			return FALSE
 	if(istype(I, /obj/item/weapon/storage/pouch)) // Pouches are basically equipped over the suit, they just take up pockets.
 		return TRUE
 	else
@@ -219,7 +220,7 @@
 
 
 /datum/inventory_slot/suit_store
-	name = "Store"
+	name = "Outerwear Storage"
 	id = slot_s_store
 	req_item_in_slot = slot_wear_suit
 	update_proc = /mob/proc/update_inv_s_store
@@ -240,6 +241,29 @@
 		return FALSE
 	return TRUE
 
+/datum/inventory_slot/lanyard
+	name = "Lanyard"
+	id = slot_lanyard
+	req_item_in_slot = slot_back
+
+/datum/inventory_slot/lanyard/can_equip(obj/item/I, mob/living/carbon/human/owner)
+	var/obj/item/weapon/storage/backpack/back = owner.get_equipped_item(slot_back)
+	if(!back || back.lanyard != TRUE)
+		to_chat(owner, SPAN_WARNING("You aren't wearing anything with a lanyard on your back."))
+		return FALSE
+	if(I.slot_flags & SLOT_LANYARD)
+		return TRUE
+	if(istype(I, /obj/item/weapon/tool/spear)||istype(I, /obj/item/weapon/tool/fireaxe)||istype(I, /obj/item/weapon/tool/scythe))
+		return TRUE
+	if(istype(I, /obj/item/weapon/gun))
+		var/obj/item/weapon/gun/G = I
+		if(!G.twohanded)
+			to_chat(owner, SPAN_WARNING("This gun is too short to fit in the lanyards."))
+			return FALSE
+		return TRUE
+	else
+		to_chat(owner, SPAN_WARNING("This can't be attached to your [back]."))
+		return FALSE
 
 //Special virtual slots. Here for backcompability.
 /datum/inventory_slot/in_backpack

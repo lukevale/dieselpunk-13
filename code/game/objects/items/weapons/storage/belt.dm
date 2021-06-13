@@ -357,3 +357,10 @@
 	desc = "Everything you need at hand, at belt."
 	icon_state = "webbing_ih"
 	item_state = "webbing_ih"
+
+/obj/item/weapon/storage/belt/quiver
+	name = "quiver"
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/stack/arrows
+		)

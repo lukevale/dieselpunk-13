@@ -131,6 +131,11 @@
 	name = "Sea Dog Beard"
 	icon_state = "seadog"
 
+/datum/sprite_accessory/facial_hair/shaggy
+	name = "Shaggy"
+	icon_state = "shag"
+	gender = NEUTER
+
 /datum/sprite_accessory/facial_hair/tribeard
 	name = "Tribeard"
 	icon_state = "tribeard"

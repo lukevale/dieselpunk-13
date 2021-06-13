@@ -145,8 +145,12 @@ This saves us from having to call add_fingerprint() any time something is put in
 		s_store = null
 		update_inv_s_store()
 	else if (W == back)
+		if(lanyard)
+			drop_from_inventory(lanyard)
 		back = null
 		update_inv_back()
+	else if (W == lanyard)
+		lanyard = null
 	else if (W == handcuffed)
 		handcuffed = null
 		if(buckled && buckled.buckle_require_restraints)
@@ -292,6 +296,8 @@ This saves us from having to call add_fingerprint() any time something is put in
 			src.r_store = W
 		if(slot_s_store)
 			src.s_store = W
+		if(slot_lanyard)
+			src.lanyard = W
 		else
 			to_chat(src, SPAN_DANGER("You are trying to equip this item to an unsupported inventory slot. If possible, please write a ticket with steps to reproduce. Slot was: [slot]"))
 			return
@@ -342,6 +348,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(slot_s_store)    return s_store
 		if(slot_l_ear)      return l_ear
 		if(slot_r_ear)      return r_ear
+		if(slot_lanyard)    return lanyard
 	return ..()
 
 /mob/living/carbon/human/get_equipped_items(var/include_carried = 0)

@@ -15,6 +15,7 @@
 #define CAL_SCI "laser casings"
 #define CAL_GRENADE "grenade"
 #define CAL_CROSSBOW "bolt"
+#define CAL_BPRIFLE ".580 paper cartridge"
 
 //Gun loading types
 #define SINGLE_CASING 	1	//The gun only accepts ammo_casings. ammo_magazines should never have this as their mag_type.

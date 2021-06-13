@@ -82,14 +82,17 @@
 
 /obj/item/weapon/gun/projectile/boltgun/handle_post_fire(mob/user)
 	..()
+	if(chambered)
+		chambered.expend()
+		process_chambered()
 	if(bolt_training && user.stats.getPerk(PERK_BOLT_REFLECT) && loaded.len>0)
 		to_chat(user, SPAN_NOTICE("Your hands move instinctively to chamber a new round!"))
-		bolt_act(src)
-		bolt_act(src)
+		bolt_act(user)
+		bolt_act(user)
 		return
 	if(bolt_training && user.stats.getPerk(PERK_BOLT_REFLECT) && loaded.len==0)
 		to_chat(user, SPAN_NOTICE("You stop your hands from instinctively chambering a new round."))
-		bolt_act(src)
+		bolt_act(user)
 		return
 
 /obj/item/weapon/gun/projectile/boltgun/proc/bolt_act(mob/living/user)

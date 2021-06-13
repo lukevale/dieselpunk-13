@@ -37,7 +37,8 @@
 		"Right Pocket" =     slot_r_store,
 		"Belt" =         slot_belt,
 		"Left Hand" =       slot_l_hand,
-		"Right Hand" =       slot_r_hand
+		"Right Hand" =       slot_r_hand,
+		"Lanyard" = 		slot_lanyard,
 		)
 
 /datum/hud_data/New()

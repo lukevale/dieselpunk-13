@@ -38,6 +38,10 @@
 	var/const/signfont = "Times New Roman"
 	var/const/crayonfont = "Comic Sans MS"
 
+/obj/item/weapon/paper/papyrus
+	icon_state = "papyrus"
+	desc = "A sheet of not-quite-paper, made out of thin strips of plant fiber compacted tightly together. Suitable for writing upon, all the same."
+
 /obj/item/weapon/paper/card
 	name = "blank card"
 	desc = "A gift card with space to write on the cover."

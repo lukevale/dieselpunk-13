@@ -153,6 +153,7 @@
 		"Left Ear" =        list("loc" = "4,2", "minloc" = "3,3",     "state" = "ears0",   "hideflag" = TOGGLE_INVENTORY_FLAG, "background" = "back1"),
 		"Right Ear" =        list("loc" = "4,3", "minloc" = "3,4",    "state" = "ears1",   "hideflag" = TOGGLE_INVENTORY_FLAG, "background" = "back1"),
 		"Hat" =         list("loc" = "3,3", "minloc" = "2,4",         "state" = "hair",    "hideflag" = TOGGLE_INVENTORY_FLAG, "background" = "back1"),
+		"Lanyard" =     list("loc" = "2,3", "minloc" = "1,4",         "state" = "shoulder","type" = /obj/screen/inventory/lanyard,"hideflag" = TOGGLE_INVENTORY_FLAG, "background" = "back1"),
 		"Shoes" =        list("loc" = "3,0", "minloc" = "2,1",        "state" = "shoes", "background" = "back1"),
 		"Suit Storage" = list("loc" = "4,0", "minloc" = "3,1",        "state" = "suit-belt", "background" = "back1"),
 		"Back" =         list("loc" = "7,0", "minloc" = "6,1",        "state" = "back", "background" = "back1"),
