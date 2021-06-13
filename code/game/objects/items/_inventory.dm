@@ -9,6 +9,7 @@
 		//In that case, it holds the number of the slot it was last in, which is potentially useful info
 		//For an accurate reading of the current slot,
 		//  use item/get_equip_slot() which will return zero if not currently on a mob
+	var/wont_fit_pocket = FALSE //This frees up a bit flag that was only ever called on a single item
 
 
 /obj/item/proc/update_wear_icon(redraw_mob = TRUE)

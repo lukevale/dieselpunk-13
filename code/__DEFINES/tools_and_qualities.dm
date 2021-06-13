@@ -27,11 +27,14 @@
 #define QUALITY_CUTTING					"cutting"
 #define QUALITY_LASER_CUTTING			"laser cutting"	//laser scalpels and e-swords - bloodless cutting
 #define QUALITY_BONE_GRAFTING			"bone grafting"
+#define QUALITY_SUTURING				"suturing" // For sewing up physical wounds; Far less costly than using first aid kits and heals 20 damage, but is localized to the body part operated on.
+#define QUALITY_TISSUE_GRAFTING			"tissue grafting" // For fixing up burn wounds, under the same benefits and limitations as suturing.
 
 //Other Qualities
 #define QUALITY_WEAVING					"weaving"
 #define QUALITY_ELECTROCUTION			"electroshock"
 #define QUALITY_ARMOR					"armor"
+#define QUALITY_SEWING					"stitching" // For crafting purposes.
 
 
 //Time for a work for tool system calculated in that way: basic time - tool level - stat check..

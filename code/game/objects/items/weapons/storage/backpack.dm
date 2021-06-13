@@ -16,6 +16,7 @@
 	matter = list(MATERIAL_BIOMATTER = 10, MATERIAL_PLASTIC = 2)
 	var/worn_access = FALSE // If the object may be accessed while equipped in a storage slot.
 	var/equip_access = TRUE // If the object may be accessed while equipped anywhere on a charcter, including hands.
+	var/lanyard = FALSE // If the object has a lanyard on one side, enabling use of the new lanyard slot for long guns and polearms.
 
 /obj/item/weapon/storage/backpack/Initialize()
 	. = ..()
@@ -255,6 +256,47 @@
 	name = "cruciform sport backpack"
 	desc = "For carrying all your holy needs."
 	icon_state = "backsport_neotheology"
+
+//Hunter Haversack
+/obj/item/weapon/storage/backpack/hunter
+	name = "hunter's haversack"
+	desc = "A very handy haversack from which the wearer can retrieve the last item they placed in it, even while it's on their back. It also features an adjustable lanyard, allowing most rifle-length firearms and polearms to be attached to one side."
+	icon_state = "backpack_hunter"
+	max_storage_space = DEFAULT_HUGE_STORAGE * 1.5
+	var/sliding_behavior = FALSE
+	lanyard = TRUE
+
+/obj/item/weapon/storage/backpack/hunter/verb/toggle_slide()
+	set name = "Toggle Slide"
+	set desc = "Toggle the behavior of last item in [src] \"sliding\" into your hand."
+	set category = "Object"
+
+	sliding_behavior = !sliding_behavior
+	to_chat(usr, SPAN_NOTICE("Items will now [sliding_behavior ? "" : "not"] slide out of [src]"))
+
+/obj/item/weapon/storage/backpack/hunter/attack_hand(mob/living/carbon/human/user)
+	if(sliding_behavior && contents.len && (src in user))
+		var/obj/item/I = contents[contents.len]
+		if(istype(I))
+			hide_from(usr)
+			var/turf/T = get_turf(user)
+			remove_from_storage(I, T)
+			usr.put_in_hands(I)
+			add_fingerprint(user)
+			return
+	else
+		if (!worn_check(no_message = TRUE))
+			if(src.loc != user || user.incapacitated())
+				return
+			if (!user.unEquip(src))
+				return
+			user.put_in_active_hand(src)
+			return
+		..()
+/obj/item/weapon/storage/backpack/hunter/attackby(obj/item/W as obj, mob/user as mob)
+	if (!sliding_behavior)
+		worn_check()
+	..()
 
 /*
  * Satchel Types

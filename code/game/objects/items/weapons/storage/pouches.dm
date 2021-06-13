@@ -70,11 +70,12 @@
 	icon_state = "large_generic"
 	item_state = "large_generic"
 	w_class = ITEM_SIZE_NORMAL
-	slot_flags = SLOT_BELT | SLOT_DENYPOCKET
+	slot_flags = SLOT_BELT
 	storage_slots = null //Uses generic capacity
 	max_storage_space = DEFAULT_NORMAL_STORAGE
 	max_w_class = ITEM_SIZE_NORMAL
 	matter = list(MATERIAL_BIOMATTER = 20)
+	wont_fit_pocket = TRUE
 
 /obj/item/weapon/storage/pouch/medical_supply
 	name = "medical supply pouch"
@@ -131,6 +132,26 @@
 		/obj/item/weapon/cell/small,
 		/obj/item/weapon/cell/medium
 		)
+
+/obj/item/weapon/storage/pouch/engineering_tools/hunter
+	name = "craftsman's pouch"
+	desc = "Can hold various tools, devices, and materials for crafting. Far too big to fit in a pocket and it takes up more bag space than any pouch or belt, but it can hold twice as much kit as a tool belt."
+	storage_slots = 14
+	w_class = ITEM_SIZE_BULKY
+	max_w_class = ITEM_SIZE_NORMAL
+	cant_hold = list(
+		/obj/item/weapon/storage,
+		/obj/item/weapon/tool/power_fist,
+		/obj/item/weapon/tool/gauntlet,
+		/obj/item/weapon/tool/sword/machete,
+		/obj/item/weapon/tool/sword,
+		/obj/item/weapon/tool/disciplinary_action,
+		/obj/item/weapon/tool/chainofcommand,
+		)
+	can_hold_extra = list(
+		/obj/item/stack/material,
+		)
+	wont_fit_pocket = TRUE
 
 /obj/item/weapon/storage/pouch/engineering_supply
 	name = "engineering supply pouch"
@@ -194,6 +215,45 @@
 		/obj/item/ammo_magazine,
 		/obj/item/ammo_casing
 		)
+
+/obj/item/weapon/storage/pouch/ammo/hunter
+	name = "cartridge pouch"
+	desc = "Can hold four handfuls of cartridges, casings, or slagbolts. Best not to mix and match."
+	icon_state = "cartridge"
+	w_class = ITEM_SIZE_SMALL
+	max_w_class = ITEM_SIZE_SMALL
+	can_hold = list(
+		/obj/item/ammo_casing
+		)
+
+/obj/item/weapon/storage/pouch/ammo/casing/attack_hand(mob/user)
+	if (!sliding_behavior && contents.len)
+		var/obj/item/I = contents[contents.len]
+		if(!istype(I, /obj/item/ammo_casing))
+			return
+		var/obj/item/ammo_casing/existing_handful = I
+		if((existing_handful.amount > 1))
+			existing_handful.amount -= 1
+			var/obj/item/ammo_casing/new_casing = new /obj/item/ammo_casing(get_turf(user))
+			new_casing.desc = existing_handful.desc
+			new_casing.caliber = existing_handful.caliber
+			new_casing.projectile_type = existing_handful.projectile_type
+			new_casing.icon_state = existing_handful.icon_state
+			new_casing.spent_icon = existing_handful.spent_icon
+			new_casing.maxamount = existing_handful.maxamount
+			if(ispath(new_casing.projectile_type) && existing_handful.BB)
+				new_casing.BB = new new_casing.projectile_type(new_casing)
+			else
+				new_casing.BB = null
+			new_casing.update_icon()
+			existing_handful.update_icon()
+			user.put_in_active_hand(new_casing)
+		else
+			user.put_in_active_hand(existing_handful)
+			return
+	else
+		return ..()
+
 
 /obj/item/weapon/storage/pouch/tubular
 	name = "tubular pouch"

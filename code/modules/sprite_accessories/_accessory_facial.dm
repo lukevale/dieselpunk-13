@@ -122,6 +122,11 @@
 	name = "Neckbeard"
 	icon_state = "neckbeard"
 
+/datum/sprite_accessory/facial_hair/shaggy
+	name = "Shaggy"
+	icon_state = "shag"
+	gender = NEUTER
+
 /datum/sprite_accessory/facial_hair/seadog
 	name = "Sea Dog Beard"
 	icon_state = "seadog"
@@ -206,6 +211,7 @@
 	name = "Neck Fluff"
 	icon_state = "neckfluff"
 	gender = NEUTER
+
 
 /*
 ///////////////////////////////////

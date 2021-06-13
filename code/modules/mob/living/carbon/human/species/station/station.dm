@@ -181,6 +181,9 @@
 		"Doberman Ears",
 		"Sleek Ears",
 		"Vulpkanin Ears",
+		"Vulpkanin short",
+		"Vulpkanin short, dual-color",
+		"Vulpkanin thin, dual-color",
 		"Wolf Ears"
 		)
 	permitted_tail  = list("Cross Fox Tail",

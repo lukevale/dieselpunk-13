@@ -22,6 +22,7 @@
 	price_tag = 650
 	one_hand_penalty = 15 //full sized shotgun level
 	var/bolt_open = 0
+	var/breech_training = TRUE //This is for a future perk for single-action and break-action guns.
 	burst_delay = 0
 	init_firemodes = list(
 		list(mode_name="fire one barrel at a time", burst=1, icon="semi"),

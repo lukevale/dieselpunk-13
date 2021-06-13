@@ -384,8 +384,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			pref.f_style = new_f_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 	else if(href_list["size_multiplier"])
-		var/new_size = input(user, "Choose your character's size, ranging from 80% to 120% Please note that size is capped at these percentages. A size of 100 is considered close to 5'10 or 1.77 meters.", "Set Size") as num|null
-		if (!ISINRANGE(new_size,80,120))
+		var/new_size = input(user, "Choose your character's size, ranging from 80% to 140% Please note that size is capped at these percentages. A size of 100 is considered close to 5'10 or 1.77 meters.", "Set Size") as num|null
+		if (!ISINRANGE(new_size,80,140))
 			pref.size_multiplier = 1
 			to_chat(user, "<span class='notice'>Invalid size.</span>")
 			return TOPIC_REFRESH_UPDATE_PREVIEW

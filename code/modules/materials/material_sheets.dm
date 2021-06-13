@@ -348,3 +348,29 @@
 	icon_state = "rcd"
 	item_state = "rcdammo"
 	default_type = MATERIAL_COMPRESSED_MATTER
+
+/obj/item/stack/material/papyrus //Used as a component in black powder cartridge crafting.
+	name = "papyrus bundles"
+	desc = "A parcel of ten sheets of papyrus, bound with leather cord."
+	singular_name = "bundle of papyrus"
+	icon_state = "sheet-papyrus"
+	item_state = "paper"
+	default_type = MATERIAL_BIOMATTER
+	var/biomatter_in_sheet = 10 // this is because each sheet of papyrus paper contains 1, and a bundle "contains" 10 sheets of papyrus paper.
+	price_tag = 1 //Not that anyone will buy this, of course, but the bundles are worth 10 biomatter each.
+
+/obj/item/stack/material/papyrus/attackby(var/obj/item/W, var/mob/user)
+	if(W.tool_qualities & QUALITY_CUTTING)
+		to_chat(user, SPAN_NOTICE("You cut the leather cord and unbundle the sheets of papyrus."))
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		new /obj/item/weapon/paper/papyrus(src)
+		return
+	return ..()

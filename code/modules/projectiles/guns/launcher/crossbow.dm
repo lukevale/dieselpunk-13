@@ -376,3 +376,122 @@
 	. = ..()
 	if(.)
 		to_chat(user, "It currently holds [stored_matter]/[max_stored_matter] matter-units.")
+
+/*////////////////////////////////
+//	 Longbow and Recursive Bow 	//
+*/////////////////////////////////
+
+/obj/item/weapon/gun/launcher/crossbow/longbow
+	name = "longbow"
+	desc = "Typically made of yew wood and with a bowstaff as long as a man is tall, a longbow is characterized by a rather short draw length and the rather high draw weight from which it derives its power."
+	max_tension = 3
+	draw_time = 10 // Full draw in three seconds
+	twohanded = FALSE // This is so that you can hold a handful of arrows in one hand and still fire it
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/recursive
+	name = "recursive bow"
+	desc = "No more than half the length of a longbow and more often than not made out of a composite of sinew, wood, and bone, a recursive bow is characterized by the double curve of its limbs, compact size, and much longer draw length."
+	max_tension = 5
+	draw_time = 5 // Full draw in 2.5 seconds
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/attackby(obj/item/I, mob/user)
+	if(!bolt)
+		if(istype(I,/obj/item/stack/arrows))
+			var/obj/item/stack/arrows/R = I
+			if (R.use(1))
+				bolt = new /obj/item/stack/arrows(src)
+				bolt.fingerprintslast = src.fingerprintslast
+				bolt.loc = src
+				bolt.throwforce = 16 // doubles the throwforce while in bows. Actual damage is derived from tension and speed, and speed is also derived from tension.
+				bolt.armor_penetration = ARMOR_PEN_SHALLOW // Arrows can pierce kevlar armor by pushing apart the fibers, whereas bullets flatten against them.
+				update_icon()
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/recursive/attackby(obj/item/I, mob/user)
+	if(!bolt)
+		if(istype(I,/obj/item/stack/arrows))
+			var/obj/item/stack/arrows/R = I
+			if (R.use(1))
+				bolt = new /obj/item/stack/arrows(src)
+				bolt.fingerprintslast = src.fingerprintslast
+				bolt.loc = src
+				bolt.throwforce = 8 // Lowered throwforce for recursive bows, because they have more max tension and twice the accelleration
+				bolt.armor_penetration = ARMOR_PEN_DEEP // The speed of a projectile has a lot of impact on how well it penetrates armor. Recursive bows are all about accelleration.
+				update_icon()
+
+/obj/item/stack/arrows/proc/removed() //helper for arrow removal from bows
+	return
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/draw(var/mob/user as mob)
+	if(!bolt)
+		to_chat(user, "You don't have anything nocked to [src].")
+		return
+
+	if(user.restrained())
+		return
+
+	current_user = user
+	user.visible_message("[user] begins to draw back the string of [src].",SPAN_NOTICE("You begin to draw back the string of [src]."))
+	tension = 1
+
+	while(bolt && tension && loc == current_user)
+		if(!do_after(user, draw_time, src)) //crossbow strings don't just magically pull back on their own.
+			user.visible_message("[usr] stops drawing and relaxes the string of [src].",SPAN_WARNING("You stop drawing back and relax the string of [src]."))
+			tension = 0
+			update_icon()
+			return
+
+		//double check that the user hasn't removed the bolt in the meantime
+		if(!(bolt && tension && loc == current_user))
+			return
+
+		tension++
+		update_icon()
+
+		if(tension >= max_tension)
+			tension = max_tension
+			to_chat(user, "[src]'s bowstaff groans as the string is pulled back as far as it can go!")
+			return
+
+		user.visible_message("[usr] draws back the string of [src]!",SPAN_NOTICE("You continue drawing back the string of [src]!"))
+		sleep(10 SECONDS)
+		if(tension >= 1) // Bows aren't meant to be permanently drawn back
+			user.visible_message("[user] relaxes the tension on [src]'s string.","You relax the tension on [src]'s string.")
+			tension = 0
+			update_icon()
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/attack_self(mob/living/user as mob)
+	if(tension)
+		user.visible_message("[user] relaxes the tension on [src]'s string.","You relax the tension on [src]'s string.")
+		tension = 0
+		update_icon()
+	else
+		draw(user)
+
+/obj/item/weapon/gun/launcher/crossbow/longbow/attack_hand(mob/user)
+	if(tension)
+		if(bolt)
+			user.visible_message("[user] relaxes the tension on [src]'s string and removes [bolt].","You relax the tension on [src]'s string and remove [bolt].")
+			bolt.loc = get_turf(src)
+			var/obj/item/stack/arrows/A = bolt
+			bolt = null
+			A.removed(user)
+		else
+			user.visible_message("[user] relaxes the tension on [src]'s string.","You relax the tension on [src]'s string.")
+		tension = 0
+		update_icon()
+		return
+	if(bolt)
+		user.visible_message("[user] removes the [bolt] from [src]'s string.","You remove the [bolt] from [src]'s string.")
+		bolt.loc = get_turf(src)
+		var/obj/item/stack/arrows/A = bolt
+		bolt = null
+		A.removed(user)
+		return
+	else
+		to_chat(user, SPAN_WARNING("There's no arrow nocked, and the string isn't drawn back."))
+	return
+
+/obj/item/stack/arrows/removed(mob/user)
+	force = initial(force)
+	armor_penetration = initial(armor_penetration)
+	user.put_in_active_hand(src)

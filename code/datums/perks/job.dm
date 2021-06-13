@@ -373,6 +373,10 @@
 	name = "Bolt Action Rifle Training"
 	desc = "Through intense and repetitive training with bolt-action and lever-action rifles, you will always chamber a new round instantly after firing."
 
+/datum/perk/job/single_load //Do not give this out yet. This can be implemented for Hunters after an event in the future tied to the new black powder gun.
+	name = "Single Action Training"
+	desc = "Through extensive practice with break-action and single-load firearms, you have developed some muscle memory to improve your handling. Whenever you open the action, you will automatically unwield your firearm and swap to your off hand when opening the breech, and automatically wield it when closing the breech so long as your offhand is empty."
+
 /datum/perk/job/jingle_jangle
 	name = "Key Smith"
 	desc = "You have been granted a multitude of specially crafted electronic 'keys' for opening most airlocks around the colony, and the knowledge on how to use them has been solely been passed on to you. Don't get discouraged, you will eventually find the right one..."
