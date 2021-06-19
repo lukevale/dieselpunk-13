@@ -1114,7 +1114,6 @@
 #include "code\game\objects\items\weapons\tools\saws.dm"
 #include "code\game\objects\items\weapons\tools\scalpels.dm"
 #include "code\game\objects\items\weapons\tools\screwdrivers.dm"
-#include "code\game\objects\items\weapons\tools\sewing.dm"
 #include "code\game\objects\items\weapons\tools\shovel.dm"
 #include "code\game\objects\items\weapons\tools\simple_weapons.dm"
 #include "code\game\objects\items\weapons\tools\surgicaldrills.dm"
