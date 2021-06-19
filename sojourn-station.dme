@@ -2827,6 +2827,7 @@
 #include "maps\CEVEris\datums\reports.dm"
 #include "maps\dungeons\crawler\crawler.dm"
 #include "maps\dungeons\deepmaint\deepmaint.dm"
+#include "maps\NazdaCity\Surface.dmm"
 #include "maps\submaps\deepmaint_rooms\template.dm"
 #include "maps\submaps\deepmaint_rooms\core\core_rooms.dm"
 #include "maps\submaps\deepmaint_rooms\normal\normal_rooms.dm"
